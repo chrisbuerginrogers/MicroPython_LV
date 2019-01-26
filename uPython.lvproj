@@ -1,6 +1,7 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="16008000">
 	<Item Name="My Computer" Type="My Computer">
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.tcp.enabled" Type="Bool">false</Property>
@@ -17,13 +18,13 @@
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="_AllThings uPython.vi" Type="VI" URL="../VIs/_AllThings uPython.vi"/>
+		<Item Name="SaveForPrevious.vi" Type="VI" URL="../VIs/SaveForPrevious.vi"/>
 		<Item Name="Bitbanging.vi" Type="VI" URL="../testing/Bitbanging.vi"/>
 		<Item Name="Code.xctl" Type="XControl" URL="../VIs/ColorText/Code.xctl"/>
-		<Item Name="dir.mnu" Type="Document" URL="../dir.mnu"/>
+		<Item Name="dir.mnu" Type="Document" URL="/&lt;userlib&gt;/MicroPython/dir.mnu"/>
 		<Item Name="ExecuteLineFromScript.vi" Type="VI" URL="../VIs/ExecuteLineFromScript.vi"/>
 		<Item Name="HelpDialog.vi" Type="VI" URL="../VIs/HelpDialog.vi"/>
 		<Item Name="OpenMVTestCode.vi" Type="VI" URL="../testing/OpenMVTestCode.vi"/>
-		<Item Name="SaveForPrevious.vi" Type="VI" URL="../VIs/SaveForPrevious.vi"/>
 		<Item Name="StripComments.vi" Type="VI" URL="../VIs/StripComments.vi"/>
 		<Item Name="Systemlink Tag.xctl" Type="XControl" URL="../VIs/SystemLink/Systemlink Tag.xctl"/>
 		<Item Name="test.vi" Type="VI" URL="../testing/test.vi"/>
