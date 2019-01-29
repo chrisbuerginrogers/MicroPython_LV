@@ -22,10 +22,8 @@
 		<Item Name="Bitbanging.vi" Type="VI" URL="../testing/Bitbanging.vi"/>
 		<Item Name="Code.xctl" Type="XControl" URL="../VIs/ColorText/Code.xctl"/>
 		<Item Name="dir.mnu" Type="Document" URL="/&lt;userlib&gt;/MicroPython/dir.mnu"/>
-		<Item Name="ExecuteLineFromScript.vi" Type="VI" URL="../VIs/ExecuteLineFromScript.vi"/>
 		<Item Name="HelpDialog.vi" Type="VI" URL="../VIs/HelpDialog.vi"/>
 		<Item Name="OpenMVTestCode.vi" Type="VI" URL="../testing/OpenMVTestCode.vi"/>
-		<Item Name="StripComments.vi" Type="VI" URL="../VIs/StripComments.vi"/>
 		<Item Name="Systemlink Tag.xctl" Type="XControl" URL="../VIs/SystemLink/Systemlink Tag.xctl"/>
 		<Item Name="test.vi" Type="VI" URL="../testing/test.vi"/>
 		<Item Name="uPythonX.xctl" Type="XControl" URL="../VIs/uPythonX/uPythonX.xctl"/>
@@ -62,6 +60,8 @@
 				<Item Name="SystemLinkHTTPComm.ctl" Type="VI" URL="../VIs/SystemLink/SystemLinkHTTPComm.ctl"/>
 				<Item Name="TranslateTyping.vi" Type="VI" URL="../VIs/REPL/Subs/TranslateTyping.vi"/>
 				<Item Name="WriteMultipleLines.vi" Type="VI" URL="../VIs/WriteMultipleLines.vi"/>
+				<Item Name="ExecuteLineFromScript.vi" Type="VI" URL="../VIs/ExecuteLineFromScript.vi"/>
+				<Item Name="StripComments.vi" Type="VI" URL="../VIs/StripComments.vi"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="CFReleaseString.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/CFString.llb/CFReleaseString.vi"/>

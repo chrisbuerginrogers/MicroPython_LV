@@ -24,5 +24,6 @@
 		<Property Name="NI.XItem.Name" Type="Str">State</Property>
 	</Item>
 	<Item Name="Systemlink_Delete.vi" Type="VI" URL="../Systemlink_Delete.vi"/>
+	<Item Name="Systemlink_ErrorCheck.vi" Type="VI" URL="../Systemlink_ErrorCheck.vi"/>
 	<Item Name="WriteTagValue.vi" Type="VI" URL="../WriteTagValue.vi"/>
 </XControl>
