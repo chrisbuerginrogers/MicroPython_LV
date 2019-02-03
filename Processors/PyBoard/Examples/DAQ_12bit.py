@@ -2,7 +2,7 @@ from pyb import DAC
 from array import array
 import math
 
-dac = DAC(1, bits=12)   # use 12 bit resolution
+dac = DAC(1, bits=12, buffering=True)   # use 12 bit resolution
 dac.write(4095)         # output maximum value, 3.3V
 
 

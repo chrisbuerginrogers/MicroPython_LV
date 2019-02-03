@@ -21,13 +21,10 @@ cur_width = min_width
 
 while True:
   tchannel.pulse_width(cur_width)
-
   # this determines how often we change the pulse-width. It is
   # analogous to frames-per-second
   sleep(0.01)
-
   cur_width += wstep
-
   if cur_width > max_width:
     cur_width = min_width
 
@@ -35,11 +32,8 @@ while True:
 
 while True:
   tchannel.pulse_width(cur_width)
-
   sleep(0.01)
-
   cur_width += wstep
-
   if cur_width > max_width:
     cur_width = max_width
     wstep *= -1

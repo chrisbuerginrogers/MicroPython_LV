@@ -1,7 +1,7 @@
 from pyb import DAC
 import utime,math
 
-dac = DAC(1)            # create DAC 1 on pin X5
+dac = DAC(1,buffering=True)            # create DAC 1 on pin X5
 dac.write(128)          # write a value to the DAC (makes X5 1.65V)
 
 # To output a continuous sine-wave:

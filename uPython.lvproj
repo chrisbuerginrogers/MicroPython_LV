@@ -27,6 +27,7 @@
 		<Item Name="Systemlink Tag.xctl" Type="XControl" URL="../VIs/SystemLink/Systemlink Tag.xctl"/>
 		<Item Name="test.vi" Type="VI" URL="../testing/test.vi"/>
 		<Item Name="uPythonX.xctl" Type="XControl" URL="../VIs/uPythonX/uPythonX.xctl"/>
+		<Item Name="PathDialog.vi" Type="VI" URL="../VIs/PathDialog.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="BuildSyliineCommCluster.vi" Type="VI" URL="../VIs/SystemLink/BuildSyliineCommCluster.vi"/>
