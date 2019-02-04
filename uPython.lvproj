@@ -65,6 +65,7 @@
 				<Item Name="PathDialog.vi" Type="VI" URL="../VIs/PathDialog.vi"/>
 				<Item Name="ShowScrollBar.vi" Type="VI" URL="../VIs/ShowScrollBar.vi"/>
 				<Item Name="HelpDialog.vi" Type="VI" URL="../VIs/HelpDialog.vi"/>
+				<Item Name="ColorizeREPL.vi" Type="VI" URL="../VIs/ColorizeREPL.vi"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="CFReleaseString.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/CFString.llb/CFReleaseString.vi"/>
