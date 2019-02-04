@@ -17,17 +17,15 @@
 		<Item Name="Processors" Type="Folder" URL="../Processors">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
+		<Item Name="testing" Type="Folder" URL="../testing">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
 		<Item Name="_AllThings uPython.vi" Type="VI" URL="../VIs/_AllThings uPython.vi"/>
 		<Item Name="SaveForPrevious.vi" Type="VI" URL="../VIs/SaveForPrevious.vi"/>
-		<Item Name="Bitbanging.vi" Type="VI" URL="../testing/Bitbanging.vi"/>
 		<Item Name="Code.xctl" Type="XControl" URL="../VIs/ColorText/Code.xctl"/>
 		<Item Name="dir.mnu" Type="Document" URL="/&lt;userlib&gt;/MicroPython/dir.mnu"/>
-		<Item Name="HelpDialog.vi" Type="VI" URL="../VIs/HelpDialog.vi"/>
-		<Item Name="OpenMVTestCode.vi" Type="VI" URL="../testing/OpenMVTestCode.vi"/>
 		<Item Name="Systemlink Tag.xctl" Type="XControl" URL="../VIs/SystemLink/Systemlink Tag.xctl"/>
-		<Item Name="test.vi" Type="VI" URL="../testing/test.vi"/>
 		<Item Name="uPythonX.xctl" Type="XControl" URL="../VIs/uPythonX/uPythonX.xctl"/>
-		<Item Name="PathDialog.vi" Type="VI" URL="../VIs/PathDialog.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="BuildSyliineCommCluster.vi" Type="VI" URL="../VIs/SystemLink/BuildSyliineCommCluster.vi"/>
@@ -63,6 +61,10 @@
 				<Item Name="WriteMultipleLines.vi" Type="VI" URL="../VIs/WriteMultipleLines.vi"/>
 				<Item Name="ExecuteLineFromScript.vi" Type="VI" URL="../VIs/ExecuteLineFromScript.vi"/>
 				<Item Name="StripComments.vi" Type="VI" URL="../VIs/StripComments.vi"/>
+				<Item Name="BuildBinaryArray.vi" Type="VI" URL="../VIs/BuildBinaryArray.vi"/>
+				<Item Name="PathDialog.vi" Type="VI" URL="../VIs/PathDialog.vi"/>
+				<Item Name="ShowScrollBar.vi" Type="VI" URL="../VIs/ShowScrollBar.vi"/>
+				<Item Name="HelpDialog.vi" Type="VI" URL="../VIs/HelpDialog.vi"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="CFReleaseString.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/CFString.llb/CFReleaseString.vi"/>
@@ -111,6 +113,8 @@
 				<Item Name="VISA Configure Serial Port (Serial Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Serial Instr).vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 				<Item Name="XControlSupport.lvlib" Type="Library" URL="/&lt;vilib&gt;/_xctls/XControlSupport.lvlib"/>
+				<Item Name="LVPointTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVPointTypeDef.ctl"/>
+				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
 			</Item>
 			<Item Name="ApplicationServices.framework" Type="Document" URL="ApplicationServices.framework">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>

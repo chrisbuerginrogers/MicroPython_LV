@@ -10,7 +10,7 @@ def connect():
      if not WiFi.isconnected():
           print ("Connecting ..")
           WiFi.active(True)
-          WiFi.connect("Rogers","s0meth1ng")
+          WiFi.connect("SSID","PASSWORD")
           i=0
           while i < 25 and not WiFi.isconnected():
                utime.sleep_ms(200)
@@ -27,7 +27,7 @@ print ("WiFi: ",WiFi.isconnected())
 Tag = "fred"
 Type = "STRING"
 Value = "hello"
-Key = "dYy-vDU9TXxDCy2QG3jO4J0s1-QUyYs6sO1xPd1oKQ"
+Key = "YOUR_KEY"
 
 urlBase = "https://api.systemlinkcloud.com/nitag/v2/tags/"
      
