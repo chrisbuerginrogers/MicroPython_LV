@@ -60,12 +60,12 @@
 				<Item Name="TranslateTyping.vi" Type="VI" URL="../VIs/REPL/Subs/TranslateTyping.vi"/>
 				<Item Name="WriteMultipleLines.vi" Type="VI" URL="../VIs/WriteMultipleLines.vi"/>
 				<Item Name="ExecuteLineFromScript.vi" Type="VI" URL="../VIs/ExecuteLineFromScript.vi"/>
-				<Item Name="StripComments.vi" Type="VI" URL="../VIs/StripComments.vi"/>
 				<Item Name="BuildBinaryArray.vi" Type="VI" URL="../VIs/BuildBinaryArray.vi"/>
 				<Item Name="PathDialog.vi" Type="VI" URL="../VIs/PathDialog.vi"/>
 				<Item Name="ShowScrollBar.vi" Type="VI" URL="../VIs/ShowScrollBar.vi"/>
 				<Item Name="HelpDialog.vi" Type="VI" URL="../VIs/HelpDialog.vi"/>
 				<Item Name="ColorizeREPL.vi" Type="VI" URL="../VIs/ColorizeREPL.vi"/>
+				<Item Name="StripComments.vi" Type="VI" URL="../VIs/StripComments.vi"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="CFReleaseString.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/CFString.llb/CFReleaseString.vi"/>
