@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<Project Type="Project" LVVersion="16008000">
+<Project Type="Project" LVVersion="17008000">
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
@@ -27,46 +27,6 @@
 		<Item Name="Systemlink Tag.xctl" Type="XControl" URL="../VIs/SystemLink/Systemlink Tag.xctl"/>
 		<Item Name="uPythonX.xctl" Type="XControl" URL="../VIs/uPythonX/uPythonX.xctl"/>
 		<Item Name="Dependencies" Type="Dependencies">
-			<Item Name="user.lib" Type="Folder">
-				<Item Name="BuildSyliineCommCluster.vi" Type="VI" URL="../VIs/SystemLink/BuildSyliineCommCluster.vi"/>
-				<Item Name="BuildTree.vi" Type="VI" URL="../VIs/BuildTree.vi"/>
-				<Item Name="CheckForEOL.vi" Type="VI" URL="../VIs/REPL/Subs/CheckForEOL.vi"/>
-				<Item Name="CheckLoopLF.vi" Type="VI" URL="../VIs/REPL/Subs/CheckLoopLF.vi"/>
-				<Item Name="ClearLineToPrompt.vi" Type="VI" URL="../VIs/REPL/Subs/ClearLineToPrompt.vi"/>
-				<Item Name="DownloadRunMain.vi" Type="VI" URL="../VIs/DownloadRunMain.vi"/>
-				<Item Name="FileNameDialog.vi" Type="VI" URL="../VIs/REPL/Subs/FileNameDialog.vi"/>
-				<Item Name="GetFileListing.vi" Type="VI" URL="../VIs/REPL/Subs/GetFileListing.vi"/>
-				<Item Name="GetTagName.vi" Type="VI" URL="../VIs/SystemLink/GetTagName.vi"/>
-				<Item Name="GreenQuotes.vi" Type="VI" URL="../VIs/ColorText/GreenQuotes.vi"/>
-				<Item Name="LoginCode.vi" Type="VI" URL="../VIs/SystemLink/LoginCode.vi"/>
-				<Item Name="LoginDialogBox.vi" Type="VI" URL="../VIs/SystemLink/LoginDialogBox.vi"/>
-				<Item Name="MP_StringToArray.vi" Type="VI" URL="../VIs/MP_StringToArray.vi"/>
-				<Item Name="QueueMany.vi" Type="VI" URL="../VIs/REPL/Subs/QueueMany.vi"/>
-				<Item Name="ReadFileContents.vi" Type="VI" URL="../VIs/REPL/Subs/ReadFileContents.vi"/>
-				<Item Name="ReadWritePython.vi" Type="VI" URL="../VIs/ReadWritePython.vi"/>
-				<Item Name="ReadWriteREPL.vi" Type="VI" URL="../VIs/ReadWriteREPL.vi"/>
-				<Item Name="RemoveBackspace.vi" Type="VI" URL="../VIs/RemoveBackspace.vi"/>
-				<Item Name="REPL_Comm.vi" Type="VI" URL="../VIs/REPL/REPL_Comm.vi"/>
-				<Item Name="ReplaceCodes.vi" Type="VI" URL="../VIs/REPL/Subs/ReplaceCodes.vi"/>
-				<Item Name="RWSkylinePrefCluster.vi" Type="VI" URL="../VIs/SystemLink/RWSkylinePrefCluster.vi"/>
-				<Item Name="SaveOnMP.vi" Type="VI" URL="../VIs/REPL/Subs/SaveOnMP.vi"/>
-				<Item Name="SavePyFile.vi" Type="VI" URL="../VIs/SavePyFile.vi"/>
-				<Item Name="SendScriptToQueue.vi" Type="VI" URL="../VIs/REPL/Subs/SendScriptToQueue.vi"/>
-				<Item Name="Skyline_ReadWritePoly.vi" Type="VI" URL="../VIs/SystemLink/Skyline_ReadWritePoly.vi"/>
-				<Item Name="SkylineCluster.ctl" Type="VI" URL="../VIs/SystemLink/SkylineCluster.ctl"/>
-				<Item Name="SkylineCreate.vi" Type="VI" URL="../VIs/SystemLink/SkylineCreate.vi"/>
-				<Item Name="SystemLink_RESTful.vi" Type="VI" URL="../VIs/SystemLink/SystemLink_RESTful.vi"/>
-				<Item Name="SystemLinkHTTPComm.ctl" Type="VI" URL="../VIs/SystemLink/SystemLinkHTTPComm.ctl"/>
-				<Item Name="TranslateTyping.vi" Type="VI" URL="../VIs/REPL/Subs/TranslateTyping.vi"/>
-				<Item Name="WriteMultipleLines.vi" Type="VI" URL="../VIs/WriteMultipleLines.vi"/>
-				<Item Name="ExecuteLineFromScript.vi" Type="VI" URL="../VIs/ExecuteLineFromScript.vi"/>
-				<Item Name="BuildBinaryArray.vi" Type="VI" URL="../VIs/BuildBinaryArray.vi"/>
-				<Item Name="PathDialog.vi" Type="VI" URL="../VIs/PathDialog.vi"/>
-				<Item Name="ShowScrollBar.vi" Type="VI" URL="../VIs/ShowScrollBar.vi"/>
-				<Item Name="HelpDialog.vi" Type="VI" URL="../VIs/HelpDialog.vi"/>
-				<Item Name="ColorizeREPL.vi" Type="VI" URL="../VIs/ColorizeREPL.vi"/>
-				<Item Name="StripComments.vi" Type="VI" URL="../VIs/StripComments.vi"/>
-			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="CFReleaseString.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/CFString.llb/CFReleaseString.vi"/>
 				<Item Name="CFReleaseURL.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/CFURL.llb/CFReleaseURL.vi"/>
@@ -126,6 +86,44 @@
 			<Item Name="CoreFoundation.framework" Type="Document" URL="CoreFoundation.framework">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="BuildSyliineCommCluster.vi" Type="VI" URL="../VIs/SystemLink/BuildSyliineCommCluster.vi"/>
+			<Item Name="BuildTree.vi" Type="VI" URL="../VIs/BuildTree.vi"/>
+			<Item Name="CheckForEOL.vi" Type="VI" URL="../VIs/REPL/Subs/CheckForEOL.vi"/>
+			<Item Name="CheckLoopLF.vi" Type="VI" URL="../VIs/REPL/Subs/CheckLoopLF.vi"/>
+			<Item Name="ClearLineToPrompt.vi" Type="VI" URL="../VIs/REPL/Subs/ClearLineToPrompt.vi"/>
+			<Item Name="DownloadRunMain.vi" Type="VI" URL="../VIs/DownloadRunMain.vi"/>
+			<Item Name="FileNameDialog.vi" Type="VI" URL="../VIs/REPL/Subs/FileNameDialog.vi"/>
+			<Item Name="GetFileListing.vi" Type="VI" URL="../VIs/REPL/Subs/GetFileListing.vi"/>
+			<Item Name="GetTagName.vi" Type="VI" URL="../VIs/SystemLink/GetTagName.vi"/>
+			<Item Name="GreenQuotes.vi" Type="VI" URL="../VIs/ColorText/GreenQuotes.vi"/>
+			<Item Name="LoginCode.vi" Type="VI" URL="../VIs/SystemLink/LoginCode.vi"/>
+			<Item Name="LoginDialogBox.vi" Type="VI" URL="../VIs/SystemLink/LoginDialogBox.vi"/>
+			<Item Name="MP_StringToArray.vi" Type="VI" URL="../VIs/MP_StringToArray.vi"/>
+			<Item Name="QueueMany.vi" Type="VI" URL="../VIs/REPL/Subs/QueueMany.vi"/>
+			<Item Name="ReadFileContents.vi" Type="VI" URL="../VIs/REPL/Subs/ReadFileContents.vi"/>
+			<Item Name="ReadWritePython.vi" Type="VI" URL="../VIs/ReadWritePython.vi"/>
+			<Item Name="ReadWriteREPL.vi" Type="VI" URL="../VIs/ReadWriteREPL.vi"/>
+			<Item Name="RemoveBackspace.vi" Type="VI" URL="../VIs/RemoveBackspace.vi"/>
+			<Item Name="REPL_Comm.vi" Type="VI" URL="../VIs/REPL/REPL_Comm.vi"/>
+			<Item Name="ReplaceCodes.vi" Type="VI" URL="../VIs/REPL/Subs/ReplaceCodes.vi"/>
+			<Item Name="RWSkylinePrefCluster.vi" Type="VI" URL="../VIs/SystemLink/RWSkylinePrefCluster.vi"/>
+			<Item Name="SaveOnMP.vi" Type="VI" URL="../VIs/REPL/Subs/SaveOnMP.vi"/>
+			<Item Name="SavePyFile.vi" Type="VI" URL="../VIs/SavePyFile.vi"/>
+			<Item Name="SendScriptToQueue.vi" Type="VI" URL="../VIs/REPL/Subs/SendScriptToQueue.vi"/>
+			<Item Name="Skyline_ReadWritePoly.vi" Type="VI" URL="../VIs/SystemLink/Skyline_ReadWritePoly.vi"/>
+			<Item Name="SkylineCluster.ctl" Type="VI" URL="../VIs/SystemLink/SkylineCluster.ctl"/>
+			<Item Name="SkylineCreate.vi" Type="VI" URL="../VIs/SystemLink/SkylineCreate.vi"/>
+			<Item Name="SystemLink_RESTful.vi" Type="VI" URL="../VIs/SystemLink/SystemLink_RESTful.vi"/>
+			<Item Name="SystemLinkHTTPComm.ctl" Type="VI" URL="../VIs/SystemLink/SystemLinkHTTPComm.ctl"/>
+			<Item Name="TranslateTyping.vi" Type="VI" URL="../VIs/REPL/Subs/TranslateTyping.vi"/>
+			<Item Name="WriteMultipleLines.vi" Type="VI" URL="../VIs/WriteMultipleLines.vi"/>
+			<Item Name="ExecuteLineFromScript.vi" Type="VI" URL="../VIs/ExecuteLineFromScript.vi"/>
+			<Item Name="BuildBinaryArray.vi" Type="VI" URL="../VIs/BuildBinaryArray.vi"/>
+			<Item Name="PathDialog.vi" Type="VI" URL="../VIs/PathDialog.vi"/>
+			<Item Name="ShowScrollBar.vi" Type="VI" URL="../VIs/ShowScrollBar.vi"/>
+			<Item Name="HelpDialog.vi" Type="VI" URL="../VIs/HelpDialog.vi"/>
+			<Item Name="ColorizeREPL.vi" Type="VI" URL="../VIs/ColorizeREPL.vi"/>
+			<Item Name="StripComments.vi" Type="VI" URL="../VIs/StripComments.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
