@@ -74,6 +74,35 @@
 				<Item Name="XControlSupport.lvlib" Type="Library" URL="/&lt;vilib&gt;/_xctls/XControlSupport.lvlib"/>
 				<Item Name="LVPointTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVPointTypeDef.ctl"/>
 				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
+				<Item Name="Color to RGB.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/colorconv.llb/Color to RGB.vi"/>
+				<Item Name="Get Image Subset.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pictutil.llb/Get Image Subset.vi"/>
+				<Item Name="Coerce Bad Rect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pictutil.llb/Coerce Bad Rect.vi"/>
+				<Item Name="Bit-array To Byte-array.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pictutil.llb/Bit-array To Byte-array.vi"/>
+				<Item Name="Unflatten Pixmap.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pixmap.llb/Unflatten Pixmap.vi"/>
+				<Item Name="Flatten Pixmap.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pixmap.llb/Flatten Pixmap.vi"/>
+				<Item Name="Picture to Pixmap.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pictutil.llb/Picture to Pixmap.vi"/>
+				<Item Name="Empty Picture" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Empty Picture"/>
+				<Item Name="Draw Rectangle.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Rectangle.vi"/>
+				<Item Name="Set Pen State.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Set Pen State.vi"/>
+			</Item>
+			<Item Name="user.lib" Type="Folder">
+				<Item Name="BuildWiFiPython.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/Wizards/_subs/BuildWiFiPython.vi"/>
+				<Item Name="SensorOperation.vi" Type="VI" URL="../../../../../../&lt;userlib&gt;/MicroPython/Processors/OpenMV/Wizards/_subs/SensorOperation.vi"/>
+				<Item Name="ConvertToLAB.vi" Type="VI" URL="../../../../../../&lt;userlib&gt;/MicroPython/Processors/OpenMV/Wizards/_subs/ConvertToLAB.vi"/>
+				<Item Name="BuildHexString.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/BuildHexString.vi"/>
+				<Item Name="ConvertStructToU8.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/ConvertStructToU8.vi"/>
+				<Item Name="HS_ReadWritePython.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_ReadWritePython.vi"/>
+				<Item Name="HS_AppendConsole.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_AppendConsole.vi"/>
+				<Item Name="HS_ConvertSize.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_ConvertSize.vi"/>
+				<Item Name="HS_ConvertJPG.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_ConvertJPG.vi"/>
+				<Item Name="HS_ReadTxBuffer.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_ReadTxBuffer.vi"/>
+				<Item Name="HS_Init.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_Init.vi"/>
+				<Item Name="HS_AskVersion.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_AskVersion.vi"/>
+				<Item Name="HS_StopScript.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_StopScript.vi"/>
+				<Item Name="HS_EnableFrameBuffer.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_EnableFrameBuffer.vi"/>
+				<Item Name="HS_RunScript.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_RunScript.vi"/>
+				<Item Name="HS_ReadCamera.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_ReadCamera.vi"/>
+				<Item Name="HS_Close.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_Close.vi"/>
 			</Item>
 			<Item Name="ApplicationServices.framework" Type="Document" URL="ApplicationServices.framework">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
