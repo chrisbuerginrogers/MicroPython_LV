@@ -86,23 +86,8 @@
 				<Item Name="Set Pen State.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Set Pen State.vi"/>
 			</Item>
 			<Item Name="user.lib" Type="Folder">
-				<Item Name="BuildWiFiPython.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/Wizards/_subs/BuildWiFiPython.vi"/>
 				<Item Name="SensorOperation.vi" Type="VI" URL="../../../../../../&lt;userlib&gt;/MicroPython/Processors/OpenMV/Wizards/_subs/SensorOperation.vi"/>
 				<Item Name="ConvertToLAB.vi" Type="VI" URL="../../../../../../&lt;userlib&gt;/MicroPython/Processors/OpenMV/Wizards/_subs/ConvertToLAB.vi"/>
-				<Item Name="BuildHexString.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/BuildHexString.vi"/>
-				<Item Name="ConvertStructToU8.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/ConvertStructToU8.vi"/>
-				<Item Name="HS_ReadWritePython.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_ReadWritePython.vi"/>
-				<Item Name="HS_AppendConsole.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_AppendConsole.vi"/>
-				<Item Name="HS_ConvertSize.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_ConvertSize.vi"/>
-				<Item Name="HS_ConvertJPG.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_ConvertJPG.vi"/>
-				<Item Name="HS_ReadTxBuffer.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_ReadTxBuffer.vi"/>
-				<Item Name="HS_Init.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_Init.vi"/>
-				<Item Name="HS_AskVersion.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_AskVersion.vi"/>
-				<Item Name="HS_StopScript.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_StopScript.vi"/>
-				<Item Name="HS_EnableFrameBuffer.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_EnableFrameBuffer.vi"/>
-				<Item Name="HS_RunScript.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_RunScript.vi"/>
-				<Item Name="HS_ReadCamera.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_ReadCamera.vi"/>
-				<Item Name="HS_Close.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/Processors/OpenMV/SubVIs/HS_Close.vi"/>
 			</Item>
 			<Item Name="ApplicationServices.framework" Type="Document" URL="ApplicationServices.framework">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
