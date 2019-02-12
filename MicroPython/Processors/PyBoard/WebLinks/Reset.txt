@@ -1,0 +1,3 @@
+https://github.com/micropython/micropython/blob/master/docs/pyboard/tutorial/reset.rst
+
+Explains Safe Mode and Factory Reset
