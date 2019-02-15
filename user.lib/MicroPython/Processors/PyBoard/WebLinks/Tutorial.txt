@@ -1,3 +1,0 @@
-https://github.com/micropython/micropython/blob/master/docs/pyboard/tutorial/index.rst
-
-A nice getting started tutorial

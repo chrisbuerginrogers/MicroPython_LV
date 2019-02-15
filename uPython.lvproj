@@ -11,20 +11,20 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="Palette" Type="Folder" URL="../Palette">
+		<Item Name="Palette" Type="Folder" URL="/&lt;userlib&gt;/MicroPython/Palette">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="Processors" Type="Folder" URL="../Processors">
+		<Item Name="Processors" Type="Folder" URL="/&lt;userlib&gt;/MicroPython/Processors">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="testing" Type="Folder" URL="../testing">
+		<Item Name="testing" Type="Folder" URL="/&lt;userlib&gt;/MicroPython/testing">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="VIs" Type="Folder" URL="../VIs">
+		<Item Name="VIs" Type="Folder" URL="/&lt;userlib&gt;/MicroPython/VIs">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="dir.mnu" Type="Document" URL="/&lt;userlib&gt;/MicroPython/dir.mnu"/>
-		<Item Name="README.md" Type="Document" URL="../README.md"/>
+		<Item Name="README.md" Type="Document" URL="/&lt;userlib&gt;/MicroPython/README.md"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="CFReleaseString.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/CFString.llb/CFReleaseString.vi"/>
@@ -85,10 +85,6 @@
 				<Item Name="Empty Picture" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Empty Picture"/>
 				<Item Name="Draw Rectangle.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Rectangle.vi"/>
 				<Item Name="Set Pen State.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Set Pen State.vi"/>
-			</Item>
-			<Item Name="user.lib" Type="Folder">
-				<Item Name="SensorOperation.vi" Type="VI" URL="../../../../../../&lt;userlib&gt;/MicroPython/Processors/OpenMV/Wizards/_subs/SensorOperation.vi"/>
-				<Item Name="ConvertToLAB.vi" Type="VI" URL="../../../../../../&lt;userlib&gt;/MicroPython/Processors/OpenMV/Wizards/_subs/ConvertToLAB.vi"/>
 			</Item>
 			<Item Name="ApplicationServices.framework" Type="Document" URL="ApplicationServices.framework">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
