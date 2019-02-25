@@ -20,4 +20,5 @@
 	<Item Name="ColorText State.ctl" Type="Ability VI" URL="../ColorText State.ctl">
 		<Property Name="NI.XItem.Name" Type="Str">State</Property>
 	</Item>
+	<Item Name="MoveLineNumbers.vi" Type="VI" URL="../MoveLineNumbers.vi"/>
 </XControl>
