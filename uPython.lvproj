@@ -87,8 +87,7 @@
 				<Item Name="Set Pen State.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Set Pen State.vi"/>
 			</Item>
 			<Item Name="user.lib" Type="Folder">
-				<Item Name="SensorOperation.vi" Type="VI" URL="../../../../../../&lt;userlib&gt;/MicroPython/Processors/OpenMV/Wizards/_subs/SensorOperation.vi"/>
-				<Item Name="ConvertToLAB.vi" Type="VI" URL="../../../../../../&lt;userlib&gt;/MicroPython/Processors/OpenMV/Wizards/_subs/ConvertToLAB.vi"/>
+				<Item Name="Bitbanging.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/testing/Bitbanging.vi"/>
 			</Item>
 			<Item Name="ApplicationServices.framework" Type="Document" URL="ApplicationServices.framework">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
