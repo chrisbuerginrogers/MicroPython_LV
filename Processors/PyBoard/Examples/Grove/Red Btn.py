@@ -1,7 +1,17 @@
+'''
+http://wiki.seeedstudio.com/Grove-LED_Button/
+
+connections: 
+Ground  - GND 
+Power    - 3V3 
+Signal 2 - button status - pin Y10
+Signal1 -  LED status - pin Y9
+'''
+
 import pyb,utime
 
-Btn = pyb.Pin('Y9', pyb.Pin.IN)
-LED = pyb.Pin('Y10', pyb.Pin.OUT)
+Btn = pyb.Pin('Y10', pyb.Pin.IN)
+LED = pyb.Pin('Y9', pyb.Pin.OUT)
 
 Btn.value()
 

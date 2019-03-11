@@ -1,7 +1,17 @@
+'''
+http://wiki.seeedstudio.com/Grove-Button/
+
+connections: 
+Ground  - GND 
+Power    - 3V3 
+NC
+Signal -  pin Y9
+'''
+
 import pyb,utime
 
-button = pyb.Pin('W16')
+button = pyb.Pin('Y9',pyb.Pin.IN)
 
 button()
-utime.sleep(10)
+utime.sleep(2)
 button()

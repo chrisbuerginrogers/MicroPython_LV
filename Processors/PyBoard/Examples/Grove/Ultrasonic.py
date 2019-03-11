@@ -1,61 +1,59 @@
+'''
+http://wiki.seeedstudio.com/Grove-Ultrasonic_Ranger/
+
+connections: 
+Ground  - GND 
+Power    - 3V3 
+NC
+Signal - pin Y9
+'''
+
 import utime
 from machine import Pin
 
-_TIMEOUT1 = 1000
-_TIMEOUT2 = 10000
 
-class GroveUltrasonicRanger(object):
-    def __init__(self, pin):
-        self.dio = Pin(pin,Pin.OUT,Pin.PULL_UP)
+dio = Pin('Y9')
 
-    def _get_distance(self):
-        self.dio.init(Pin.OUT)
-        self.dio.value(0)
-        utime.sleep_us(2)
-        self.dio.value(1)
-        utime.sleep_us(10)
-        self.dio.value(0)
+def _get_distance():
+     dio.init(Pin.OUT)
+     dio.value(0)
+     utime.sleep_us(2)
+     dio.value(1)
+     utime.sleep_us(10)
+     dio.value(0)
 
-        self.dio.init(Pin.IN,Pin.PULL_UP)
+     dio.init(Pin.IN)
 
-        t0 = utime.time()
-        count = 0
-        while count < _TIMEOUT1:
-            if self.dio.value():
-                break
-            count += 1
-        if count >= _TIMEOUT1:
-            return None
+     t0 = utime.ticks_us()
+     count = 0
+     while count < _TIMEOUT1:
+          if dio.value():
+               break
+          count += 1
+          if count >= _TIMEOUT1:
+               return None
+     t1 = utime.ticks_us()
+     count = 0
+     while count < _TIMEOUT2:
+          if not dio.value():
+               break
+          count += 1
+          if count >= _TIMEOUT2:
+               return None
+     t2 = utime.ticks_us()
+     dt = int(t1 - t0)
+     if dt > 530:
+          return None
+     distance = ((t2 - t1) / 29 / 2)    # cm
+     return distance
 
-        t1 = utime.time()
-        count = 0
-        while count < _TIMEOUT2:
-            if not self.dio.value():
-                break
-            count += 1
-        if count >= _TIMEOUT2:
-            return None
-
-        t2 = utime.time()
-
-        dt = int((t1 - t0) * 1000000)
-        if dt > 530:
-            return None
-
-        distance = ((t2 - t1) * 1000000 / 29 / 2)    # cm
-
-        return distance
-
-    def get_distance(self):
-        while True:
-            dist = self._get_distance()
-            if dist:
-                return dist
-
-sonar = GroveUltrasonicRanger('Y9')
+def get_distance():
+     while True:
+          dist = _get_distance()
+          if dist:
+               return dist
 
 print('Detecting distance...')
 while True:
-        print('{} cm'.format(sonar.get_distance()))
+        print('{} cm'.format(get_distance()))
         utime.sleep(1)
-

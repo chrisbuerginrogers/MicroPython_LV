@@ -1,6 +1,17 @@
+'''
+http://wiki.seeedstudio.com/Grove-LED_Bar/
+https://github.com/Seeed-Studio/Grove_LED_Bar/blob/master/Grove_LED_Bar.cpp
+https://github.com/Seeed-Studio/Grove_LED_Bar/blob/master/examples/BasicControl/BasicControl.ino
+
+connections: 
+Ground (B) - GND 
+Power  (R)   - 3V3 
+DCLK (W) - pin Y9
+DIn (Y) -  pin Y10
+'''
+
 import  utime
 from machine import Pin
-
 
 GLB_CMDMODE = 0x00  # Work on 8-bit mode
 

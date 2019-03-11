@@ -1,3 +1,13 @@
+'''
+http://wiki.seeedstudio.com/Grove-4-Digit_Display/
+
+connections: 
+Ground  - GND 
+Power    - 3V3 
+SCLK - pin Y9
+SDATA -  pin Y10
+'''
+
 import  utime
 from machine import Pin
 
@@ -57,19 +67,28 @@ def writeByte(data):
      dio.init(Pin.OUT,Pin.PULL_UP)
      utime.sleep_ms(50)
      
-def display(data):
+def display(data,brightness=BRIGHT_DEFAULT,colon=False):
      start()
      writeByte(ADDR_AUTO)
      stop()
      
      start()
      writeByte(STARTADDR)
+     if len(data) < 4:
+          data = data + '    '
      for i in range(4):
-          writeByte(data)
+          writeByte(charmap[data[i]] | 0x80 * colon)
      stop()
      
+     if brightness > BRIGHT_HIGHEST:
+          brightness = BRIGHT_HIGHEST
+     if brightness < BRIGHT_DARKEST:
+          brightness = BRIGHT_DARKEST
      start()
-     writeByte(0x88 +  7)
+     writeByte(0x88 +  brightness)
      stop()
+     
+def clear():
+     display('    ',4,0)
 
-display(0x06)
+display('1234', 4,True)
