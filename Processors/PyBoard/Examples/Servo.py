@@ -1,4 +1,12 @@
-#  from https://github.com/micropython/micropython/blob/master/docs/pyboard/tutorial/servo.rst
+'''
+https://docs.micropython.org/en/latest/pyboard/tutorial/servo.html
+     
+connections: 
+Ground (B) - GND 
+Power  (R)   - 3V3 
+NC
+Signal -  pin X1
+'''
 
 import pyb
 
@@ -18,3 +26,4 @@ servo1.angle(-45, 2000); servo2.angle(60, 2000)
 servo1.speed()
 
 # you can also change the calibration (see webpage)
+

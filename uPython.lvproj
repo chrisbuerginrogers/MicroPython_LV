@@ -94,9 +94,6 @@
 				<Item Name="Three Button Dialog CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog CORE.vi"/>
 				<Item Name="Three Button Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog.vi"/>
 			</Item>
-			<Item Name="user.lib" Type="Folder">
-				<Item Name="Bitbanging.vi" Type="VI" URL="../../../../../../&lt;userlib&gt;/MicroPython/testing/Bitbanging.vi"/>
-			</Item>
 			<Item Name="ApplicationServices.framework" Type="Document" URL="ApplicationServices.framework">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>

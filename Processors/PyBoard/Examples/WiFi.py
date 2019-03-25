@@ -6,7 +6,6 @@ WiFi = network.WLAN()
 mac = ubinascii.hexlify(network.WLAN().config("mac"),":").decode()
 print("MAC address: " + mac)
 def connect():
-     EN1 = machine.Pin("W23", machine.Pin.OUT, value=1)  # set power high for USB power (500mA now allowed)
      if not WiFi.isconnected():
           print ("Connecting ..")
           WiFi.active(True)
@@ -24,10 +23,10 @@ connect()
 print ("WiFi: ",WiFi.isconnected())
 
 # Info
-Tag = "fred"
+Tag = "fred2"
 Type = "STRING"
-Value = "hello"
-Key = "YOUR_KEY"
+Value = "hi"
+Key = "APIKey_HERE"
 
 urlBase = "https://api.systemlinkcloud.com/nitag/v2/tags/"
      
@@ -39,14 +38,24 @@ headers = {"Accept":"application/json","x-ni-api-key":Key}
 propName={"type":Type,"path":Tag}
 propValue = {"value":{"type":Type,"value":Value}}
 
-print(urequests.put(urlTag,headers=headers,json=propName).text)
-print(urequests.put(urlValue,headers=headers,json=propValue).text)
+#define tag - not necessary if the tag is already defined
+response = urequests.put(urlTag,headers=headers,json=propName)
+print(response.text)
+response.close()
+
+#assign value
+response = urequests.put(urlValue,headers=headers,json=propValue)
+print(response.text)
+response.close()
 
 urlValue = urlBase + Tag + "/values/current"
 
 ## GET
-value = urequests.get(urlValue,headers=headers).text
+response = urequests.get(urlValue,headers=headers)
+value = response.text
+response.close()
 
 data = ujson.loads(value)
 result = data.get("value").get("value")
 print ("value = ",result)
+
