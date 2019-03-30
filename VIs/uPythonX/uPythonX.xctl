@@ -7,6 +7,7 @@
 	<Property Name="NI.XItem.Express" Type="Bool">false</Property>
 	<Property Name="NI.XItem.Name" Type="Str">XControl 1</Property>
 	<Property Name="NI.XItem.SupportsFatalErrorOut" Type="Bool">false</Property>
+	<Item Name="CheckSavedFile.vi" Type="VI" URL="../CheckSavedFile.vi"/>
 	<Item Name="OpenHelp.vi" Type="VI" URL="../OpenHelp.vi"/>
 	<Item Name="PythonData.ctl" Type="Ability VI" URL="../PythonData.ctl">
 		<Property Name="NI.XItem.Name" Type="Str">Data</Property>

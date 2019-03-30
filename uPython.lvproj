@@ -25,6 +25,7 @@
 		</Item>
 		<Item Name="dir.mnu" Type="Document" URL="/&lt;userlib&gt;/MicroPython/dir.mnu"/>
 		<Item Name="README.md" Type="Document" URL="/&lt;userlib&gt;/MicroPython/README.md"/>
+		<Item Name="AccuWeather.vi" Type="VI" URL="../../../../../../Users/crogers/Desktop/AccuWeather.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="CFReleaseString.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/CFString.llb/CFReleaseString.vi"/>
@@ -86,13 +87,25 @@
 				<Item Name="Draw Rectangle.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Rectangle.vi"/>
 				<Item Name="Set Pen State.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Set Pen State.vi"/>
 				<Item Name="Space Constant.vi" Type="VI" URL="/&lt;vilib&gt;/dlg_ctls.llb/Space Constant.vi"/>
-				<Item Name="LVBoundsTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVBoundsTypeDef.ctl"/>
-				<Item Name="Get String Text Bounds.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Get String Text Bounds.vi"/>
-				<Item Name="Get Text Rect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Get Text Rect.vi"/>
-				<Item Name="Convert property node font to graphics font.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Convert property node font to graphics font.vi"/>
-				<Item Name="Longest Line Length in Pixels.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Longest Line Length in Pixels.vi"/>
-				<Item Name="Three Button Dialog CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog CORE.vi"/>
-				<Item Name="Three Button Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog.vi"/>
+				<Item Name="subDisplayMessage.vi" Type="VI" URL="/&lt;vilib&gt;/express/express output/DisplayMessageBlock.llb/subDisplayMessage.vi"/>
+			</Item>
+			<Item Name="user.lib" Type="Folder">
+				<Item Name="HTTPComm.ctl" Type="VI" URL="../../IoT Devices/_subVIs/HTTPComm.ctl"/>
+				<Item Name="Device.ctl" Type="VI" URL="../../IoT Devices/_subVIs/Device.ctl"/>
+				<Item Name="RWSkylinePrefCluster_IoT.vi" Type="VI" URL="../../IoT Devices/Skyline/_subVIs/RWSkylinePrefCluster_IoT.vi"/>
+				<Item Name="3rd_FilePaths.vi" Type="VI" URL="../../IoT Devices/_subVIs/3rd_FilePaths.vi"/>
+				<Item Name="Run_Login.vi" Type="VI" URL="../../IoT Devices/_subVIs/Run_Login.vi"/>
+				<Item Name="RWPrefCluster.vi" Type="VI" URL="../../IoT Devices/_subVIs/RWPrefCluster.vi"/>
+				<Item Name="RWPrefFile.vi" Type="VI" URL="../../IoT Devices/_subVIs/RWPrefFile.vi"/>
+				<Item Name="FilePoly.vi" Type="VI" URL="../../IoT Devices/_subVIs/FilePoly.vi"/>
+				<Item Name="HTTPErrCheck.vi" Type="VI" URL="../../IoT Devices/_subVIs/HTTPErrCheck.vi"/>
+				<Item Name="BuildCommCluster.vi" Type="VI" URL="../../IoT Devices/_subVIs/BuildCommCluster.vi"/>
+				<Item Name="ClearHeaders.vi" Type="VI" URL="../../IoT Devices/_subVIs/ClearHeaders.vi"/>
+				<Item Name="IoT_CheckHandle.vi" Type="VI" URL="../../IoT Devices/_subVIs/IoT_CheckHandle.vi"/>
+				<Item Name="InitRestful.vi" Type="VI" URL="../../IoT Devices/_subVIs/InitRestful.vi"/>
+				<Item Name="IoT_RESTful.vi" Type="VI" URL="../../IoT Devices/_subVIs/IoT_RESTful.vi"/>
+				<Item Name="Errors_Global.vi" Type="VI" URL="../../IoT Devices/_subVIs/Errors_Global.vi"/>
+				<Item Name="ShowDialog.vi" Type="VI" URL="../../IoT Devices/_subVIs/ShowDialog.vi"/>
 			</Item>
 			<Item Name="ApplicationServices.framework" Type="Document" URL="ApplicationServices.framework">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -103,6 +116,12 @@
 			<Item Name="CoreFoundation.framework" Type="Document" URL="CoreFoundation.framework">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="Curtin_Base64.vi" Type="VI" URL="../../../../../../Users/crogers/Desktop/Violin/Curtin2/Code/ViolinSubs/Curtin_Base64.vi"/>
+			<Item Name="Polytec.vi" Type="VI" URL="../../../../../../Users/crogers/Desktop/Violin/Curtin2/Code/ViolinSubs/PolyTec/Polytec.vi"/>
+			<Item Name="Toggle Laser.vi" Type="VI" URL="../../../../../../Users/crogers/Desktop/Violin/Curtin2/Code/ViolinSubs/PolyTec/Toggle Laser.vi"/>
+			<Item Name="Set High Pass Filter.vi" Type="VI" URL="../../../../../../Users/crogers/Desktop/Violin/Curtin2/Code/ViolinSubs/PolyTec/Set High Pass Filter.vi"/>
+			<Item Name="Set Sensitivity.vi" Type="VI" URL="../../../../../../Users/crogers/Desktop/Violin/Curtin2/Code/ViolinSubs/PolyTec/Set Sensitivity.vi"/>
+			<Item Name="Set Bandwidth.vi" Type="VI" URL="../../../../../../Users/crogers/Desktop/Violin/Curtin2/Code/ViolinSubs/PolyTec/Set Bandwidth.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
