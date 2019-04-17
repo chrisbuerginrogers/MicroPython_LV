@@ -19,15 +19,15 @@ class GroveRGB_LCD(object):
           self.i2c = I2C(i2c)
 
      def setRGB(self,r,g,b):
-          i2c.writeto_mem(RGB_ADDR, 0x00,b'\x00')
-          i2c.writeto_mem(RGB_ADDR, 0x01,b'\x00')
-          i2c.writeto_mem(RGB_ADDR, 0x08,b'\xAA')
-          i2c.writeto_mem(RGB_ADDR, 0x04, chr(r))
-          i2c.writeto_mem(RGB_ADDR, 0x03,  chr(g))
-          i2c.writeto_mem(RGB_ADDR, 0x02,  chr(b))
+          self.i2c.writeto_mem(RGB_ADDR, 0x00,b'\x00')
+          self.i2c.writeto_mem(RGB_ADDR, 0x01,b'\x00')
+          self.i2c.writeto_mem(RGB_ADDR, 0x08,b'\xAA')
+          self.i2c.writeto_mem(RGB_ADDR, 0x04, chr(r))
+          self.i2c.writeto_mem(RGB_ADDR, 0x03,  chr(g))
+          self.i2c.writeto_mem(RGB_ADDR, 0x02,  chr(b))
 
      def textCommand(self,cmd):
-          i2c.writeto_mem(TEXT_ADDR, 0x80, chr(cmd)) #byte out, slave addr, starting memory location on slave
+          self.i2c.writeto_mem(TEXT_ADDR, 0x80, chr(cmd)) #byte out, slave addr, starting memory location on slave
 
      def setText(self,text):
           self.textCommand(0x01)   # 1 = clear display 
@@ -49,7 +49,7 @@ class GroveRGB_LCD(object):
                     if c == "\n":
                          continue
                count += 1
-               i2c.writeto_mem(TEXT_ADDR, 0x40,c)
+               self.i2c.writeto_mem(TEXT_ADDR, 0x40,c)
 
 screen = GroveRGB_LCD(2)
 screen.setRGB(0,255,0)
