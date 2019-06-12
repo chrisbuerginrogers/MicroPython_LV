@@ -13,6 +13,9 @@ from machine import Pin,time_pulse_us
 
 dio = Pin('Y9')
 
+# referenced arduino/ultrasonic.h library for timeout number 
+_TIMEOUT2 = 1000000
+
 def _get_distance():
      dio.init(Pin.OUT)
      dio.value(0)
