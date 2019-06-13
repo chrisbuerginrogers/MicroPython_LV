@@ -86,6 +86,20 @@
 				<Item Name="Draw Rectangle.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Rectangle.vi"/>
 				<Item Name="Set Pen State.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Set Pen State.vi"/>
 				<Item Name="Space Constant.vi" Type="VI" URL="/&lt;vilib&gt;/dlg_ctls.llb/Space Constant.vi"/>
+				<Item Name="System Exec.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/system.llb/System Exec.vi"/>
+			</Item>
+			<Item Name="user.lib" Type="Folder">
+				<Item Name="HighSpeedInit.vi" Type="VI" URL="../../LabVIEWOpenMV/VIs/Advanced/HighSpeedInit.vi"/>
+				<Item Name="WriteHSpeed.vi" Type="VI" URL="../../LabVIEWOpenMV/_subs/WriteHSpeed.vi"/>
+				<Item Name="WriteToUART.vi" Type="VI" URL="../../Microprocessors/microbit/VIs/_subs/WriteToUART.vi"/>
+				<Item Name="ConvertToU8.vi" Type="VI" URL="../../LabVIEWOpenMV/_subs/ConvertToU8.vi"/>
+				<Item Name="ConvertSize.vi" Type="VI" URL="../../LabVIEWOpenMV/_subs/ConvertSize.vi"/>
+				<Item Name="OMV_Python.vi" Type="VI" URL="../../LabVIEWOpenMV/VIs/OMV_Python.vi"/>
+				<Item Name="RunScript.vi" Type="VI" URL="../../LabVIEWOpenMV/VIs/Advanced/RunScript.vi"/>
+				<Item Name="ReadTxBuffer.vi" Type="VI" URL="../../LabVIEWOpenMV/_subs/ReadTxBuffer.vi"/>
+				<Item Name="EndScript.vi" Type="VI" URL="../../LabVIEWOpenMV/VIs/Advanced/EndScript.vi"/>
+				<Item Name="FB_Enable.vi" Type="VI" URL="../../LabVIEWOpenMV/VIs/Advanced/FB_Enable.vi"/>
+				<Item Name="AskVersion.vi" Type="VI" URL="../../LabVIEWOpenMV/VIs/Advanced/AskVersion.vi"/>
 			</Item>
 			<Item Name="ApplicationServices.framework" Type="Document" URL="ApplicationServices.framework">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
