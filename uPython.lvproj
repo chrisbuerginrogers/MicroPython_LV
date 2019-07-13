@@ -87,19 +87,8 @@
 				<Item Name="Set Pen State.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Set Pen State.vi"/>
 				<Item Name="Space Constant.vi" Type="VI" URL="/&lt;vilib&gt;/dlg_ctls.llb/Space Constant.vi"/>
 				<Item Name="System Exec.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/system.llb/System Exec.vi"/>
-			</Item>
-			<Item Name="user.lib" Type="Folder">
-				<Item Name="HighSpeedInit.vi" Type="VI" URL="../../LabVIEWOpenMV/VIs/Advanced/HighSpeedInit.vi"/>
-				<Item Name="WriteHSpeed.vi" Type="VI" URL="../../LabVIEWOpenMV/_subs/WriteHSpeed.vi"/>
-				<Item Name="WriteToUART.vi" Type="VI" URL="../../Microprocessors/microbit/VIs/_subs/WriteToUART.vi"/>
-				<Item Name="ConvertToU8.vi" Type="VI" URL="../../LabVIEWOpenMV/_subs/ConvertToU8.vi"/>
-				<Item Name="ConvertSize.vi" Type="VI" URL="../../LabVIEWOpenMV/_subs/ConvertSize.vi"/>
-				<Item Name="OMV_Python.vi" Type="VI" URL="../../LabVIEWOpenMV/VIs/OMV_Python.vi"/>
-				<Item Name="RunScript.vi" Type="VI" URL="../../LabVIEWOpenMV/VIs/Advanced/RunScript.vi"/>
-				<Item Name="ReadTxBuffer.vi" Type="VI" URL="../../LabVIEWOpenMV/_subs/ReadTxBuffer.vi"/>
-				<Item Name="EndScript.vi" Type="VI" URL="../../LabVIEWOpenMV/VIs/Advanced/EndScript.vi"/>
-				<Item Name="FB_Enable.vi" Type="VI" URL="../../LabVIEWOpenMV/VIs/Advanced/FB_Enable.vi"/>
-				<Item Name="AskVersion.vi" Type="VI" URL="../../LabVIEWOpenMV/VIs/Advanced/AskVersion.vi"/>
+				<Item Name="Path to URL inner.vi" Type="VI" URL="/&lt;vilib&gt;/printing/PathToURL.llb/Path to URL inner.vi"/>
+				<Item Name="CFURLGetString.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/CFURL.llb/CFURLGetString.vi"/>
 			</Item>
 			<Item Name="ApplicationServices.framework" Type="Document" URL="ApplicationServices.framework">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -110,13 +99,71 @@
 			<Item Name="CoreFoundation.framework" Type="Document" URL="CoreFoundation.framework">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Curtin_Base64.vi" Type="VI" URL="../../../../../../Users/crogers/Desktop/Violin/Curtin2/Code/ViolinSubs/Curtin_Base64.vi"/>
-			<Item Name="Polytec.vi" Type="VI" URL="../../../../../../Users/crogers/Desktop/Violin/Curtin2/Code/ViolinSubs/PolyTec/Polytec.vi"/>
-			<Item Name="Toggle Laser.vi" Type="VI" URL="../../../../../../Users/crogers/Desktop/Violin/Curtin2/Code/ViolinSubs/PolyTec/Toggle Laser.vi"/>
-			<Item Name="Set High Pass Filter.vi" Type="VI" URL="../../../../../../Users/crogers/Desktop/Violin/Curtin2/Code/ViolinSubs/PolyTec/Set High Pass Filter.vi"/>
-			<Item Name="Set Sensitivity.vi" Type="VI" URL="../../../../../../Users/crogers/Desktop/Violin/Curtin2/Code/ViolinSubs/PolyTec/Set Sensitivity.vi"/>
-			<Item Name="Set Bandwidth.vi" Type="VI" URL="../../../../../../Users/crogers/Desktop/Violin/Curtin2/Code/ViolinSubs/PolyTec/Set Bandwidth.vi"/>
 		</Item>
-		<Item Name="Build Specifications" Type="Build"/>
+		<Item Name="Build Specifications" Type="Build">
+			<Item Name="MicroPython" Type="EXE">
+				<Property Name="App_copyErrors" Type="Bool">true</Property>
+				<Property Name="App_INI_aliasGUID" Type="Str">{F2AE9874-D89B-4B15-BA7A-B2A0971DE705}</Property>
+				<Property Name="App_INI_GUID" Type="Str">{6BFC0E16-B0BC-4594-8003-3CF526E021FC}</Property>
+				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
+				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{39A4DBD0-BE27-485B-B5EA-38393FCC6EB7}</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">MicroPython</Property>
+				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
+				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
+				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
+				<Property Name="Bld_localDestDir" Type="Path">/Users/crogers/Desktop/builds/NI_AB_PROJECTNAME</Property>
+				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{766D1B08-9FDD-45E3-A5D3-3BEE1753EF1C}</Property>
+				<Property Name="Bld_version.build" Type="Int">10</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="DestinationCount" Type="Int">2</Property>
+				<Property Name="Destination[0].destName" Type="Str">uPython.app</Property>
+				<Property Name="Destination[0].path" Type="Path">/Users/crogers/Desktop/builds/NI_AB_PROJECTNAME/uPython.app</Property>
+				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
+				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="Destination[0].type" Type="Str">App</Property>
+				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
+				<Property Name="Destination[1].path" Type="Path">/Users/crogers/Desktop/builds/NI_AB_PROJECTNAME/uPython.app/Support</Property>
+				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
+				<Property Name="SourceCount" Type="Int">7</Property>
+				<Property Name="Source[0].itemID" Type="Str">{AB0206A0-05C0-4919-8546-F327EC218099}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/VIs/uPythonApp.vi</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/VIs/REPL/REPL_Comm.vi</Property>
+				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[2].type" Type="Str">VI</Property>
+				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/My Computer/VIs/HelpDialog.vi</Property>
+				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[3].type" Type="Str">VI</Property>
+				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[4].itemID" Type="Ref">/My Computer/VIs/uPythonX/uPythonX.xctl</Property>
+				<Property Name="Source[4].Library.atomicCopy" Type="Bool">true</Property>
+				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[4].type" Type="Str">Library</Property>
+				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/My Computer/VIs/ColorText/Code.xctl</Property>
+				<Property Name="Source[5].Library.atomicCopy" Type="Bool">true</Property>
+				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[5].type" Type="Str">Library</Property>
+				<Property Name="Source[6].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[6].itemID" Type="Ref">/My Computer/VIs/Console/ConsoleXControl.xctl</Property>
+				<Property Name="Source[6].Library.atomicCopy" Type="Bool">true</Property>
+				<Property Name="Source[6].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[6].type" Type="Str">Library</Property>
+				<Property Name="TgtF_enableDebugging" Type="Bool">true</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">MicroPython</Property>
+				<Property Name="TgtF_internalName" Type="Str">com.company.MyApplication</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright 2019 </Property>
+				<Property Name="TgtF_productName" Type="Str">MicroPython</Property>
+				<Property Name="TgtF_targetfileGUID" Type="Str">{D7B22A48-B415-4655-B29C-E7B74C625076}</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">uPython.app</Property>
+			</Item>
+		</Item>
 	</Item>
 </Project>
