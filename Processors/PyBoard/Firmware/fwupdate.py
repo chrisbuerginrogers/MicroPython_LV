@@ -1,13 +1,8 @@
-# Update mboot from a .dfu.gz file on the filesystem
+# Update Mboot or MicroPython from a .dfu.gz file on the board's filesystem
 # MIT license; Copyright (c) 2019 Damien P. George
 
 import struct, time
-import uzlib, machine
-
-try:
-    import stm
-except ImportError:
-    pass
+import uzlib, machine, stm
 
 
 FLASH_KEY1 = 0x45670123
@@ -47,34 +42,32 @@ def dfu_read(filename):
 
     hdr = f.read(11)
     sig, ver, size, num_targ = struct.unpack('<5sBIB', hdr)
-    #print(sig, ver, size, num_targ)
 
     file_offset = 11
 
     for i in range(num_targ):
         hdr = f.read(274)
         sig, alt, has_name, name, t_size, num_elem = struct.unpack('<6sBi255sII', hdr)
-        #print(sig, alt, has_name, name.strip(b'\x00'), t_size, num_elem)
 
         file_offset += 274
         file_offset_t = file_offset
         for j in range(num_elem):
             hdr = f.read(8)
             addr, e_size = struct.unpack('<II', hdr)
-            #print(hex(addr), e_size)
             data = f.read(e_size)
             elems.append((addr, data))
             file_offset += 8 + e_size
 
         if t_size != file_offset - file_offset_t:
             print('corrupt DFU', t_size, file_offset - file_offset_t)
+            return None
 
     if size != file_offset:
         print('corrupt DFU', size, file_offset)
+        return None
 
     hdr = f.read(16)
     hdr = struct.unpack('<HHHH3sBI', hdr)
-    #print(hdr)
 
     return elems
 
@@ -127,59 +120,88 @@ def update_mboot(filename):
     if mboot_addr != 0x08000000:
         assert 0
 
-    # Validate firmware in a simple way
-    # TODO
+    # TODO: Validate firmware in a simple way
+
+    print('Found Mboot data with size %u.' % len(mboot_fw))
 
     chk = check_mem_contains(mboot_addr, mboot_fw)
     if chk:
-        print('Supplied version of mboot is already on device.')
+        print('Supplied version of Mboot is already on device.')
         return
 
-    print('Programming mboot, do not turn off!')
+    print('Programming Mboot, do not turn off!')
     time.sleep_ms(50)
 
     irq = machine.disable_irq()
     flash_unlock()
-    #print('flash unlocked')
     flash_erase_sector(0)
-    #print('sector 0 erased')
-    if not check_mem_erased(mboot_addr + 16 * 1024, 16 * 1024):
-        flash_erase_sector(1) # not needed for F767
-        #print('sector 1 erased')
+    if len(mboot_fw) > 16 * 1024 and not check_mem_erased(mboot_addr + 16 * 1024, 16 * 1024):
+        flash_erase_sector(1)
     flash_write(mboot_addr, mboot_fw)
-    #print('firmware written')
     flash_lock()
     machine.enable_irq(irq)
 
-    chk = check_mem_contains(mboot_addr, mboot_fw)
-    if chk:
-        print('Verification of new mboot succeeded.')
+    print('New Mboot programmed.')
+
+    if check_mem_contains(mboot_addr, mboot_fw):
+        print('Verification of new Mboot succeeded.')
     else:
-        print('Verification of new mboot FAILED!  Try rerunning.')
+        print('Verification of new Mboot FAILED!  Try rerunning.')
 
     print('Programming finished, can now reset or turn off.')
 
-def stage1(filename='/flash/PYBD_SF2_W4F2_mboot.dfu.gz'):
-    import os, pyb
+def update_mpy(filename, fs_base, fs_len):
+    # Check firmware is of .dfu.gz type
     try:
-        os.stat(filename)
-    except:
-        print('File not found:', filename)
+        with open(filename, 'rb') as f:
+            hdr = uzlib.DecompIO(f, 16 + 15).read(6)
+    except Exception:
+        hdr = None
+    if hdr != b'DfuSe\x01':
+        print('Firmware must be a .dfu.gz file.')
         return
-    update_mboot(filename)
-    os.remove(filename)
+
+    # old PYBD firmware didn't accept args, mboot searched for PYBD_SF2*.dfu.gz regardless
+    machine.bootloader()
+
+    ELEM_TYPE_END = 1
+    ELEM_TYPE_MOUNT = 2
+    ELEM_TYPE_FSLOAD = 3
+    ELEM_MOUNT_FAT = 1
+    mount_point = 1
+    mount = struct.pack('<BBBBLL', ELEM_TYPE_MOUNT, 10, mount_point, ELEM_MOUNT_FAT, fs_base, fs_len)
+    fsup = struct.pack('<BBB', ELEM_TYPE_FSLOAD, 1 + len(filename), mount_point) + bytes(filename, 'ascii')
+    end = struct.pack('<BB', ELEM_TYPE_END, 0)
+    machine.bootloader(mount + fsup + end)
+
+################################################################################
+
+FILE_MBOOT = 'PYBD_SF2_W4F2_mboot.dfu.gz'
+FILE_APP = 'PYBD_SF2_W4F2_ble.dfu.gz'
+
+def stage1(fmboot=FILE_MBOOT, fapp=FILE_APP):
+    import os, pyb
+    os.chdir('/flash')
+    try:
+        os.stat(fmboot)
+    except:
+        print('File not found:', fmboot)
+        return
+    update_mboot(fmboot)
+    os.remove(fmboot)
     print('stage1 done, rebooting')
     time.sleep(1)
-    pyb.bootloader()
+    update_mpy(fapp, 0x80000000, 2 * 1024 * 1024)
     # mboot will now update main firmware
 
-def stage2(filename='/flash/PYBD_SF2_W4F2.dfu.gz'):
+def stage2(fmboot=FILE_MBOOT, fapp=FILE_APP):
     # mboot has updated main firmware
     import os
+    os.chdir('/flash')
     try:
-        os.stat(filename)
+        os.stat(fapp)
     except:
-        print('File not found:', filename)
+        print('File not found:', fapp)
         return
-    os.remove(filename)
+    os.remove(fapp)
     print('stage2 done')
