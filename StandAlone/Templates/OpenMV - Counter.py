@@ -1,3 +1,7 @@
+'''
+Sample code on the openMV Camera
+test
+'''
 import gc,utime
 import pyb, micropython
 from LPF2Class import LPF2
@@ -8,7 +12,7 @@ red_led=pyb.LED(1)
 green_led = pyb.LED(2)
 red_led.on()
 
-lpf2 = LPF2(1, 'Y1', 'Y2', timer = 4, freq = 5)    # PyBoard
+lpf2 = LPF2(3, 'P4', 'P5', timer = 4, freq = 5)    # OpenMV
 lpf2.initialize()
 
 value = 0
@@ -38,14 +42,14 @@ hub.port.B.info()
 # if info comes back with None - then you have to restart the pybaord
 i=0
 fred = bytes([11])
-while (i<15):
+while True:
      try:
-          i=i+1 if i<19 else 10
+          i=i+1 if i<9 else 0
           value = hub.port.B.device.get()[0]
           #print(value)
           hub.display.show(str(value))
           #print(value)
-          hub.port.B.device.mode(0,fred*i)
+          #hub.port.B.device.mode(0,fred*i)
           utime.sleep(0.1)
      except:
           utime.sleep(1)

@@ -23,6 +23,9 @@
 		<Item Name="VIs" Type="Folder" URL="../VIs">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
+		<Item Name="StandAlone" Type="Folder" URL="../StandAlone">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
 		<Item Name="dir.mnu" Type="Document" URL="/&lt;userlib&gt;/MicroPython/dir.mnu"/>
 		<Item Name="README.md" Type="Document" URL="/&lt;userlib&gt;/MicroPython/README.md"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -89,8 +92,8 @@
 				<Item Name="System Exec.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/system.llb/System Exec.vi"/>
 				<Item Name="Path to URL inner.vi" Type="VI" URL="/&lt;vilib&gt;/printing/PathToURL.llb/Path to URL inner.vi"/>
 				<Item Name="CFURLGetString.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/CFURL.llb/CFURLGetString.vi"/>
-				<Item Name="Create Mask By Alpha.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Create Mask By Alpha.vi"/>
 				<Item Name="Read PNG File.vi" Type="VI" URL="/&lt;vilib&gt;/picture/png.llb/Read PNG File.vi"/>
+				<Item Name="Create Mask By Alpha.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Create Mask By Alpha.vi"/>
 			</Item>
 			<Item Name="ApplicationServices.framework" Type="Document" URL="ApplicationServices.framework">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>

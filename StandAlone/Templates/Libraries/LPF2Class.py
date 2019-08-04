@@ -11,19 +11,23 @@ CMD_ModeInfo = 0x80  # name command
 NAME,RAW,Pct,SI,SYM,FCT, FMT = 0x0,0x1,0x2,0x3,0x4,0x5, 0x80
 DATA8,DATA16,DATA32,DATAF = 0,1,2,3  # Data type codes
 ABSOLUTE,RELATIVE,DISCRETE = 16,8,4
+WeDo_Ultrasonic, SPIKE_Color, SPIKE_Ultrasonic = 35, 61, 62
+
 
 # Name, Format [# datasets, type, figures, decimals], raw [min,max], Percent, SI, Symbol,functionMap, view
 mode0 = ['LPF2-DETECT',[1,DATA8,3,0],[0,10],[0,100],[0,10],'',[ABSOLUTE,0],True]
 mode1 = ['LPF2-COUNT',[1,DATA32,4,0],[0,100],[0,100],[0,100],'CNT',[ABSOLUTE,0],True]
 mode2 = ['LPF2-CAL',[3,DATA16,3,0],[0,1023],[0,100],[0,1023],'RAW',[ABSOLUTE,0],False]
-modes = [mode0,mode1,mode2]
+defaultModes = [mode0,mode1,mode2]
 
 class LPF2(object):
-     def __init__(self, uartChannel, txPin, rxPin, timer = 4, freq = 5):
+     def __init__(self, uartChannel, txPin, rxPin, modes = defaultModes, type = WeDo_Ultrasonic, timer = 4, freq = 5):
           self.txPin = txPin
           self.rxPin = rxPin
           self.uart = machine.UART(uartChannel)
           self.txTimer = timer
+          self.modes = modes
+          self.type = type
           self.connected = False
           self.payload = bytearray([])
           self.freq = freq
@@ -104,7 +108,7 @@ class LPF2(object):
           self.uart.init(baudrate=2400, bits=8, parity=None, stop=1)
           self.writeIt(b'\x00')
 
-     def type(self,sensorType):
+     def setType(self,sensorType):
           return self.addChksm(bytearray([CMD_Type, sensorType]))
 
      def defineBaud(self,baud):
@@ -169,13 +173,13 @@ class LPF2(object):
           self.connected = False
           self.sendTimer = pyb.Timer(self.txTimer, freq = self.freq)  # default is 200 ms
           self.init()
-          self.writeIt(self.type(35))  # set type to 35 
-          self.writeIt(self.defineModes(modes))  # tell how many modes 
+          self.writeIt(self.setType(self.type))  # set type to 35 (WeDo Ultrasonic) 61 (Spike color), 62 (Spike ultrasonic)
+          self.writeIt(self.defineModes(self.modes))  # tell how many modes 
           self.writeIt(self.defineBaud(115200))
           self.writeIt(self.defineVers(2,2))
 
-          num = len(modes) - 1
-          for mode in reversed(modes):
+          num = len(self.modes) - 1
+          for mode in reversed(self.modes):
                self.setupMode(mode,num)
                num -= 1
                utime.sleep_ms(5)
