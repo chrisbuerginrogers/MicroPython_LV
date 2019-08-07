@@ -3,67 +3,67 @@ http://wiki.seeedstudio.com/
 
 '''
 
-from pyb import ADC, Pin,time_pulse_us
-from machine import I2C
-import utime
+from pyb import ADC, Pin
+from machine import I2C,time_pulse_us
+import utime, math
 
 class GroveButton(object):
-    def __init__(self, pin):
-         self.button = Pin(pin,Pin.IN)
+     def __init__(self, pin):
+          self.button = Pin(pin,Pin.IN)
 
-    def value(self):
-        return self.button.value()
-        
+     def value(self):
+          return self.button.value()
+          
 class GroveAngle(object):
-    def __init__(self, pin):
-         self.adc = ADC(pin)
+     def __init__(self, pin):
+          self.adc = ADC(pin)
 
-    def value(self):
-        return self.adc.read()
-        
+     def value(self):
+          return self.adc.read()
+          
 class GroveLEDBtn(object):
-    def __init__(self, btn_pin,led_pin):
-         self.btn = Pin(btn_pin,Pin.IN)
-         self.led = Pin(led_pin,Pin.OUT)
+     def __init__(self, btn_pin,led_pin):
+          self.btn = Pin(btn_pin,Pin.IN)
+          self.led = Pin(led_pin,Pin.OUT)
 
-    def value(self):
-        return self.btn.value()
+     def value(self):
+          return self.btn.value()
 
-    def toggle(self):
-        self.led.value(not self.led.value())
-        
-    def on(self):
-         self.led.value(True)
-        
-    def off(self):
-         self.led.value(False)
+     def toggle(self):
+          self.led.value(not self.led.value())
+          
+     def on(self):
+          self.led.value(True)
+          
+     def off(self):
+          self.led.value(False)
 
 class GroveRelay(object):
-    def __init__(self, pin):
-         self.relay = Pin(pin,Pin.OUT)
+     def __init__(self, pin):
+          self.relay = Pin(pin,Pin.OUT)
 
-    def value(self):
-        return self.relay.value()
+     def value(self):
+          return self.relay.value()
 
-    def toggle(self):
-        self.relay.value(not self.relay.value())
+     def toggle(self):
+          self.relay.value(not self.relay.value())
 
-    def on(self):
-         self.relay.value(True)
-        
-    def off(self):
-         self.relay.value(False)
+     def on(self):
+          self.relay.value(True)
+          
+     def off(self):
+          self.relay.value(False)
 
 class GroveLight(object):
-    def __init__(self, pin):
-         self.adc = ADC(pin)
+     def __init__(self, pin):
+          self.adc = ADC(pin)
 
-    def value(self):
-        return self.adc.read()
-        
+     def value(self):
+          return self.adc.read()
+          
 class GroveUltrasonic(object):
-    def __init__(self, pin):
-         self.dio = Pin(pin)
+     def __init__(self, pin):
+          self.dio = Pin(pin)
 
      def value(self):
           dt=-1
@@ -80,27 +80,27 @@ class GroveUltrasonic(object):
           return  (dt / 29 / 2)    # cm
           
 class GroveBuzzer(object):
-    def __init__(self, pin):
-         self.buzz = Pin(pin,Pin.OUT)
+     def __init__(self, pin):
+          self.buzz = Pin(pin,Pin.OUT)
 
-    def value(self):
-        return self.buzz.value()
+     def value(self):
+          return self.buzz.value()
 
-    def toggle(self):
-        self.buzz.value(not self.buzz.value())
+     def toggle(self):
+          self.buzz.value(not self.buzz.value())
 
-    def on(self):
-         self.buzz.value(True)
-        
-    def off(self):
-         self.buzz.value(False)
-         
+     def on(self):
+          self.buzz.value(True)
+          
+     def off(self):
+          self.buzz.value(False)
+          
 charmap = {
-    '0': 0x3f,'1': 0x06,'2': 0x5b,'3': 0x4f,'4': 0x66,'5': 0x6d,'6': 0x7d,'7': 0x07,'8': 0x7f,
-    '9': 0x6f,'A': 0x77,'B': 0x7f,'b': 0x7C,'C': 0x39,'c': 0x58,'D': 0x3f,'d': 0x5E,'E': 0x79,
-    'F': 0x71,'G': 0x7d,'H': 0x76,'h': 0x74,'I': 0x06,'J': 0x1f,'K': 0x76,'L': 0x38,'l': 0x06,
-    'n': 0x54,'O': 0x3f,'o': 0x5c,'P': 0x73,'r': 0x50,'S': 0x6d,'U': 0x3e,'V': 0x3e,'Y': 0x66,
-    'Z': 0x5b,'-': 0x40,'_': 0x08,' ': 0x00}
+     '0': 0x3f,'1': 0x06,'2': 0x5b,'3': 0x4f,'4': 0x66,'5': 0x6d,'6': 0x7d,'7': 0x07,'8': 0x7f,
+     '9': 0x6f,'A': 0x77,'B': 0x7f,'b': 0x7C,'C': 0x39,'c': 0x58,'D': 0x3f,'d': 0x5E,'E': 0x79,
+     'F': 0x71,'G': 0x7d,'H': 0x76,'h': 0x74,'I': 0x06,'J': 0x1f,'K': 0x76,'L': 0x38,'l': 0x06,
+     'n': 0x54,'O': 0x3f,'o': 0x5c,'P': 0x73,'r': 0x50,'S': 0x6d,'U': 0x3e,'V': 0x3e,'Y': 0x66,
+     'Z': 0x5b,'-': 0x40,'_': 0x08,' ': 0x00}
 
 ADDR_AUTO = 0x40
 ADDR_FIXED = 0x44
@@ -110,12 +110,12 @@ BRIGHT_DEFAULT = 2
 BRIGHT_HIGHEST = 7
 
 class Grove4Digit(object):
-    def __init__(self, clk,dio):
-         self.clk = Pin(clk,Pin.OUT,Pin.PULL_UP)
-         self.dio = Pin(dio,Pin.OUT,Pin.PULL_UP)
+     def __init__(self, clk,dio):
+          self.clk = Pin(clk,Pin.OUT,Pin.PULL_UP)
+          self.dio = Pin(dio,Pin.OUT,Pin.PULL_UP)
 
-    def value(self):
-        return self.button.value()
+     def value(self):
+          return self.button.value()
 
      def start(self):
           self.clk.value(1)
@@ -248,7 +248,7 @@ class GroveLEDBar(object):
      def meter(self,value):
           value = min(10,max(value,0))
           self.setBits(-1 + 2**value)
-         
+          
 class GroveTemp(object):
      def __init__(self, pin):
           self.adc = ADC(pin)

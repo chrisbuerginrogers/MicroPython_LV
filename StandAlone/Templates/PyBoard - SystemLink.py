@@ -1,5 +1,11 @@
 import machine, network, ubinascii, ujson, urequests, utime
-import passwords   #this is a file you should have preloaded on to your microprocessor
+
+# Get wifi details and more from a passwords.py file
+try:
+    import passwords
+except ImportError:
+    print("WiFi passwords should be in your passwords.py file on the processor (Sample under Templates/Library)")
+    raise
 
 WiFi = network.WLAN()
 
