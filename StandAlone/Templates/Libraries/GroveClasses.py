@@ -259,7 +259,8 @@ class GroveTemp(object):
           val = adc.read()
           R = 4095/val-1.0
           R = R0*R
-          temperature = 1.0/(math.log10(R/R0)/B+1/298.15)-273.15 
+          temperature = 1.0/(math.log10(R/R0)/B+1/298.15)-273.15
+          return temperature
           
 class GroveSPL(object):
      def __init__(self, pin):
