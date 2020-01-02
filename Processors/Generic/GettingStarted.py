@@ -91,7 +91,8 @@ def Test():
      try:
           spi.send_recv(data,reply)
           print(reply)
-     except:
+     except Exception as e:
+          print(e):
           print('failed')
 
 Test()
