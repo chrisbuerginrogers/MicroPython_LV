@@ -1,0 +1,934 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ev3devices – EV3 Motors and Sensors &mdash; ev3-micropython 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="parameters – Parameters and Constants" href="parameters.html" />
+    <link rel="prev" title="ev3brick – The EV3 Programmable Brick" href="ev3brick.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ev3-micropython
+          
+
+          
+            
+            <img src="_static/lego-education-logo-small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="startinstall.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startrun.html">Creating and running programs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pybricks Modules</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ev3brick.html"><code class="docutils literal notranslate"><span class="pre">ev3brick</span></code> – The EV3 Programmable Brick</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">ev3devices</span></code> – EV3 Motors and Sensors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#motors">Motors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sensors">Sensors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#touch-sensor">Touch Sensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#color-sensor">Color Sensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#infrared-sensor-and-beacon">Infrared Sensor and Beacon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ultrasonic-sensor">Ultrasonic Sensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gyroscopic-sensor">Gyroscopic Sensor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="parameters.html"><code class="docutils literal notranslate"><span class="pre">parameters</span></code> – Parameters and Constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code> – Timing and Datalogging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robotics.html"><code class="docutils literal notranslate"><span class="pre">robotics</span></code> – Robotics module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Engineering Essentials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="signaltypes.html">Signals and Units</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Demo Programs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/robot_educator.html">Robot Educator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/color_sorter.html">Color Sorter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/robot_arm_h25.html">Robot Arm H25</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ev3-micropython</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">ev3devices</span></code> – EV3 Motors and Sensors</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/ev3devices.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-ev3devices">
+<span id="ev3devices-ev3-motors-and-sensors"></span><h1><a class="reference internal" href="#module-ev3devices" title="ev3devices"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ev3devices</span></code></a> – EV3 Motors and Sensors<a class="headerlink" href="#module-ev3devices" title="Permalink to this headline">¶</a></h1>
+<p>LEGO® MINDSTORMS® EV3 motors and sensors.</p>
+<div class="section" id="motors">
+<h2>Motors<a class="headerlink" href="#motors" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ev3devices.Motor">
+<em class="property">class </em><code class="descname">Motor</code><span class="sig-paren">(</span><em>port</em>, <em>direction=Direction.CLOCKWISE</em>, <em>gears=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.Motor" title="Permalink to this definition">¶</a></dt>
+<dd><p>LEGO® MINDSTORMS® EV3 Medium or Large Motor.</p>
+<p>Element 99455/6148292 or 95658/6148278, contained in:</p>
+<ul class="simple">
+<li>31313: LEGO® MINDSTORMS® EV3 (2013)</li>
+<li>45544: LEGO® MINDSTORMS® Education EV3 Core Set (2013)</li>
+<li>45503 or 45502: Separate part (2013)</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>port</strong> (<a class="reference internal" href="parameters.html#parameters.Port" title="parameters.Port"><em>Port</em></a>) – Port to which the motor is connected.</li>
+<li><strong>direction</strong> (<a class="reference internal" href="parameters.html#parameters.Direction" title="parameters.Direction"><em>Direction</em></a>) – Positive speed direction (<em>Default</em>: Direction.CLOCKWISE).</li>
+<li><strong>gears</strong> (<em>list</em>) – <p>List of gears linked to the motor (<em>Default</em>: <code class="docutils literal notranslate"><span class="pre">None</span></code>).</p>
+<p>For example: <code class="docutils literal notranslate"><span class="pre">[12,</span> <span class="pre">36]</span></code> represents a gear train with a 12-tooth and a 36-tooth gear. See <span class="xref std std-ref">ratio</span> for illustrated examples.</p>
+<p>Use a list of lists for multiple gear trains, such as <code class="docutils literal notranslate"><span class="pre">[[12,</span> <span class="pre">36],</span> <span class="pre">[20,</span> <span class="pre">16,</span> <span class="pre">40]]</span></code>.</p>
+<p>When you specify a gear train, all motor commands and settings are automatically adjusted to account for the resulting gear ratio. The motor direction remains unchanged, no matter how many gears you choose.</p>
+<p>For example, with <code class="docutils literal notranslate"><span class="pre">gears=[12,</span> <span class="pre">36]</span></code>, the gear ratio is 3, which means that the output is mechanically slowed down by a factor of 3. To compensate, the motor will automatically turn 3 times as fast and 3 times as far when you give a motor command. So when you choose <code class="docutils literal notranslate"><span class="pre">run_angle(200,</span> <span class="pre">90)</span></code>, your mechanism output simply turns at 200 deg/s for 90 degrees.</p>
+<p>The same holds for the documentation below: When it states “motor angle” or “motor speed”, you can read this as “mechanism output angle” and “mechanism output speed”, and so on, as the gear ratio is automatically accounted for.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">gears</span></code> setting is only available for motors with rotation sensors.</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize a motor (by default this means clockwise, without any gears).</span>
+<span class="n">example_motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">A</span><span class="p">)</span>
+
+<span class="c1"># Initialize a motor where positive speed values should go counterclockwise</span>
+<span class="n">right_motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">B</span><span class="p">,</span> <span class="n">Direction</span><span class="o">.</span><span class="n">COUNTERCLOCKWISE</span><span class="p">)</span>
+
+<span class="c1"># Initialize a motor with a gear train</span>
+<span class="n">robot_arm</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">C</span><span class="p">,</span> <span class="n">Direction</span><span class="o">.</span><span class="n">CLOCKWISE</span><span class="p">,</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">36</span><span class="p">])</span>
+</pre></div>
+</div>
+<p class="rubric">Methods for motors without rotation sensors</p>
+<dl class="method">
+<dt id="ev3devices.Motor.dc">
+<code class="descname">dc</code><span class="sig-paren">(</span><em>duty</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.Motor.dc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the <span class="xref std std-ref">duty cycle</span> of the motor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>duty</strong> (<a class="reference internal" href="signaltypes.html#percentage"><span class="std std-ref">percentage: %</span></a>) – The duty cycle (-100.0 to 100).</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the motor duty cycle to 75%.</span>
+<span class="n">example_motor</span><span class="o">.</span><span class="n">duty</span><span class="p">(</span><span class="mi">75</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p class="rubric">Methods for motors with rotation sensors</p>
+<dl class="method">
+<dt id="ev3devices.Motor.angle">
+<code class="descname">angle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.Motor.angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the rotation angle of the motor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Motor angle.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#angle"><span class="std std-ref">angle: deg</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ev3devices.Motor.reset_angle">
+<code class="descname">reset_angle</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.Motor.reset_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the accumulated rotation angle of the motor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>angle</strong> (<a class="reference internal" href="signaltypes.html#angle"><span class="std std-ref">angle: deg</span></a>) – Value to which the angle should be reset.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ev3devices.Motor.speed">
+<code class="descname">speed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.Motor.speed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the speed (angular velocity) of the motor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Motor speed.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#speed"><span class="std std-ref">rotational speed: deg/s</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ev3devices.Motor.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><em>stop_type=Stop.COAST</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.Motor.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop the motor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>stop_type</strong> (<a class="reference internal" href="parameters.html#parameters.Stop" title="parameters.Stop"><em>Stop</em></a>) – Whether to coast, brake, or hold (<em>Default</em>: <a class="reference internal" href="parameters.html#parameters.Stop" title="parameters.Stop"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stop.COAST</span></code></a>).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ev3devices.Motor.run">
+<code class="descname">run</code><span class="sig-paren">(</span><em>speed</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.Motor.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keep the motor running at a constant speed (angular velocity).</p>
+<p>The motor will accelerate towards the requested speed and the duty cycle is automatically adjusted to keep the speed constant, even under some load. This continues in the background until you give the motor a new command or the program stops.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>speed</strong> (<a class="reference internal" href="signaltypes.html#speed"><span class="std std-ref">rotational speed: deg/s</span></a>) – Speed of the motor.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ev3devices.Motor.run_time">
+<code class="descname">run_time</code><span class="sig-paren">(</span><em>speed</em>, <em>time</em>, <em>stop_type=Stop.COAST</em>, <em>wait=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.Motor.run_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the motor at a constant speed (angular velocity) for a given amount of time.</p>
+<p>The motor will accelerate towards the requested speed and the duty cycle is automatically adjusted to keep the speed constant, even under some load. It begins to decelerate just in time to reach standstill after the specified duration.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>speed</strong> (<a class="reference internal" href="signaltypes.html#speed"><span class="std std-ref">rotational speed: deg/s</span></a>) – Speed of the motor.</li>
+<li><strong>time</strong> (<a class="reference internal" href="signaltypes.html#time"><span class="std std-ref">time: ms</span></a>) – Duration of the maneuver.</li>
+<li><strong>stop_type</strong> (<a class="reference internal" href="parameters.html#parameters.Stop" title="parameters.Stop"><em>Stop</em></a>) – Whether to coast, brake, or hold after coming to a standstill (<em>Default</em>: <a class="reference internal" href="parameters.html#parameters.Stop" title="parameters.Stop"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stop.COAST</span></code></a>).</li>
+<li><strong>wait</strong> (<em>bool</em>) – Wait for the maneuver to complete before continuing with the rest of the program (<em>Default</em>: <code class="docutils literal notranslate"><span class="pre">True</span></code>). This means that your program waits for the specified <code class="docutils literal notranslate"><span class="pre">time</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ev3devices.Motor.run_angle">
+<code class="descname">run_angle</code><span class="sig-paren">(</span><em>speed</em>, <em>rotation_angle</em>, <em>stop_type=Stop.COAST</em>, <em>wait=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.Motor.run_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the motor at a constant speed (angular velocity) by a given angle.</p>
+<p>The motor will accelerate towards the requested speed and the duty cycle is automatically adjusted to keep the speed constant, even under some load. It begins to decelerate just in time so that it comes to a standstill after traversing the given angle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>speed</strong> (<a class="reference internal" href="signaltypes.html#speed"><span class="std std-ref">rotational speed: deg/s</span></a>) – Speed of the motor.</li>
+<li><strong>rotation_angle</strong> (<a class="reference internal" href="signaltypes.html#angle"><span class="std std-ref">angle: deg</span></a>) – Angle by which the motor should rotate.</li>
+<li><strong>stop_type</strong> (<a class="reference internal" href="parameters.html#parameters.Stop" title="parameters.Stop"><em>Stop</em></a>) – Whether to coast, brake, or hold after coming to a standstill (<em>Default</em>: <a class="reference internal" href="parameters.html#parameters.Stop" title="parameters.Stop"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stop.COAST</span></code></a>).</li>
+<li><strong>wait</strong> (<em>bool</em>) – Wait for the maneuver to complete before continuing with the rest of the program (<em>Default</em>: <code class="docutils literal notranslate"><span class="pre">True</span></code>). This means that your program waits until the motor has traveled precisely the requested angle.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ev3devices.Motor.run_target">
+<code class="descname">run_target</code><span class="sig-paren">(</span><em>speed</em>, <em>target_angle</em>, <em>stop_type=Stop.COAST</em>, <em>wait=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.Motor.run_target" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the motor at a constant speed (angular velocity) towards a given target angle.</p>
+<p>The motor will accelerate towards the requested speed and the duty cycle is automatically adjusted to keep the speed constant, even under some load. It begins to decelerate just in time so that it comes to a standstill at the given target angle.</p>
+<p>The direction of rotation is automatically selected based on the target angle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>speed</strong> (<a class="reference internal" href="signaltypes.html#speed"><span class="std std-ref">rotational speed: deg/s</span></a>) – Absolute speed of the motor. The direction will be automatically selected based on the target angle: it makes no difference if you specify a positive or negative speed.</li>
+<li><strong>target_angle</strong> (<a class="reference internal" href="signaltypes.html#angle"><span class="std std-ref">angle: deg</span></a>) – Target angle that the motor should rotate to, regardless of its current angle.</li>
+<li><strong>stop_type</strong> (<a class="reference internal" href="parameters.html#parameters.Stop" title="parameters.Stop"><em>Stop</em></a>) – Whether to coast, brake, or hold after coming to a standstill (<em>Default</em>: <a class="reference internal" href="parameters.html#parameters.Stop" title="parameters.Stop"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stop.COAST</span></code></a>).</li>
+<li><strong>wait</strong> (<em>bool</em>) – Wait for the maneuver to complete before continuing with the rest of the program (<em>Default</em>: <code class="docutils literal notranslate"><span class="pre">True</span></code>). This means that your program waits until the motor has reached the target angle.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p class="rubric">Advanced methods for motors with rotation sensors</p>
+<dl class="method">
+<dt id="ev3devices.Motor.track_target">
+<code class="descname">track_target</code><span class="sig-paren">(</span><em>target_angle</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.Motor.track_target" title="Permalink to this definition">¶</a></dt>
+<dd><p>Track a target angle that varies in time.</p>
+<p>This function is quite similar to <a class="reference internal" href="#ev3devices.Motor.run_target" title="ev3devices.Motor.run_target"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run_target()</span></code></a>, but speed and acceleration settings are ignored: it will move to the target angle as fast as possible. Instead, you adjust speed and acceleration by choosing how fast or slow you vary the <code class="docutils literal notranslate"><span class="pre">target_angle</span></code>.</p>
+<p>This method is useful in fast loops where the motor target changes continuously.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>target_angle</strong> (<a class="reference internal" href="signaltypes.html#angle"><span class="std std-ref">angle: deg</span></a>) – Target angle that the motor should rotate to.</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize motor and timer</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">sin</span>
+<span class="n">motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">A</span><span class="p">)</span>
+<span class="n">watch</span> <span class="o">=</span> <span class="n">StopWatch</span><span class="p">()</span>
+<span class="n">amplitude</span> <span class="o">=</span> <span class="mi">90</span>
+
+<span class="c1"># In a fast loop, compute a reference angle</span>
+<span class="c1"># and make the motor track it.</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="c1"># Get the time in seconds</span>
+    <span class="n">seconds</span> <span class="o">=</span> <span class="n">watch</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">/</span><span class="mi">1000</span>
+    <span class="c1"># Compute a reference angle. This produces</span>
+    <span class="c1"># a sine wave that makes the motor move</span>
+    <span class="c1"># smoothly between -90 and +90 degrees.</span>
+    <span class="n">angle_now</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span><span class="o">*</span><span class="n">amplitude</span>
+    <span class="c1"># Make the motor track the given angle</span>
+    <span class="n">motor</span><span class="o">.</span><span class="n">track_target</span><span class="p">(</span><span class="n">angle_now</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="ev3devices.Motor.stalled">
+<code class="descname">stalled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.Motor.stalled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the motor is currently stalled.</p>
+<p>A motor is stalled when it cannot move even with the maximum torque. For example, when something is blocking the motor or your mechanism simply cannot turn any further.</p>
+<p>Specifically, the motor is stalled when the duty cycle computed by the PID controllers has reached the maximum (so <code class="docutils literal notranslate"><span class="pre">duty</span></code> = <code class="docutils literal notranslate"><span class="pre">duty_limit</span></code>) and still the motor cannot reach a minimal speed (so <code class="docutils literal notranslate"><span class="pre">speed</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">stall_speed</span></code>) for a period of at least <code class="docutils literal notranslate"><span class="pre">stall_time</span></code>.</p>
+<p>You can change the <code class="docutils literal notranslate"><span class="pre">duty_limit</span></code>, <code class="docutils literal notranslate"><span class="pre">stall_speed</span></code>, and <code class="docutils literal notranslate"><span class="pre">stall_time</span></code> settings using <a class="reference internal" href="#ev3devices.Motor.set_dc_settings" title="ev3devices.Motor.set_dc_settings"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_dc_settings()</span></code></a> and <a class="reference internal" href="#ev3devices.Motor.set_pid_settings" title="ev3devices.Motor.set_pid_settings"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_pid_settings()</span></code></a> in order to change the sensitivity to being stalled.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">True</span></code> if the motor is stalled, <code class="docutils literal notranslate"><span class="pre">False</span></code> if it is not.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ev3devices.Motor.run_until_stalled">
+<code class="descname">run_until_stalled</code><span class="sig-paren">(</span><em>speed</em>, <em>stop_type=Stop.COAST</em>, <em>duty_limit=default</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.Motor.run_until_stalled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the motor at a constant speed (angular velocity) until it stalls. The motor is considered stalled when it cannot move even with the maximum torque. See <a class="reference internal" href="#ev3devices.Motor.stalled" title="ev3devices.Motor.stalled"><code class="xref py py-meth docutils literal notranslate"><span class="pre">stalled()</span></code></a> for a more precise definition.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">duty_limit</span></code> argument lets you temporarily limit the motor torque during this maneuver. This is useful to avoid applying the full motor torque to a geared or lever mechanism.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>speed</strong> (<a class="reference internal" href="signaltypes.html#speed"><span class="std std-ref">rotational speed: deg/s</span></a>) – Speed of the motor.</li>
+<li><strong>stop_type</strong> (<a class="reference internal" href="parameters.html#parameters.Stop" title="parameters.Stop"><em>Stop</em></a>) – Whether to coast, brake, or hold after coming to a standstill (<em>Default</em>: <a class="reference internal" href="parameters.html#parameters.Stop" title="parameters.Stop"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stop.COAST</span></code></a>).</li>
+<li><strong>duty_limit</strong> (<a class="reference internal" href="signaltypes.html#percentage"><span class="std std-ref">percentage: %</span></a>) – Relative torque limit. This limit works just like <a class="reference internal" href="#ev3devices.Motor.set_dc_settings" title="ev3devices.Motor.set_dc_settings"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_dc_settings()</span></code></a>, but in this case the limit is temporary: it returns to its previous value after completing this command.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ev3devices.Motor.set_dc_settings">
+<code class="descname">set_dc_settings</code><span class="sig-paren">(</span><em>duty_limit</em>, <em>duty_offset</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.Motor.set_dc_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configure the settings to adjust the behavior of the <a class="reference internal" href="#ev3devices.Motor.dc" title="ev3devices.Motor.dc"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dc()</span></code></a> command. This also affects all of the <code class="docutils literal notranslate"><span class="pre">run</span></code> commands, which use the <a class="reference internal" href="#ev3devices.Motor.dc" title="ev3devices.Motor.dc"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dc()</span></code></a> method in the background.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>duty_limit</strong> (<a class="reference internal" href="signaltypes.html#percentage"><span class="std std-ref">percentage: %</span></a>) – Relative torque limit during subsequent motor commands. This sets the maximum duty cycle that is applied during any subsequent motor command. This reduces the maximum torque output to a percentage of the absolute maximum stall torque. This is useful to avoid applying the full motor torque to a geared or lever mechanism, or to prevent your LEGO® train from unintentionally going at full speed. (<em>Default</em>: 100).</li>
+<li><strong>duty_offset</strong> (<a class="reference internal" href="signaltypes.html#percentage"><span class="std std-ref">percentage: %</span></a>) – Minimum duty cycle given when you use <a class="reference internal" href="#ev3devices.Motor.dc" title="ev3devices.Motor.dc"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dc()</span></code></a>. This adds a small feed forward torque so that your motor will move even for very low duty cycle values, which can be useful when you create your own feedback controllers (<em>Default</em>: 0).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ev3devices.Motor.set_run_settings">
+<code class="descname">set_run_settings</code><span class="sig-paren">(</span><em>max_speed</em>, <em>acceleration</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.Motor.set_run_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configure the maximum speed and acceleration/deceleration of the motor for all run commands.</p>
+<p>This applies to the <code class="docutils literal notranslate"><span class="pre">run</span></code>, <code class="docutils literal notranslate"><span class="pre">run_time</span></code>, <code class="docutils literal notranslate"><span class="pre">run_angle</span></code>, <code class="docutils literal notranslate"><span class="pre">run_target</span></code>, or <code class="docutils literal notranslate"><span class="pre">run_until_stalled</span></code> commands you give the motor. See also the <span class="xref std std-ref">default parameters</span> for each motor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>max_speed</strong> (<a class="reference internal" href="signaltypes.html#speed"><span class="std std-ref">rotational speed: deg/s</span></a>) – Maximum speed of the motor during a motor command.</li>
+<li><strong>acceleration</strong> (<a class="reference internal" href="signaltypes.html#acceleration"><span class="std std-ref">rotational acceleration: deg/s/s</span></a>) – Acceleration towards the target speed and deceleration towards standstill. This should be a positive value. The motor will automatically change the sign to decelerate as needed.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the maximum speed to 200 deg/s and acceleration to 400 deg/s/s.</span>
+<span class="n">example_motor</span><span class="o">.</span><span class="n">set_run_settings</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+
+<span class="c1"># Make the motor run for 5 seconds. Even though the speed argument is 300</span>
+<span class="c1"># deg/s in this example, the motor will move at only 200 deg/s because of</span>
+<span class="c1"># the settings above.</span>
+<span class="n">example_motor</span><span class="o">.</span><span class="n">run_time</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">5000</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="ev3devices.Motor.set_pid_settings">
+<code class="descname">set_pid_settings</code><span class="sig-paren">(</span><em>kp</em>, <em>ki</em>, <em>kd</em>, <em>tight_loop_limit</em>, <em>angle_tolerance</em>, <em>speed_tolerance</em>, <em>stall_speed</em>, <em>stall_time</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.Motor.set_pid_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configure the settings of the position and speed controllers. See also <span class="xref std std-ref">pid</span> and the <span class="xref std std-ref">default parameters</span> for each motor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>kp</strong> (<em>int</em>) – Proportional position (and integral speed) control constant.</li>
+<li><strong>ki</strong> (<em>int</em>) – Integral position control constant.</li>
+<li><strong>kd</strong> (<em>int</em>) – Derivative position (and proportional speed) control constant.</li>
+<li><strong>tight_loop_limit</strong> (<a class="reference internal" href="signaltypes.html#time"><span class="std std-ref">time: ms</span></a>) – If you execute any of the <code class="docutils literal notranslate"><span class="pre">run</span></code> commands within this interval after starting the previous command, the controllers assume that you want to control the speed directly. This means that it will ignore the acceleration setting and immediately begin tracking the speed you give in the <code class="docutils literal notranslate"><span class="pre">run</span></code> command. This is useful in a fast loop, where you usually want the motors to respond quickly rather than accelerate smoothly, for example with a line-following robot.</li>
+<li><strong>angle_tolerance</strong> (<a class="reference internal" href="signaltypes.html#angle"><span class="std std-ref">angle: deg</span></a>) – Allowed deviation from the target angle before motion is considered complete.</li>
+<li><strong>speed_tolerance</strong> (<a class="reference internal" href="signaltypes.html#speed"><span class="std std-ref">rotational speed: deg/s</span></a>) – Allowed deviation from zero speed before motion is considered complete.</li>
+<li><strong>stall_speed</strong> (<a class="reference internal" href="signaltypes.html#speed"><span class="std std-ref">rotational speed: deg/s</span></a>) – See <a class="reference internal" href="#ev3devices.Motor.stalled" title="ev3devices.Motor.stalled"><code class="xref py py-meth docutils literal notranslate"><span class="pre">stalled()</span></code></a>.</li>
+<li><strong>stall_time</strong> (<a class="reference internal" href="signaltypes.html#time"><span class="std std-ref">time: ms</span></a>) – See <a class="reference internal" href="#ev3devices.Motor.stalled" title="ev3devices.Motor.stalled"><code class="xref py py-meth docutils literal notranslate"><span class="pre">stalled()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="sensors">
+<h2>Sensors<a class="headerlink" href="#sensors" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="touch-sensor">
+<h3>Touch Sensor<a class="headerlink" href="#touch-sensor" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="ev3devices.TouchSensor">
+<em class="property">class </em><code class="descname">TouchSensor</code><span class="sig-paren">(</span><em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.TouchSensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>LEGO® MINDSTORMS® EV3 Touch Sensor.</p>
+<p>Element 95648/6138404, contained in:</p>
+<ul class="simple">
+<li>31313: LEGO® MINDSTORMS® EV3 (2013)</li>
+<li>45544: LEGO® MINDSTORMS® Education EV3 Core Set (2013)</li>
+<li>45507: Separate part (2013)</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>port</strong> (<a class="reference internal" href="parameters.html#parameters.Port" title="parameters.Port"><em>Port</em></a>) – Port to which the sensor is connected.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="ev3devices.TouchSensor.pressed">
+<code class="descname">pressed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.TouchSensor.pressed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the sensor is pressed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">True</span></code> if the sensor is pressed, <code class="docutils literal notranslate"><span class="pre">False</span></code> if it is not pressed.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="color-sensor">
+<h3>Color Sensor<a class="headerlink" href="#color-sensor" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="ev3devices.ColorSensor">
+<em class="property">class </em><code class="descname">ColorSensor</code><span class="sig-paren">(</span><em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.ColorSensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>LEGO® MINDSTORMS® EV3 Color Sensor.</p>
+<p>Element 95650/6128869, contained in:</p>
+<ul class="simple">
+<li>31313: LEGO® MINDSTORMS® EV3 (2013)</li>
+<li>45544: LEGO® MINDSTORMS® Education EV3 Core Set (2013)</li>
+<li>45506: Separate part (2013)</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>port</strong> (<a class="reference internal" href="parameters.html#parameters.Port" title="parameters.Port"><em>Port</em></a>) – Port to which the sensor is connected.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="ev3devices.ColorSensor.color">
+<code class="descname">color</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.ColorSensor.color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measure the color of a surface.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">Color.BLACK</span></code>, <code class="docutils literal notranslate"><span class="pre">Color.BLUE</span></code>, <code class="docutils literal notranslate"><span class="pre">Color.GREEN</span></code>, <code class="docutils literal notranslate"><span class="pre">Color.YELLOW</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Color.RED</span></code>, <code class="docutils literal notranslate"><span class="pre">Color.WHITE</span></code>, <code class="docutils literal notranslate"><span class="pre">Color.BROWN</span></code> or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="parameters.html#parameters.Color" title="parameters.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">Color</span></code></a>, or <code class="docutils literal notranslate"><span class="pre">None</span></code> if no color is detected.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ev3devices.ColorSensor.ambient">
+<code class="descname">ambient</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.ColorSensor.ambient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measure the ambient light intensity.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Ambient light intensity, ranging from 0 (dark) to 100 (bright).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#percentage"><span class="std std-ref">percentage: %</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ev3devices.ColorSensor.reflection">
+<code class="descname">reflection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.ColorSensor.reflection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measure the reflection of a surface using a red light.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Reflection, ranging from 0 (no reflection) to 100 (high reflection).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#percentage"><span class="std std-ref">percentage: %</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ev3devices.ColorSensor.rgb">
+<code class="descname">rgb</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.ColorSensor.rgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measure the reflection of a surface using a red, green, and then a blue light.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Reflection for red, green, and blue light, each ranging from 0.0 (no reflection) to 100.0 (high reflection).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">tuple of three <a class="reference internal" href="signaltypes.html#percentage"><span class="std std-ref">percentages</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="infrared-sensor-and-beacon">
+<h3>Infrared Sensor and Beacon<a class="headerlink" href="#infrared-sensor-and-beacon" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="ev3devices.InfraredSensor">
+<em class="property">class </em><code class="descname">InfraredSensor</code><span class="sig-paren">(</span><em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.InfraredSensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>LEGO® MINDSTORMS® EV3 Infrared Sensor and Beacon.</p>
+<p>Element 95654/6132629 and 72156/6127283, contained in:</p>
+<ul class="simple">
+<li>31313: LEGO® MINDSTORMS® EV3 (2013)</li>
+<li>45509 and 45508: Separate parts (2013)</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>port</strong> (<a class="reference internal" href="parameters.html#parameters.Port" title="parameters.Port"><em>Port</em></a>) – Port to which the sensor is connected.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="ev3devices.InfraredSensor.distance">
+<code class="descname">distance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.InfraredSensor.distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measure the relative distance between the sensor and an object using infrared light.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Relative distance ranging from 0 (closest) to 100 (farthest).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#relativedistance"><span class="std std-ref">relative distance: %</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ev3devices.InfraredSensor.beacon">
+<code class="descname">beacon</code><span class="sig-paren">(</span><em>channel</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.InfraredSensor.beacon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measure the relative distance and angle between the remote and the infrared sensor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>channel</strong> (<em>int</em>) – Channel number of the remote.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Tuple of relative distance (0 to 100) and approximate angle (-75 to 75 degrees) between remote and infrared sensor.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">(<a class="reference internal" href="signaltypes.html#relativedistance"><span class="std std-ref">relative distance: %</span></a>, <a class="reference internal" href="signaltypes.html#angle"><span class="std std-ref">angle: deg</span></a>) or (<code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">None</span></code>) if no remote is detected.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ev3devices.InfraredSensor.buttons">
+<code class="descname">buttons</code><span class="sig-paren">(</span><em>channel</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.InfraredSensor.buttons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check which buttons on the infrared remote are pressed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>channel</strong> (<em>int</em>) – Channel number of the remote.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">List of pressed buttons on the remote on the specified channel.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List of <a class="reference internal" href="parameters.html#parameters.Button" title="parameters.Button"><code class="xref py py-class docutils literal notranslate"><span class="pre">Button</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="ultrasonic-sensor">
+<h3>Ultrasonic Sensor<a class="headerlink" href="#ultrasonic-sensor" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="ev3devices.UltrasonicSensor">
+<em class="property">class </em><code class="descname">UltrasonicSensor</code><span class="sig-paren">(</span><em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.UltrasonicSensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>LEGO® MINDSTORMS® EV3 Ultrasonic Sensor.</p>
+<p>Element 95652/6138403, contained in:</p>
+<ul class="simple">
+<li>45544: LEGO® MINDSTORMS® Education EV3 Core Set (2013)</li>
+<li>45504: Separate part (2013)</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>port</strong> (<a class="reference internal" href="parameters.html#parameters.Port" title="parameters.Port"><em>Port</em></a>) – Port to which the sensor is connected.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="ev3devices.UltrasonicSensor.distance">
+<code class="descname">distance</code><span class="sig-paren">(</span><em>silent=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.UltrasonicSensor.distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measure the distance between the sensor and an object using ultrasonic sound waves.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>silent</strong> (<em>bool</em>) – <p>Choose <code class="docutils literal notranslate"><span class="pre">True</span></code> to turn the sensor off after measuring the distance.</p>
+<p>Choose <code class="docutils literal notranslate"><span class="pre">False</span></code> to leave the sensor on (<em>Default</em>).</p>
+<p>When you choose <code class="docutils literal notranslate"><span class="pre">silent=True</span></code>, the sensor does not emit sounds waves
+except when taking the measurement. This reduces interference with
+other ultrasonic sensors, but turning the sensor off takes approximately 300 ms each time.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Distance (millimeters).</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#distance"><span class="std std-ref">distance: mm</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ev3devices.UltrasonicSensor.presence">
+<code class="descname">presence</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.UltrasonicSensor.presence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check for the presence of other ultrasonic sensors by detecting ultrasonic sounds.</p>
+<p>If the other ultrasonic sensor is operating in silent mode, you can only detect the presence of that sensor while it is taking a measurement.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">True</span></code> if ultrasonic sounds are detected, <code class="docutils literal notranslate"><span class="pre">False</span></code> if not.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="gyroscopic-sensor">
+<h3>Gyroscopic Sensor<a class="headerlink" href="#gyroscopic-sensor" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="ev3devices.GyroSensor">
+<em class="property">class </em><code class="descname">GyroSensor</code><span class="sig-paren">(</span><em>port</em>, <em>direction=Direction.CLOCKWISE</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.GyroSensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>LEGO® MINDSTORMS® EV3 Gyro Sensor.</p>
+<p>Element 99380/6138411, contained in:</p>
+<ul class="simple">
+<li>45544: LEGO® MINDSTORMS® Education EV3 Core Set (2013)</li>
+<li>45505: Separate part (2013)</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>port</strong> (<a class="reference internal" href="parameters.html#parameters.Port" title="parameters.Port"><em>Port</em></a>) – Port to which the sensor is connected.</li>
+<li><strong>direction</strong> (<a class="reference internal" href="parameters.html#parameters.Direction" title="parameters.Direction"><em>Direction</em></a>) – Positive rotation direction when looking at the red dot on top of the sensor (<em>Default</em>: Direction.CLOCKWISE).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="ev3devices.GyroSensor.speed">
+<code class="descname">speed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.GyroSensor.speed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the speed (angular velocity) of the sensor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Sensor angular velocity.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#speed"><span class="std std-ref">rotational speed: deg/s</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ev3devices.GyroSensor.angle">
+<code class="descname">angle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.GyroSensor.angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the accumulated angle of the sensor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Rotation angle.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#angle"><span class="std std-ref">angle: deg</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ev3devices.GyroSensor.reset_angle">
+<code class="descname">reset_angle</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3devices.GyroSensor.reset_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the rotation angle of the sensor to a desired value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>angle</strong> (<a class="reference internal" href="signaltypes.html#angle"><span class="std std-ref">angle: deg</span></a>) – Value to which the angle should be reset.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="parameters.html" class="btn btn-neutral float-right" title="parameters – Parameters and Constants" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ev3brick.html" class="btn btn-neutral float-left" title="ev3brick – The EV3 Programmable Brick" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019 The LEGO Group. All rights reserved.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

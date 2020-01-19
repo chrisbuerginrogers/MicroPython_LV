@@ -1,0 +1,499 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ev3brick – The EV3 Programmable Brick &mdash; ev3-micropython 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ev3devices – EV3 Motors and Sensors" href="ev3devices.html" />
+    <link rel="prev" title="Creating and running programs" href="startrun.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ev3-micropython
+          
+
+          
+            
+            <img src="_static/lego-education-logo-small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="startinstall.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startrun.html">Creating and running programs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pybricks Modules</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">ev3brick</span></code> – The EV3 Programmable Brick</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#buttons">Buttons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#light">Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sound">Sound</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#display">Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#battery">Battery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ev3devices.html"><code class="docutils literal notranslate"><span class="pre">ev3devices</span></code> – EV3 Motors and Sensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameters.html"><code class="docutils literal notranslate"><span class="pre">parameters</span></code> – Parameters and Constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code> – Timing and Datalogging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robotics.html"><code class="docutils literal notranslate"><span class="pre">robotics</span></code> – Robotics module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Engineering Essentials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="signaltypes.html">Signals and Units</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Demo Programs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/robot_educator.html">Robot Educator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/color_sorter.html">Color Sorter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/robot_arm_h25.html">Robot Arm H25</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ev3-micropython</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">ev3brick</span></code> – The EV3 Programmable Brick</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/ev3brick.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-ev3brick">
+<span id="ev3brick-the-ev3-programmable-brick"></span><h1><a class="reference internal" href="#module-ev3brick" title="ev3brick"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ev3brick</span></code></a> – The EV3 Programmable Brick<a class="headerlink" href="#module-ev3brick" title="Permalink to this headline">¶</a></h1>
+<p>LEGO® MINDSTORMS® EV3 Brick.</p>
+<div class="section" id="buttons">
+<h2>Buttons<a class="headerlink" href="#buttons" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ev3brick.buttons">
+<code class="descname">buttons</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ev3brick.buttons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check which buttons on the EV3 Brick are currently pressed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List of pressed buttons.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">List of <a class="reference internal" href="parameters.html#parameters.Button" title="parameters.Button"><code class="xref py py-class docutils literal notranslate"><span class="pre">Button</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Do something if the left button is pressed</span>
+<span class="k">if</span> <span class="n">Button</span><span class="o">.</span><span class="n">LEFT</span> <span class="ow">in</span> <span class="n">brick</span><span class="o">.</span><span class="n">buttons</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The left button is pressed.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Wait until any of the buttons are pressed</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="n">brick</span><span class="o">.</span><span class="n">buttons</span><span class="p">()):</span>
+    <span class="n">wait</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Wait until all buttons are released</span>
+<span class="k">while</span> <span class="nb">any</span><span class="p">(</span><span class="n">brick</span><span class="o">.</span><span class="n">buttons</span><span class="p">()):</span>
+    <span class="n">wait</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="light">
+<h2>Light<a class="headerlink" href="#light" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ev3brick.light">
+<code class="descname">light</code><span class="sig-paren">(</span><em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3brick.light" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the color of the brick light.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>color</strong> (<a class="reference internal" href="parameters.html#parameters.Color" title="parameters.Color"><em>Color</em></a>) – Color of the light. Choose <code class="docutils literal notranslate"><span class="pre">Color.BLACK</span></code> or <code class="docutils literal notranslate"><span class="pre">None</span></code>
+to turn the light off.</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make the light red</span>
+<span class="n">brick</span><span class="o">.</span><span class="n">light</span><span class="p">(</span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span><span class="p">)</span>
+
+<span class="c1"># Turn the light off</span>
+<span class="n">brick</span><span class="o">.</span><span class="n">light</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="sound">
+<h2>Sound<a class="headerlink" href="#sound" title="Permalink to this headline">¶</a></h2>
+<dl class="classmethod">
+<dt id="ev3brick.sound.beep">
+<em class="property">classmethod </em><code class="descclassname">sound.</code><code class="descname">beep</code><span class="sig-paren">(</span><em>frequency=500</em>, <em>duration=100</em>, <em>volume=30</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3brick.sound.beep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Play a beep/tone.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>frequency</strong> (<a class="reference internal" href="signaltypes.html#frequency"><span class="std std-ref">frequency: Hz</span></a>) – Frequency of the beep (<em>Default</em>: 500).</li>
+<li><strong>duration</strong> (<a class="reference internal" href="signaltypes.html#time"><span class="std std-ref">time: ms</span></a>) – Duration of the beep (<em>Default</em>: 100).</li>
+<li><strong>volume</strong> (<a class="reference internal" href="signaltypes.html#percentage"><span class="std std-ref">percentage: %</span></a>) – Volume of the beep (<em>Default</em>: 30).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># A simple beep</span>
+<span class="n">brick</span><span class="o">.</span><span class="n">sound</span><span class="o">.</span><span class="n">beep</span><span class="p">()</span>
+
+<span class="c1"># A high pitch (1500 Hz) for one second (1000 ms) at 50% volume</span>
+<span class="n">brick</span><span class="o">.</span><span class="n">sound</span><span class="o">.</span><span class="n">beep</span><span class="p">(</span><span class="mi">1500</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ev3brick.sound.beeps">
+<em class="property">classmethod </em><code class="descclassname">sound.</code><code class="descname">beeps</code><span class="sig-paren">(</span><em>number</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3brick.sound.beeps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Play a number of default beeps with a brief pause in between.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>number</strong> (<em>int</em>) – Number of beeps.</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make 5 simple beeps</span>
+<span class="n">brick</span><span class="o">.</span><span class="n">sound</span><span class="o">.</span><span class="n">beeps</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ev3brick.sound.file">
+<em class="property">classmethod </em><code class="descclassname">sound.</code><code class="descname">file</code><span class="sig-paren">(</span><em>file_name</em>, <em>volume=100</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3brick.sound.file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Play a sound file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>file_name</strong> (<em>str</em>) – Path to the sound file, including extension.</li>
+<li><strong>volume</strong> (<a class="reference internal" href="signaltypes.html#percentage"><span class="std std-ref">percentage: %</span></a>) – Volume of the sound (<em>Default</em>: 100).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Play one of the built-in sounds</span>
+<span class="n">brick</span><span class="o">.</span><span class="n">sound</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">SoundFile</span><span class="o">.</span><span class="n">HELLO</span><span class="p">)</span>
+
+<span class="c1"># Play a sound file from your project folder</span>
+<span class="n">brick</span><span class="o">.</span><span class="n">sound</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s1">&#39;mysound.wav&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="display">
+<h2>Display<a class="headerlink" href="#display" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>                  <span class="n">x</span>
+         <span class="o">--------------&gt;</span>
+<span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="n">__________________</span>
+       <span class="o">|</span>                  <span class="o">|</span>
+   <span class="o">|</span>   <span class="o">|</span>                  <span class="o">|</span>
+<span class="n">y</span>  <span class="o">|</span>   <span class="o">|</span>      <span class="n">Hello</span>       <span class="o">|</span>
+   <span class="o">|</span>   <span class="o">|</span>      <span class="n">World</span>       <span class="o">|</span>
+   <span class="n">v</span>   <span class="o">|</span>                  <span class="o">|</span>
+       <span class="o">|</span><span class="n">__________________</span><span class="o">|</span>
+                           <span class="p">(</span><span class="mi">177</span><span class="p">,</span> <span class="mi">127</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="classmethod">
+<dt id="ev3brick.display.clear">
+<em class="property">classmethod </em><code class="descclassname">display.</code><code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ev3brick.display.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear everything on the display.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ev3brick.display.text">
+<em class="property">classmethod </em><code class="descclassname">display.</code><code class="descname">text</code><span class="sig-paren">(</span><em>text</em>, <em>coordinate=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3brick.display.text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display text.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>text</strong> (<em>str</em>) – The text to display.</li>
+<li><strong>coordinate</strong> (<em>tuple</em>) – <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code> coordinate tuple. It is the top-left corner of the first character. If no coordinate is specified, it is printed on the next line.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clear the display</span>
+<span class="n">brick</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+<span class="c1"># Print ``Hello`` near the middle of the screen</span>
+<span class="n">brick</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>
+
+<span class="c1"># Print ``World`` directly underneath it</span>
+<span class="n">brick</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;World&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ev3brick.display.image">
+<em class="property">classmethod </em><code class="descclassname">display.</code><code class="descname">image</code><span class="sig-paren">(</span><em>file_name</em>, <em>alignment=Align.CENTER</em>, <em>coordinate=None</em>, <em>clear=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ev3brick.display.image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show an image file.</p>
+<p>You can specify its placement either using <code class="docutils literal notranslate"><span class="pre">alignment</span></code> or by specifying a <code class="docutils literal notranslate"><span class="pre">coordinate</span></code>, but not both.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>file_name</strong> (<em>str</em>) – Path to the image file. Paths may be absolute or relative from the project folder.</li>
+<li><strong>alignment</strong> (<a class="reference internal" href="parameters.html#parameters.Align" title="parameters.Align"><em>Align</em></a>) – Where to place the image (<em>Default</em>: Align.CENTER).</li>
+<li><strong>coordinate</strong> (<em>tuple</em>) – <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code> coordinate tuple. It is the top-left corner of the image (<em>Default</em>: None).</li>
+<li><strong>clear</strong> (<em>bool</em>) – Whether to clear the screen before showing the image (<em>Default</em>: <code class="docutils literal notranslate"><span class="pre">True</span></code>).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show a built-in image of two eyes looking upward</span>
+<span class="n">brick</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="n">ImageFile</span><span class="o">.</span><span class="n">UP</span><span class="p">)</span>
+
+<span class="c1"># Display a custom image from your project folder</span>
+<span class="n">brick</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="s1">&#39;pybricks.png&#39;</span><span class="p">)</span>
+
+<span class="c1"># Display a custom image at the top right of the screen, without clearing</span>
+<span class="c1"># the screen first</span>
+<span class="n">brick</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="s1">&#39;arrow.png&#39;</span><span class="p">,</span> <span class="n">Align</span><span class="o">.</span><span class="n">TOP_RIGHT</span><span class="p">,</span> <span class="n">clear</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="battery">
+<h2>Battery<a class="headerlink" href="#battery" title="Permalink to this headline">¶</a></h2>
+<dl class="classmethod">
+<dt id="ev3brick.battery.voltage">
+<em class="property">classmethod </em><code class="descclassname">battery.</code><code class="descname">voltage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ev3brick.battery.voltage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the voltage of the battery.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Battery voltage.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#voltage"><span class="std std-ref">voltage: mV</span></a></td>
+</tr>
+</tbody>
+</table>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Play a warning sound when the battery voltage</span>
+<span class="c1"># is below 7 Volt (7000 mV = 7V)</span>
+<span class="k">if</span> <span class="n">brick</span><span class="o">.</span><span class="n">battery</span><span class="o">.</span><span class="n">voltage</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">7000</span><span class="p">:</span>
+    <span class="n">brick</span><span class="o">.</span><span class="n">sound</span><span class="o">.</span><span class="n">beep</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ev3brick.battery.current">
+<em class="property">classmethod </em><code class="descclassname">battery.</code><code class="descname">current</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ev3brick.battery.current" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current supplied by the battery.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Battery current.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#current"><span class="std std-ref">current: mA</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ev3devices.html" class="btn btn-neutral float-right" title="ev3devices – EV3 Motors and Sensors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="startrun.html" class="btn btn-neutral float-left" title="Creating and running programs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019 The LEGO Group. All rights reserved.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

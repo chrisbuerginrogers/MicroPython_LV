@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Robot Educator &mdash; ev3-micropython 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Color Sorter" href="color_sorter.html" />
+    <link rel="prev" title="Signals and Units" href="../signaltypes.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ev3-micropython
+          
+
+          
+            
+            <img src="../_static/lego-education-logo-small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../startinstall.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startrun.html">Creating and running programs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pybricks Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ev3brick.html"><code class="docutils literal notranslate"><span class="pre">ev3brick</span></code> – The EV3 Programmable Brick</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ev3devices.html"><code class="docutils literal notranslate"><span class="pre">ev3devices</span></code> – EV3 Motors and Sensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parameters.html"><code class="docutils literal notranslate"><span class="pre">parameters</span></code> – Parameters and Constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code> – Timing and Datalogging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robotics.html"><code class="docutils literal notranslate"><span class="pre">robotics</span></code> – Robotics module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Engineering Essentials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../signaltypes.html">Signals and Units</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Demo Programs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Robot Educator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="color_sorter.html">Color Sorter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robot_arm_h25.html">Robot Arm H25</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ev3-micropython</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Robot Educator</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/examples/robot_educator.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="robot-educator">
+<h1>Robot Educator<a class="headerlink" href="#robot-educator" title="Permalink to this headline">¶</a></h1>
+<p>This example makes the Robot Educator (<a class="reference internal" href="#fig-robot-educator"><span class="std std-numref">Figure 16</span></a>) drive until it sees an obstacle. It then backs up, turns around, and starts driving again.</p>
+<p>You can find building instructions for the Robot Educator on the <a class="reference external" href="https://education.lego.com/en-us/support/mindstorms-ev3/building-instructions#robot">LEGO Education website</a>.</p>
+<div class="figure align-center" id="id1">
+<span id="fig-robot-educator"></span><a class="reference internal image-reference" href="../_images/robot_educator.jpg"><img alt="robot_educator" src="../_images/robot_educator.jpg" style="width: 80%;" /></a>
+<p class="caption"><span class="caption-number">Figure 16 </span><span class="caption-text">Robot Educator with the Ultrasonic Sensor</span></p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env pybricks-micropython</span>
+
+<span class="kn">from</span> <span class="nn">pybricks</span> <span class="k">import</span> <span class="n">ev3brick</span> <span class="k">as</span> <span class="n">brick</span>
+<span class="kn">from</span> <span class="nn">pybricks.ev3devices</span> <span class="k">import</span> <span class="n">Motor</span><span class="p">,</span> <span class="n">UltrasonicSensor</span>
+<span class="kn">from</span> <span class="nn">pybricks.parameters</span> <span class="k">import</span> <span class="n">Port</span>
+<span class="kn">from</span> <span class="nn">pybricks.tools</span> <span class="k">import</span> <span class="n">wait</span>
+<span class="kn">from</span> <span class="nn">pybricks.robotics</span> <span class="k">import</span> <span class="n">DriveBase</span>
+
+<span class="c1"># Play a sound.</span>
+<span class="n">brick</span><span class="o">.</span><span class="n">sound</span><span class="o">.</span><span class="n">beep</span><span class="p">()</span>
+
+<span class="c1"># Initialize the Ultrasonic Sensor. It is used to detect</span>
+<span class="c1"># obstacles as the robot drives around.</span>
+<span class="n">obstacle_sensor</span> <span class="o">=</span> <span class="n">UltrasonicSensor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">S4</span><span class="p">)</span>
+
+<span class="c1"># Initialize two motors with default settings on Port B and Port C.</span>
+<span class="c1"># These will be the left and right motors of the drive base.</span>
+<span class="n">left_motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">B</span><span class="p">)</span>
+<span class="n">right_motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">C</span><span class="p">)</span>
+
+<span class="c1"># The wheel diameter of the Robot Educator is 56 millimeters.</span>
+<span class="n">wheel_diameter</span> <span class="o">=</span> <span class="mi">56</span>
+
+<span class="c1"># The axle track is the distance between the centers of each of the wheels.</span>
+<span class="c1"># For the Robot Educator this is 114 millimeters.</span>
+<span class="n">axle_track</span> <span class="o">=</span> <span class="mi">114</span>
+
+<span class="c1"># The DriveBase is composed of two motors, with a wheel on each motor.</span>
+<span class="c1"># The wheel_diameter and axle_track values are used to make the motors</span>
+<span class="c1"># move at the correct speed when you give a motor command.</span>
+<span class="n">robot</span> <span class="o">=</span> <span class="n">DriveBase</span><span class="p">(</span><span class="n">left_motor</span><span class="p">,</span> <span class="n">right_motor</span><span class="p">,</span> <span class="n">wheel_diameter</span><span class="p">,</span> <span class="n">axle_track</span><span class="p">)</span>
+
+<span class="c1"># The following loop makes the robot drive forward until it detects an</span>
+<span class="c1"># obstacle. Then it backs up and turns around. It keeps on doing this</span>
+<span class="c1"># until you stop the program.</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="c1"># Begin driving forward at 200 millimeters per second.</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="c1"># Wait until an obstacle is detected. This is done by repeatedly</span>
+    <span class="c1"># doing nothing (waiting for 10 milliseconds) while the measured</span>
+    <span class="c1"># distance is still greater than 300 mm.</span>
+    <span class="k">while</span> <span class="n">obstacle_sensor</span><span class="o">.</span><span class="n">distance</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">300</span><span class="p">:</span>
+        <span class="n">wait</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+    <span class="c1"># Drive backward at 100 millimeters per second. Keep going for 2 seconds.</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">drive_time</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
+
+    <span class="c1"># Turn around at 60 degrees per second, around the midpoint between</span>
+    <span class="c1"># the wheels. Keep going for 2 seconds.</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">drive_time</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="color_sorter.html" class="btn btn-neutral float-right" title="Color Sorter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../signaltypes.html" class="btn btn-neutral float-left" title="Signals and Units" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019 The LEGO Group. All rights reserved.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

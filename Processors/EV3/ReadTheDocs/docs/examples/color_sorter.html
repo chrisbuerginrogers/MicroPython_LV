@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Color Sorter &mdash; ev3-micropython 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Robot Arm H25" href="robot_arm_h25.html" />
+    <link rel="prev" title="Robot Educator" href="robot_educator.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ev3-micropython
+          
+
+          
+            
+            <img src="../_static/lego-education-logo-small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../startinstall.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startrun.html">Creating and running programs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pybricks Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ev3brick.html"><code class="docutils literal notranslate"><span class="pre">ev3brick</span></code> – The EV3 Programmable Brick</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ev3devices.html"><code class="docutils literal notranslate"><span class="pre">ev3devices</span></code> – EV3 Motors and Sensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parameters.html"><code class="docutils literal notranslate"><span class="pre">parameters</span></code> – Parameters and Constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code> – Timing and Datalogging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robotics.html"><code class="docutils literal notranslate"><span class="pre">robotics</span></code> – Robotics module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Engineering Essentials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../signaltypes.html">Signals and Units</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Demo Programs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="robot_educator.html">Robot Educator</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Color Sorter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robot_arm_h25.html">Robot Arm H25</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ev3-micropython</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Color Sorter</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/examples/color_sorter.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="color-sorter">
+<h1>Color Sorter<a class="headerlink" href="#color-sorter" title="Permalink to this headline">¶</a></h1>
+<p>This example program for the color sorter (<a class="reference internal" href="#fig-color-sorter"><span class="std std-numref">Figure 17</span></a>) lets you scan colored Technic beams using the Color Sensor.</p>
+<p>Scan the colored beams one by one and add them to the tray. A beep confirms that it has registered the color. When the tray is full or when you press the center button, the robot will start distributing the Technic bricks by color.</p>
+<p>You can find building instructions for the color sorter on the <a class="reference external" href="https://le-www-live-s.legocdn.com/sc/media/lessons/mindstorms-ev3/building-instructions/ev3-model-core-set-color-sorter-c778563f88c986841453574495cb5ff1.pdf">LEGO Education website</a>.</p>
+<div class="figure align-center" id="id1">
+<span id="fig-color-sorter"></span><a class="reference internal image-reference" href="../_images/color_sorter.jpg"><img alt="color_sorter" src="../_images/color_sorter.jpg" style="width: 90%;" /></a>
+<p class="caption"><span class="caption-number">Figure 17 </span><span class="caption-text">Color Sorter</span></p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env pybricks-micropython</span>
+
+<span class="kn">from</span> <span class="nn">pybricks</span> <span class="k">import</span> <span class="n">ev3brick</span> <span class="k">as</span> <span class="n">brick</span>
+<span class="kn">from</span> <span class="nn">pybricks.ev3devices</span> <span class="k">import</span> <span class="n">Motor</span><span class="p">,</span> <span class="n">TouchSensor</span><span class="p">,</span> <span class="n">ColorSensor</span>
+<span class="kn">from</span> <span class="nn">pybricks.parameters</span> <span class="k">import</span> <span class="n">Port</span><span class="p">,</span> <span class="n">Button</span><span class="p">,</span> <span class="n">Color</span><span class="p">,</span> <span class="n">ImageFile</span><span class="p">,</span> <span class="n">SoundFile</span>
+<span class="kn">from</span> <span class="nn">pybricks.tools</span> <span class="k">import</span> <span class="n">wait</span>
+
+<span class="c1"># The colored objects are either red, green, blue, or yellow.</span>
+<span class="n">POSSIBLE_COLORS</span> <span class="o">=</span> <span class="p">(</span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span><span class="p">,</span> <span class="n">Color</span><span class="o">.</span><span class="n">GREEN</span><span class="p">,</span> <span class="n">Color</span><span class="o">.</span><span class="n">BLUE</span><span class="p">,</span> <span class="n">Color</span><span class="o">.</span><span class="n">YELLOW</span><span class="p">)</span>
+
+<span class="c1"># Initialize the motors that drive the conveyor belt and eject the objects.</span>
+<span class="n">belt_motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">D</span><span class="p">)</span>
+<span class="n">feed_motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">A</span><span class="p">)</span>
+
+<span class="c1"># Initialize the Touch Sensor. It is used to detect when the belt motor</span>
+<span class="c1"># has moved the sorter module all the way to the left.</span>
+<span class="n">touch_sensor</span> <span class="o">=</span> <span class="n">TouchSensor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">S1</span><span class="p">)</span>
+
+<span class="c1"># Initialize the Color Sensor. It is used to detect the color of the objects.</span>
+<span class="n">color_sensor</span> <span class="o">=</span> <span class="n">ColorSensor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">S3</span><span class="p">)</span>
+
+<span class="c1"># This is the main loop. It waits for you to scan and insert 8 colored objects.</span>
+<span class="c1"># Then it sorts them by color. Then the process starts over and you can scan</span>
+<span class="c1"># and insert the next set of colored objects.</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="c1"># Get the feed motor in the correct starting position.</span>
+    <span class="c1"># This is done by running the motor forward until it stalls. This</span>
+    <span class="c1"># means that it cannot move any further. From this end point, the motor</span>
+    <span class="c1"># rotates backward by 180 degrees. Then it is in the starting position.</span>
+    <span class="n">feed_motor</span><span class="o">.</span><span class="n">run_until_stalled</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+    <span class="n">feed_motor</span><span class="o">.</span><span class="n">run_angle</span><span class="p">(</span><span class="mi">450</span><span class="p">,</span> <span class="o">-</span><span class="mi">180</span><span class="p">)</span>
+
+    <span class="c1"># Get the conveyor belt motor in the correct starting position.</span>
+    <span class="c1"># This is done by first running the belt motor backward until the</span>
+    <span class="c1"># touch sensor becomes pressed. Then the motor stops, and the the angle is</span>
+    <span class="c1"># reset to zero. This means that when it rotates backward to zero later</span>
+    <span class="c1"># on, it returns to this starting position.</span>
+    <span class="n">belt_motor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="o">-</span><span class="mi">500</span><span class="p">)</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">touch_sensor</span><span class="o">.</span><span class="n">pressed</span><span class="p">():</span>
+        <span class="k">pass</span>
+    <span class="n">belt_motor</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+    <span class="n">wait</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+    <span class="n">belt_motor</span><span class="o">.</span><span class="n">reset_angle</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="c1"># Clear all the contents from the display.</span>
+    <span class="n">brick</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+    <span class="c1"># When we scan the objects, we store all the color numbers in a list.</span>
+    <span class="c1"># We start with an empty list. It will grow as we add colors to it.</span>
+    <span class="n">color_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># This loop scans the colors of the objects. It repeats until 8 objects</span>
+    <span class="c1"># are scanned and placed in the chute. This is done by repeating the loop</span>
+    <span class="c1"># while the length of the list is still less than 8.</span>
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">color_list</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">:</span>
+        <span class="c1"># Show an arrow that points to the color sensor.</span>
+        <span class="n">brick</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="n">ImageFile</span><span class="o">.</span><span class="n">RIGHT</span><span class="p">)</span>
+
+        <span class="c1"># Show how many colored objects we have already scanned.</span>
+        <span class="n">brick</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">color_list</span><span class="p">))</span>
+
+        <span class="c1"># Wait for the center button to be pressed or a color to be scanned.</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="c1"># Store True if the center button is pressed or False if not.</span>
+            <span class="n">pressed</span> <span class="o">=</span> <span class="n">Button</span><span class="o">.</span><span class="n">CENTER</span> <span class="ow">in</span> <span class="n">brick</span><span class="o">.</span><span class="n">buttons</span><span class="p">()</span>
+            <span class="c1"># Store the color measured by the Color Sensor.</span>
+            <span class="n">color</span> <span class="o">=</span> <span class="n">color_sensor</span><span class="o">.</span><span class="n">color</span><span class="p">()</span>
+            <span class="c1"># If the center button is pressed or a color is detected,</span>
+            <span class="c1"># break out of the loop.</span>
+            <span class="k">if</span> <span class="n">pressed</span> <span class="ow">or</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">POSSIBLE_COLORS</span><span class="p">:</span>
+                <span class="k">break</span>
+
+        <span class="k">if</span> <span class="n">pressed</span><span class="p">:</span>
+            <span class="c1"># If the button was pressed, end the loop early.</span>
+            <span class="c1"># We will no longer wait for any remaining objects</span>
+            <span class="c1"># to be scanned and added to the chute.</span>
+            <span class="k">break</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Otherwise, a color was scanned.</span>
+            <span class="c1"># So we add (append) it to the list.</span>
+            <span class="n">brick</span><span class="o">.</span><span class="n">sound</span><span class="o">.</span><span class="n">beep</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+            <span class="n">color_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+
+            <span class="c1"># We don&#39;t want to register the same color once more if we&#39;re</span>
+            <span class="c1"># still looking at the same object. So before we continue, we</span>
+            <span class="c1"># wait until the sensor no longer sees the object.</span>
+            <span class="k">while</span> <span class="n">color_sensor</span><span class="o">.</span><span class="n">color</span><span class="p">()</span> <span class="ow">in</span> <span class="n">POSSIBLE_COLORS</span><span class="p">:</span>
+                <span class="k">pass</span>
+            <span class="n">brick</span><span class="o">.</span><span class="n">sound</span><span class="o">.</span><span class="n">beep</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+            <span class="c1"># Show an arrow pointing to the center button,</span>
+            <span class="c1"># to ask if we are done.</span>
+            <span class="n">brick</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="n">ImageFile</span><span class="o">.</span><span class="n">BACKWARD</span><span class="p">)</span>
+            <span class="n">wait</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+
+    <span class="c1"># Play a sound and show an image to indicate that we are done scanning.</span>
+    <span class="n">brick</span><span class="o">.</span><span class="n">sound</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">SoundFile</span><span class="o">.</span><span class="n">READY</span><span class="p">)</span>
+    <span class="n">brick</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="n">ImageFile</span><span class="o">.</span><span class="n">EV3</span><span class="p">)</span>
+
+    <span class="c1"># Now sort the bricks according the list of colors that we stored.</span>
+    <span class="c1"># We do this by going over each color in the list in a loop.</span>
+    <span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">color_list</span><span class="p">:</span>
+
+        <span class="c1"># Wait for one second between each sorting action.</span>
+        <span class="n">wait</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+
+        <span class="c1"># Run the conveyor belt motor to the right position based on the color.</span>
+        <span class="k">if</span> <span class="n">color</span> <span class="o">==</span> <span class="n">Color</span><span class="o">.</span><span class="n">BLUE</span><span class="p">:</span>
+            <span class="n">brick</span><span class="o">.</span><span class="n">sound</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">SoundFile</span><span class="o">.</span><span class="n">BLUE</span><span class="p">)</span>
+            <span class="n">belt_motor</span><span class="o">.</span><span class="n">run_target</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">color</span> <span class="o">==</span> <span class="n">Color</span><span class="o">.</span><span class="n">GREEN</span><span class="p">:</span>
+            <span class="n">brick</span><span class="o">.</span><span class="n">sound</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">SoundFile</span><span class="o">.</span><span class="n">GREEN</span><span class="p">)</span>
+            <span class="n">belt_motor</span><span class="o">.</span><span class="n">run_target</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">132</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">color</span> <span class="o">==</span> <span class="n">Color</span><span class="o">.</span><span class="n">YELLOW</span><span class="p">:</span>
+            <span class="n">brick</span><span class="o">.</span><span class="n">sound</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">SoundFile</span><span class="o">.</span><span class="n">YELLOW</span><span class="p">)</span>
+            <span class="n">belt_motor</span><span class="o">.</span><span class="n">run_target</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">360</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">color</span> <span class="o">==</span> <span class="n">Color</span><span class="o">.</span><span class="n">RED</span><span class="p">:</span>
+            <span class="n">brick</span><span class="o">.</span><span class="n">sound</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">SoundFile</span><span class="o">.</span><span class="n">RED</span><span class="p">)</span>
+            <span class="n">belt_motor</span><span class="o">.</span><span class="n">run_target</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">530</span><span class="p">)</span>
+
+        <span class="c1"># Now that the conveyor belt is in the correct position,</span>
+        <span class="c1"># eject the colored object.</span>
+        <span class="n">feed_motor</span><span class="o">.</span><span class="n">run_angle</span><span class="p">(</span><span class="mi">1500</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span>
+        <span class="n">feed_motor</span><span class="o">.</span><span class="n">run_angle</span><span class="p">(</span><span class="mi">1500</span><span class="p">,</span> <span class="o">-</span><span class="mi">90</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="robot_arm_h25.html" class="btn btn-neutral float-right" title="Robot Arm H25" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="robot_educator.html" class="btn btn-neutral float-left" title="Robot Educator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019 The LEGO Group. All rights reserved.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

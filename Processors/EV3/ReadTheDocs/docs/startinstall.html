@@ -1,0 +1,358 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation &mdash; ev3-micropython 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Creating and running programs" href="startrun.html" />
+    <link rel="prev" title="Getting started with EV3 MicroPython" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ev3-micropython
+          
+
+          
+            
+            <img src="_static/lego-education-logo-small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-do-you-need">What do you need?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#preparing-your-computer">Preparing your computer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#preparing-the-microsd-card">Preparing the microSD card</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#updating-the-microsd-card">Updating the microSD card</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-the-ev3-brick">Using the EV3 Brick</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#turning-the-ev3-brick-on-and-off">Turning the EV3 Brick on and off</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#viewing-motor-and-sensor-values">Viewing motor and sensor values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#going-back-to-the-original-firmware">Going back to the original firmware</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="startrun.html">Creating and running programs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pybricks Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ev3brick.html"><code class="docutils literal notranslate"><span class="pre">ev3brick</span></code> – The EV3 Programmable Brick</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ev3devices.html"><code class="docutils literal notranslate"><span class="pre">ev3devices</span></code> – EV3 Motors and Sensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameters.html"><code class="docutils literal notranslate"><span class="pre">parameters</span></code> – Parameters and Constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code> – Timing and Datalogging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robotics.html"><code class="docutils literal notranslate"><span class="pre">robotics</span></code> – Robotics module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Engineering Essentials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="signaltypes.html">Signals and Units</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Demo Programs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/robot_educator.html">Robot Educator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/color_sorter.html">Color Sorter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/robot_arm_h25.html">Robot Arm H25</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ev3-micropython</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/startinstall.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>This page guides you through the steps to collect and install everything you need to start programming.</p>
+<div class="section" id="what-do-you-need">
+<h2>What do you need?<a class="headerlink" href="#what-do-you-need" title="Permalink to this headline">¶</a></h2>
+<p>To get started, you’ll need:</p>
+<ul>
+<li><p class="first">A Windows 10 or Mac OS computer</p>
+</li>
+<li><p class="first">Internet access and administrator access</p>
+<blockquote>
+<div><p>This is required during the installation only. You will not need special access to write and run programs later on.</p>
+</div></blockquote>
+</li>
+<li><p class="first">A microSD card</p>
+<blockquote>
+<div><p>You’ll need a card with a minimum capacity of 4GB and a maximum capacity of 32GB. This type of microSD card is also known as microSDHC. We recommend cards with Application Performance Class A1.</p>
+</div></blockquote>
+</li>
+<li><p class="first">A microSD card slot or card reader in your computer</p>
+<blockquote>
+<div><p>If your computer does not have a (micro)SD card slot, you can use an external USB (micro)SD card reader.</p>
+</div></blockquote>
+</li>
+<li><p class="first">A mini-USB cable, like the one included with your EV3 set</p>
+</li>
+</ul>
+<p>The typical configuration of this equipment is summarized in <a class="reference internal" href="#fig-overview"><span class="std std-numref">Figure 1</span></a>.</p>
+<div class="figure align-center" id="id1">
+<span id="fig-overview"></span><a class="reference internal image-reference" href="_images/overview.png"><img alt="overview" src="_images/overview.png" style="width: 90%;" /></a>
+<p class="caption"><span class="caption-number">Figure 1 </span><span class="caption-text">Setup overview</span></p>
+</div>
+</div>
+<div class="section" id="preparing-your-computer">
+<h2>Preparing your computer<a class="headerlink" href="#preparing-your-computer" title="Permalink to this headline">¶</a></h2>
+<p>You’ll write your MicroPython programs using Visual Studio Code. Follow the steps below to download, install, and configure this application:</p>
+<ol class="arabic simple">
+<li>Download <a class="reference external" href="https://code.visualstudio.com/Download">Visual Studio Code</a>.</li>
+<li>Follow the on-screen instructions to install the application.</li>
+<li>Launch Visual Studio Code.</li>
+<li>Open the extensions tab.</li>
+<li>Install the EV3 MicroPython extension as shown in <a class="reference internal" href="#fig-store"><span class="std std-numref">Figure 2</span></a>.</li>
+</ol>
+<div class="figure align-center" id="id2">
+<span id="fig-store"></span><img alt="store" src="_images/store.png" />
+<p class="caption"><span class="caption-number">Figure 2 </span><span class="caption-text">Installing the extension from the Visual Studio Code marketplace</span></p>
+</div>
+</div>
+<div class="section" id="preparing-the-microsd-card">
+<span id="prepsdcard"></span><h2>Preparing the microSD card<a class="headerlink" href="#preparing-the-microsd-card" title="Permalink to this headline">¶</a></h2>
+<p>To make it possible to run MicroPython programs on your EV3 Brick, you’ll now learn how to install the required tools on your microSD card.</p>
+<p>If the microSD card contains files you want to keep, make sure to create a backup of its contents first. See <a class="reference internal" href="startrun.html#managefiles"><span class="std std-ref">managing files on the EV3</span></a> to learn how to backup your previous MicroPython programs if necessary.</p>
+<p><em>This process erases everything on your microSD card, including any previous MicroPython programs on it.</em></p>
+<p>To install the MicroPython tools on your microSD card:</p>
+<ol class="arabic">
+<li><p class="first">Download the <a class="reference external" href="https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3">EV3 MicroPython microSD card image</a> and save it in a convenient location. This file is approximately 360 MB. You do <strong>not</strong> need to unzip the file.</p>
+</li>
+<li><p class="first">Download and install a microSD card flashing tool such as <a class="reference external" href="https://www.balena.io/etcher/">Etcher</a>.</p>
+</li>
+<li><p class="first">Insert the microSD card into your computer or card reader.</p>
+</li>
+<li><p class="first">Launch the flashing tool and follow the steps on your screen to install the file you have just downloaded. If you use Etcher, you can follow the instructions below, as shown in <a class="reference internal" href="#fig-etcher"><span class="std std-numref">Figure 3</span></a>.</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>Select the EV3 MicroPython microSD card image file you have just downloaded.</li>
+<li>Select your microSD card. Make sure that the device and size correspond to your microSD card.</li>
+<li>Start the flashing process. This may take several minutes. Do not remove the card until the flashing process is complete.</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+<div class="figure align-center" id="id3">
+<span id="fig-etcher"></span><a class="reference internal image-reference" href="_images/etcher.png"><img alt="etcher" src="_images/etcher.png" style="width: 85%;" /></a>
+<p class="caption"><span class="caption-number">Figure 3 </span><span class="caption-text">Using Etcher to flash the EV3 MicroPython microSD card image</span></p>
+</div>
+</div>
+<div class="section" id="updating-the-microsd-card">
+<h2>Updating the microSD card<a class="headerlink" href="#updating-the-microsd-card" title="Permalink to this headline">¶</a></h2>
+<p>To update the microSD card, download a new image file using the link above and flash it to the microSD card as described above. Be sure to <a class="reference internal" href="startrun.html#managefiles"><span class="std std-ref">back up any MicroPython programs you want to save</span></a>.</p>
+<p>You do not need to erase the contents of the microSD card first. This is done automatically when you flash the new image file.</p>
+</div>
+<div class="section" id="using-the-ev3-brick">
+<h2>Using the EV3 Brick<a class="headerlink" href="#using-the-ev3-brick" title="Permalink to this headline">¶</a></h2>
+<p>Make sure the EV3 Brick is turned off. Insert the microSD card you prepared into the microSD card slot on the EV3 Brick, as shown in <a class="reference internal" href="#fig-sd"><span class="std std-numref">Figure 4</span></a>.</p>
+<div class="figure align-center" id="id4">
+<span id="fig-sd"></span><a class="reference internal image-reference" href="_images/sd.png"><img alt="sd" src="_images/sd.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Figure 4 </span><span class="caption-text">Inserting the flashed microSD card into the EV3 Brick</span></p>
+</div>
+<div class="section" id="turning-the-ev3-brick-on-and-off">
+<h3>Turning the EV3 Brick on and off<a class="headerlink" href="#turning-the-ev3-brick-on-and-off" title="Permalink to this headline">¶</a></h3>
+<p>Turn on the EV3 Brick by pressing the dark gray center button.</p>
+<p>The boot process may take several minutes. While booting, the EV3 Brick status light turns orange and blinks intermittently, and you’ll see a lot of text on the EV3 screen. The EV3 Brick is ready for use when the status light turns green.</p>
+<p>To turn the EV3 Brick off, open the shutdown menu with the back button, and then select <em>Power Off</em> using the center button, as shown in <a class="reference internal" href="#fig-onoff"><span class="std std-numref">Figure 5</span></a>.</p>
+<div class="figure align-center" id="id5">
+<span id="fig-onoff"></span><a class="reference internal image-reference" href="_images/onoff.png"><img alt="onoff" src="_images/onoff.png" style="width: 65%;" /></a>
+<p class="caption"><span class="caption-number">Figure 5 </span><span class="caption-text">Turning the EV3 Brick off</span></p>
+</div>
+</div>
+<div class="section" id="viewing-motor-and-sensor-values">
+<h3>Viewing motor and sensor values<a class="headerlink" href="#viewing-motor-and-sensor-values" title="Permalink to this headline">¶</a></h3>
+<p>When you’re not running a program, you can view motor and sensor values using the device browser, as shown in <a class="reference internal" href="#fig-devicebrowser"><span class="std std-numref">Figure 6</span></a>.</p>
+<div class="figure align-center" id="id6">
+<span id="fig-devicebrowser"></span><a class="reference internal image-reference" href="_images/devicebrowser.png"><img alt="devicebrowser" src="_images/devicebrowser.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Figure 6 </span><span class="caption-text">Viewing motor and sensor values</span></p>
+</div>
+</div>
+<div class="section" id="going-back-to-the-original-firmware">
+<h3>Going back to the original firmware<a class="headerlink" href="#going-back-to-the-original-firmware" title="Permalink to this headline">¶</a></h3>
+<p>You can go back to the LEGO® firmware and your LEGO programs at any time. To do so:</p>
+<ol class="arabic simple">
+<li>Turn the EV3 Brick off as shown above.</li>
+<li>Wait for the screen and brick status light to turn off.</li>
+<li>Remove the microSD card.</li>
+<li>Turn the EV3 on.</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="startrun.html" class="btn btn-neutral float-right" title="Creating and running programs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Getting started with EV3 MicroPython" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019 The LEGO Group. All rights reserved.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -31,7 +31,11 @@
 		<Item Name="dir.mnu" Type="Document" URL="/&lt;userlib&gt;/MicroPython/dir.mnu"/>
 		<Item Name="README.md" Type="Document" URL="/&lt;userlib&gt;/MicroPython/README.md"/>
 		<Item Name="SaveForPrevious.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/SaveForPrevious.vi"/>
+		<Item Name="SSHProblem.vi" Type="VI" URL="/Users/crogers/Desktop/SSHProblem.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
+			<Item Name="user.lib" Type="Folder">
+				<Item Name="Simple.rtm" Type="Document" URL="/&lt;userlib&gt;/MicroPython/StandAlone/SubVIs/Simple.rtm"/>
+			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Bit-array To Byte-array.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pictutil.llb/Bit-array To Byte-array.vi"/>
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>

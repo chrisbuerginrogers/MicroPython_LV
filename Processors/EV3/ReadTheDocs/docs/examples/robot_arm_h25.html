@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Robot Arm H25 &mdash; ev3-micropython 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Color Sorter" href="color_sorter.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ev3-micropython
+          
+
+          
+            
+            <img src="../_static/lego-education-logo-small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../startinstall.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startrun.html">Creating and running programs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pybricks Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ev3brick.html"><code class="docutils literal notranslate"><span class="pre">ev3brick</span></code> – The EV3 Programmable Brick</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ev3devices.html"><code class="docutils literal notranslate"><span class="pre">ev3devices</span></code> – EV3 Motors and Sensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parameters.html"><code class="docutils literal notranslate"><span class="pre">parameters</span></code> – Parameters and Constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code> – Timing and Datalogging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robotics.html"><code class="docutils literal notranslate"><span class="pre">robotics</span></code> – Robotics module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Engineering Essentials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../signaltypes.html">Signals and Units</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Demo Programs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="robot_educator.html">Robot Educator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="color_sorter.html">Color Sorter</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Robot Arm H25</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ev3-micropython</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Robot Arm H25</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/examples/robot_arm_h25.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="robot-arm-h25">
+<h1>Robot Arm H25<a class="headerlink" href="#robot-arm-h25" title="Permalink to this headline">¶</a></h1>
+<p>This example program makes the robot (<a class="reference internal" href="#fig-robot-arm"><span class="std std-numref">Figure 18</span></a>) move the black wheel hub stacks around forever. The robot arm will first initialize and then start moving the hubs around.</p>
+<p>You can find building instructions for the robot on the <a class="reference external" href="https://le-www-live-s.legocdn.com/sc/media/lessons/mindstorms-ev3/building-instructions/ev3-model-core-set-robot-arm-h25-56cdb22c1e3a02f1770bda72862ce2bd.pdf">LEGO Education website</a>.</p>
+<p>Tip: When building the robot, reverse the orientation of the EV3 Brick such that the microSD card is easily accessible.</p>
+<div class="figure align-center" id="id1">
+<span id="fig-robot-arm"></span><a class="reference internal image-reference" href="../_images/robot_arm.jpg"><img alt="robot_arm" src="../_images/robot_arm.jpg" style="width: 90%;" /></a>
+<p class="caption"><span class="caption-number">Figure 18 </span><span class="caption-text">Robot Arm H25</span></p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env pybricks-micropython</span>
+
+<span class="kn">from</span> <span class="nn">pybricks</span> <span class="k">import</span> <span class="n">ev3brick</span> <span class="k">as</span> <span class="n">brick</span>
+<span class="kn">from</span> <span class="nn">pybricks.ev3devices</span> <span class="k">import</span> <span class="n">Motor</span><span class="p">,</span> <span class="n">TouchSensor</span><span class="p">,</span> <span class="n">ColorSensor</span>
+<span class="kn">from</span> <span class="nn">pybricks.parameters</span> <span class="k">import</span> <span class="n">Port</span><span class="p">,</span> <span class="n">Stop</span><span class="p">,</span> <span class="n">Direction</span>
+<span class="kn">from</span> <span class="nn">pybricks.tools</span> <span class="k">import</span> <span class="n">wait</span>
+
+<span class="c1"># Configure the gripper motor on Port A with default settings.</span>
+<span class="n">gripper_motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">A</span><span class="p">)</span>
+
+<span class="c1"># Configure the elbow motor. It has an 8-teeth and a 40-teeth gear</span>
+<span class="c1"># connected to it. We would like positive speed values to make the</span>
+<span class="c1"># arm go upward. This corresponds to counterclockwise rotation</span>
+<span class="c1"># of the motor.</span>
+<span class="n">elbow_motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">B</span><span class="p">,</span> <span class="n">Direction</span><span class="o">.</span><span class="n">COUNTERCLOCKWISE</span><span class="p">,</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">40</span><span class="p">])</span>
+
+<span class="c1"># Configure the motor that rotates the base. It has a 12-teeth and a</span>
+<span class="c1"># 36-teeth gear connected to it. We would like positive speed values</span>
+<span class="c1"># to make the arm go away from the Touch Sensor. This corresponds</span>
+<span class="c1"># to counterclockwise rotation of the motor.</span>
+<span class="n">base_motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">C</span><span class="p">,</span> <span class="n">Direction</span><span class="o">.</span><span class="n">COUNTERCLOCKWISE</span><span class="p">,</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">36</span><span class="p">])</span>
+
+<span class="c1"># Limit the elbow and base accelerations. This results in</span>
+<span class="c1"># very smooth motion. Like an industrial robot.</span>
+<span class="n">elbow_motor</span><span class="o">.</span><span class="n">set_run_settings</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>
+<span class="n">base_motor</span><span class="o">.</span><span class="n">set_run_settings</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>
+
+<span class="c1"># Set up the Touch Sensor. It acts as an end-switch in the base</span>
+<span class="c1"># of the robot arm. It defines the starting point of the base.</span>
+<span class="n">base_switch</span> <span class="o">=</span> <span class="n">TouchSensor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">S1</span><span class="p">)</span>
+
+<span class="c1"># Set up the Color Sensor. This sensor detects when the elbow</span>
+<span class="c1"># is in the starting position. This is when the sensor sees the</span>
+<span class="c1"># white beam up close.</span>
+<span class="n">elbow_sensor</span> <span class="o">=</span> <span class="n">ColorSensor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">S3</span><span class="p">)</span>
+
+<span class="c1"># Initialize the elbow. First make it go down for one second.</span>
+<span class="c1"># Then make it go upwards slowly (15 degrees per second) until</span>
+<span class="c1"># the Color Sensor detects the white beam. Then reset the motor</span>
+<span class="c1"># angle to make this the zero point. Finally, hold the motor</span>
+<span class="c1"># in place so it does not move.</span>
+<span class="n">elbow_motor</span><span class="o">.</span><span class="n">run_time</span><span class="p">(</span><span class="o">-</span><span class="mi">30</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">elbow_motor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">elbow_sensor</span><span class="o">.</span><span class="n">reflection</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">32</span><span class="p">:</span>
+    <span class="n">wait</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">elbow_motor</span><span class="o">.</span><span class="n">reset_angle</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">elbow_motor</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="n">Stop</span><span class="o">.</span><span class="n">HOLD</span><span class="p">)</span>
+
+<span class="c1"># Initialize the base. First rotate it until the Touch Sensor</span>
+<span class="c1"># in the base is pressed. Reset the motor angle to make this</span>
+<span class="c1"># the zero point. Then hold the motor in place so it does not move.</span>
+<span class="n">base_motor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="o">-</span><span class="mi">60</span><span class="p">)</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="n">base_switch</span><span class="o">.</span><span class="n">pressed</span><span class="p">():</span>
+    <span class="n">wait</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">base_motor</span><span class="o">.</span><span class="n">reset_angle</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">base_motor</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="n">Stop</span><span class="o">.</span><span class="n">HOLD</span><span class="p">)</span>
+
+<span class="c1"># Initialize the gripper. First rotate the motor until it stalls.</span>
+<span class="c1"># Stalling means that it cannot move any further. This position</span>
+<span class="c1"># corresponds to the closed position. Then rotate the motor</span>
+<span class="c1"># by 90 degrees such that the gripper is open.</span>
+<span class="n">gripper_motor</span><span class="o">.</span><span class="n">run_until_stalled</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="n">Stop</span><span class="o">.</span><span class="n">COAST</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">gripper_motor</span><span class="o">.</span><span class="n">reset_angle</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">gripper_motor</span><span class="o">.</span><span class="n">run_target</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="o">-</span><span class="mi">90</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">robot_pick</span><span class="p">(</span><span class="n">position</span><span class="p">):</span>
+    <span class="c1"># This function makes the robot base rotate to the indicated</span>
+    <span class="c1"># position. There it lowers the elbow, closes the gripper, and</span>
+    <span class="c1"># raises the elbow to pick up the object.</span>
+
+    <span class="c1"># Rotate to the pick-up position.</span>
+    <span class="n">base_motor</span><span class="o">.</span><span class="n">run_target</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">Stop</span><span class="o">.</span><span class="n">HOLD</span><span class="p">)</span>
+    <span class="c1"># Lower the arm.</span>
+    <span class="n">elbow_motor</span><span class="o">.</span><span class="n">run_target</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="o">-</span><span class="mi">40</span><span class="p">)</span>
+    <span class="c1"># Close the gripper to grab the wheel stack.</span>
+    <span class="n">gripper_motor</span><span class="o">.</span><span class="n">run_until_stalled</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="n">Stop</span><span class="o">.</span><span class="n">HOLD</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+    <span class="c1"># Raise the arm to lift the wheel stack.</span>
+    <span class="n">elbow_motor</span><span class="o">.</span><span class="n">run_target</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Stop</span><span class="o">.</span><span class="n">HOLD</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">robot_release</span><span class="p">(</span><span class="n">position</span><span class="p">):</span>
+    <span class="c1"># This function makes the robot base rotate to the indicated</span>
+    <span class="c1"># position. There it lowers the elbow, opens the gripper to</span>
+    <span class="c1"># release the object. Then it raises its arm again.</span>
+
+    <span class="c1"># Rotate to the drop-off position.</span>
+    <span class="n">base_motor</span><span class="o">.</span><span class="n">run_target</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">Stop</span><span class="o">.</span><span class="n">HOLD</span><span class="p">)</span>
+    <span class="c1"># Lower the arm to put the wheel stack on the ground.</span>
+    <span class="n">elbow_motor</span><span class="o">.</span><span class="n">run_target</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="o">-</span><span class="mi">40</span><span class="p">)</span>
+    <span class="c1"># Open the gripper to release the wheel stack.</span>
+    <span class="n">gripper_motor</span><span class="o">.</span><span class="n">run_target</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="o">-</span><span class="mi">90</span><span class="p">)</span>
+    <span class="c1"># Raise the arm.</span>
+    <span class="n">elbow_motor</span><span class="o">.</span><span class="n">run_target</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Stop</span><span class="o">.</span><span class="n">HOLD</span><span class="p">)</span>
+
+
+<span class="c1"># Play three beeps to indicate that the initialization is complete.</span>
+<span class="n">brick</span><span class="o">.</span><span class="n">sound</span><span class="o">.</span><span class="n">beeps</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># Define the three destinations for picking up and moving the wheel stacks.</span>
+<span class="n">LEFT</span> <span class="o">=</span> <span class="mi">160</span>
+<span class="n">MIDDLE</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">RIGHT</span> <span class="o">=</span> <span class="mi">40</span>
+
+<span class="c1"># This is the main part of the program. It is a loop that repeats endlessly.</span>
+<span class="c1">#</span>
+<span class="c1"># First, the robot moves the object on the left towards the middle.</span>
+<span class="c1"># Second, the robot moves the object on the right towards the left.</span>
+<span class="c1"># Finally, the robot moves the object that is now in the middle, to the right.</span>
+<span class="c1">#</span>
+<span class="c1"># Now we have a wheel stack on the left and on the right as before, but they</span>
+<span class="c1"># have switched places. Then the loop repeats to do this over and over.</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="c1"># Move a wheel stack from the left to the middle.</span>
+    <span class="n">robot_pick</span><span class="p">(</span><span class="n">LEFT</span><span class="p">)</span>
+    <span class="n">robot_release</span><span class="p">(</span><span class="n">MIDDLE</span><span class="p">)</span>
+
+    <span class="c1"># Move a wheel stack from the right to the left.</span>
+    <span class="n">robot_pick</span><span class="p">(</span><span class="n">RIGHT</span><span class="p">)</span>
+    <span class="n">robot_release</span><span class="p">(</span><span class="n">LEFT</span><span class="p">)</span>
+
+    <span class="c1"># Move a wheel stack from the middle to the right.</span>
+    <span class="n">robot_pick</span><span class="p">(</span><span class="n">MIDDLE</span><span class="p">)</span>
+    <span class="n">robot_release</span><span class="p">(</span><span class="n">RIGHT</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="color_sorter.html" class="btn btn-neutral float-left" title="Color Sorter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019 The LEGO Group. All rights reserved.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
