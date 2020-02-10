@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Robot Educator &mdash; ev3-micropython 1.0.0 documentation</title>
+  <title>Robot Educator &mdash; ev3-micropython 0+untagged.350.gab6b15f documentation</title>
   
 
   
@@ -20,12 +20,22 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'0+untagged.350.gab6b15f',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="../_static/contentui.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -34,11 +44,12 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/contentui.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Color Sorter" href="color_sorter.html" />
-    <link rel="prev" title="Signals and Units" href="../signaltypes.html" /> 
+    <link rel="prev" title="More about Motors" href="../motors.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -65,7 +76,7 @@
             
             
               <div class="version">
-                1.0.0
+                0+untagged.350.gab6b15f
               </div>
             
           
@@ -96,15 +107,19 @@
 </ul>
 <p class="caption"><span class="caption-text">Pybricks Modules</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../ev3brick.html"><code class="docutils literal notranslate"><span class="pre">ev3brick</span></code> – The EV3 Programmable Brick</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ev3devices.html"><code class="docutils literal notranslate"><span class="pre">ev3devices</span></code> – EV3 Motors and Sensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hubs.html"><code class="docutils literal notranslate"><span class="pre">hubs</span></code> – Programmable Hubs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ev3devices.html"><code class="docutils literal notranslate"><span class="pre">ev3devices</span></code> – EV3 Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nxtdevices.html"><code class="docutils literal notranslate"><span class="pre">nxtdevices</span></code> – NXT Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iodevices.html"><code class="docutils literal notranslate"><span class="pre">iodevices</span></code> – Generic I/O Devices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../parameters.html"><code class="docutils literal notranslate"><span class="pre">parameters</span></code> – Parameters and Constants</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tools.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code> – Timing and Datalogging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code> – Timing and Data logging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robotics.html"><code class="docutils literal notranslate"><span class="pre">robotics</span></code> – Robotics module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../media.html"><code class="docutils literal notranslate"><span class="pre">media</span></code> – Sounds and Images</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Engineering Essentials</span></p>
+<p class="caption"><span class="caption-text">Engineering Extras</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../signaltypes.html">Signals and Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../motors.html">More about Motors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Demo Programs</span></p>
 <ul class="current">
@@ -183,58 +198,9 @@
 <span id="fig-robot-educator"></span><a class="reference internal image-reference" href="../_images/robot_educator.jpg"><img alt="robot_educator" src="../_images/robot_educator.jpg" style="width: 80%;" /></a>
 <p class="caption"><span class="caption-number">Figure 16 </span><span class="caption-text">Robot Educator with the Ultrasonic Sensor</span></p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env pybricks-micropython</span>
-
-<span class="kn">from</span> <span class="nn">pybricks</span> <span class="k">import</span> <span class="n">ev3brick</span> <span class="k">as</span> <span class="n">brick</span>
-<span class="kn">from</span> <span class="nn">pybricks.ev3devices</span> <span class="k">import</span> <span class="n">Motor</span><span class="p">,</span> <span class="n">UltrasonicSensor</span>
-<span class="kn">from</span> <span class="nn">pybricks.parameters</span> <span class="k">import</span> <span class="n">Port</span>
-<span class="kn">from</span> <span class="nn">pybricks.tools</span> <span class="k">import</span> <span class="n">wait</span>
-<span class="kn">from</span> <span class="nn">pybricks.robotics</span> <span class="k">import</span> <span class="n">DriveBase</span>
-
-<span class="c1"># Play a sound.</span>
-<span class="n">brick</span><span class="o">.</span><span class="n">sound</span><span class="o">.</span><span class="n">beep</span><span class="p">()</span>
-
-<span class="c1"># Initialize the Ultrasonic Sensor. It is used to detect</span>
-<span class="c1"># obstacles as the robot drives around.</span>
-<span class="n">obstacle_sensor</span> <span class="o">=</span> <span class="n">UltrasonicSensor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">S4</span><span class="p">)</span>
-
-<span class="c1"># Initialize two motors with default settings on Port B and Port C.</span>
-<span class="c1"># These will be the left and right motors of the drive base.</span>
-<span class="n">left_motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">B</span><span class="p">)</span>
-<span class="n">right_motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">C</span><span class="p">)</span>
-
-<span class="c1"># The wheel diameter of the Robot Educator is 56 millimeters.</span>
-<span class="n">wheel_diameter</span> <span class="o">=</span> <span class="mi">56</span>
-
-<span class="c1"># The axle track is the distance between the centers of each of the wheels.</span>
-<span class="c1"># For the Robot Educator this is 114 millimeters.</span>
-<span class="n">axle_track</span> <span class="o">=</span> <span class="mi">114</span>
-
-<span class="c1"># The DriveBase is composed of two motors, with a wheel on each motor.</span>
-<span class="c1"># The wheel_diameter and axle_track values are used to make the motors</span>
-<span class="c1"># move at the correct speed when you give a motor command.</span>
-<span class="n">robot</span> <span class="o">=</span> <span class="n">DriveBase</span><span class="p">(</span><span class="n">left_motor</span><span class="p">,</span> <span class="n">right_motor</span><span class="p">,</span> <span class="n">wheel_diameter</span><span class="p">,</span> <span class="n">axle_track</span><span class="p">)</span>
-
-<span class="c1"># The following loop makes the robot drive forward until it detects an</span>
-<span class="c1"># obstacle. Then it backs up and turns around. It keeps on doing this</span>
-<span class="c1"># until you stop the program.</span>
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="c1"># Begin driving forward at 200 millimeters per second.</span>
-    <span class="n">robot</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-
-    <span class="c1"># Wait until an obstacle is detected. This is done by repeatedly</span>
-    <span class="c1"># doing nothing (waiting for 10 milliseconds) while the measured</span>
-    <span class="c1"># distance is still greater than 300 mm.</span>
-    <span class="k">while</span> <span class="n">obstacle_sensor</span><span class="o">.</span><span class="n">distance</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">300</span><span class="p">:</span>
-        <span class="n">wait</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-
-    <span class="c1"># Drive backward at 100 millimeters per second. Keep going for 2 seconds.</span>
-    <span class="n">robot</span><span class="o">.</span><span class="n">drive_time</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
-
-    <span class="c1"># Turn around at 60 degrees per second, around the midpoint between</span>
-    <span class="c1"># the wheels. Keep going for 2 seconds.</span>
-    <span class="n">robot</span><span class="o">.</span><span class="n">drive_time</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
-</pre></div>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">This example is not yet updated</p>
 </div>
 </div>
 
@@ -249,7 +215,7 @@
         <a href="color_sorter.html" class="btn btn-neutral float-right" title="Color Sorter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../signaltypes.html" class="btn btn-neutral float-left" title="Signals and Units" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../motors.html" class="btn btn-neutral float-left" title="More about Motors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

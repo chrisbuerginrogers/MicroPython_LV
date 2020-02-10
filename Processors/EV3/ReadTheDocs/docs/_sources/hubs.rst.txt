@@ -1,0 +1,5 @@
+:mod:`hubs` -- Programmable Hubs
+==============================================
+
+.. include:: ../../pybricks-api/doc/api/hubs_ev3brick.inc
+

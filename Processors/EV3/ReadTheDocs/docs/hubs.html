@@ -1,0 +1,788 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>hubs – Programmable Hubs &mdash; ev3-micropython 0+untagged.350.gab6b15f documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'0+untagged.350.gab6b15f',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="_static/contentui.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ev3devices – EV3 Devices" href="ev3devices.html" />
+    <link rel="prev" title="Creating and running programs" href="startrun.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ev3-micropython
+          
+
+          
+            
+            <img src="_static/lego-education-logo-small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0+untagged.350.gab6b15f
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="startinstall.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startrun.html">Creating and running programs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pybricks Modules</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">hubs</span></code> – Programmable Hubs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ev3devices.html"><code class="docutils literal notranslate"><span class="pre">ev3devices</span></code> – EV3 Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nxtdevices.html"><code class="docutils literal notranslate"><span class="pre">nxtdevices</span></code> – NXT Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iodevices.html"><code class="docutils literal notranslate"><span class="pre">iodevices</span></code> – Generic I/O Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameters.html"><code class="docutils literal notranslate"><span class="pre">parameters</span></code> – Parameters and Constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code> – Timing and Data logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robotics.html"><code class="docutils literal notranslate"><span class="pre">robotics</span></code> – Robotics module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="media.html"><code class="docutils literal notranslate"><span class="pre">media</span></code> – Sounds and Images</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Engineering Extras</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="signaltypes.html">Signals and Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="motors.html">More about Motors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Demo Programs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/robot_educator.html">Robot Educator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/color_sorter.html">Color Sorter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/robot_arm_h25.html">Robot Arm H25</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ev3-micropython</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">hubs</span></code> – Programmable Hubs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/hubs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hubs-programmable-hubs">
+<h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">hubs</span></code> – Programmable Hubs<a class="headerlink" href="#hubs-programmable-hubs" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pybricks.hubs.EV3Brick">
+<em class="property">class </em><code class="descname">EV3Brick</code><a class="headerlink" href="#pybricks.hubs.EV3Brick" title="Permalink to this definition">¶</a></dt>
+<dd><p>LEGO® MINDSTORMS® EV3 Brick.</p>
+<p class="rubric">Using the buttons</p>
+<dl class="classmethod">
+<dt id="pybricks.hubs.EV3Brick.buttons.pressed">
+<code class="descclassname">buttons.</code><code class="descname">pressed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.buttons.pressed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check which buttons are currently pressed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List of pressed buttons.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">List of <a class="reference internal" href="parameters.html#pybricks.parameters.Button" title="pybricks.parameters.Button"><code class="xref py py-class docutils literal notranslate"><span class="pre">Button</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p class="rubric">Using the brick status light</p>
+<dl class="classmethod">
+<dt id="pybricks.hubs.EV3Brick.light.on">
+<code class="descclassname">light.</code><code class="descname">on</code><span class="sig-paren">(</span><em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.light.on" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn on the light at the specified color and brightness.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>color</strong> (<a class="reference internal" href="parameters.html#pybricks.parameters.Color" title="pybricks.parameters.Color"><em>Color</em></a>) – Color of the light. The light turns off if you
+choose <code class="docutils literal notranslate"><span class="pre">None</span></code> or a color that is not available.</td>
+</tr>
+</tbody>
+</table>
+<p class="toggle-header"><strong>Show/hide example</strong></p>
+<div class="toggle-content docutils container">
+<p><strong>Example: Turn the light on and change the color.</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env pybricks-micropython</span>
+
+<span class="kn">from</span> <span class="nn">pybricks.hubs</span> <span class="kn">import</span> <span class="n">EV3Brick</span>
+<span class="kn">from</span> <span class="nn">pybricks.tools</span> <span class="kn">import</span> <span class="n">wait</span>
+<span class="kn">from</span> <span class="nn">pybricks.parameters</span> <span class="kn">import</span> <span class="n">Color</span>
+
+<span class="c1"># Initialize the EV3</span>
+<span class="n">ev3</span> <span class="o">=</span> <span class="n">EV3Brick</span><span class="p">()</span>
+
+<span class="c1"># Turn on a red light</span>
+<span class="n">ev3</span><span class="o">.</span><span class="n">light</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span><span class="p">)</span>
+
+<span class="c1"># Wait</span>
+<span class="n">wait</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># Turn the light off</span>
+<span class="n">ev3</span><span class="o">.</span><span class="n">light</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="pybricks.hubs.EV3Brick.light.off">
+<code class="descclassname">light.</code><code class="descname">off</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.light.off" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn off the light.</p>
+</dd></dl>
+
+<p class="rubric">Using the speaker</p>
+<dl class="method">
+<dt id="pybricks.hubs.EV3Brick.speaker.beep">
+<code class="descclassname">speaker.</code><code class="descname">beep</code><span class="sig-paren">(</span><em>frequency=500</em>, <em>duration=100</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.speaker.beep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Play a beep/tone.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>frequency</strong> (<a class="reference internal" href="signaltypes.html#frequency"><span class="std std-ref">frequency: Hz</span></a>) – Frequency of the beep (<em>Default</em>: 500). Frequencies below 100
+are treated as 100.</li>
+<li><strong>duration</strong> (<a class="reference internal" href="signaltypes.html#id1"><span class="std std-ref">time: ms</span></a>) – Duration of the beep (<em>Default</em>: 100). If the duration is less
+than 0, then the method returns immediately and the frequency
+play continues to play indefinitely.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybricks.hubs.EV3Brick.speaker.play_notes">
+<code class="descclassname">speaker.</code><code class="descname">play_notes</code><span class="sig-paren">(</span><em>notes</em>, <em>tempo=120</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.speaker.play_notes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Play a sequence of musical notes.</p>
+<p>For example, you can play: <code class="docutils literal notranslate"><span class="pre">['C4/4',</span> <span class="pre">'C4/4',</span> <span class="pre">'G4/4',</span> <span class="pre">'G4/4']</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>notes</strong> (<em>iter</em>) – A sequence of notes to be played (see format below).</li>
+<li><strong>tempo</strong> (<em>int</em>) – Beats per minute where a quarter note is one beat.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="toggle-header"><strong>Show/hide musical note format</strong></p>
+<div class="toggle-content docutils container">
+<p>Each note is a string with the following format:</p>
+<blockquote>
+<div><ul class="simple">
+<li>The first character is the name of the note, <code class="docutils literal notranslate"><span class="pre">A</span></code> to <code class="docutils literal notranslate"><span class="pre">G</span></code> or <code class="docutils literal notranslate"><span class="pre">R</span></code>
+for a rest.</li>
+<li>Note names can also include an accidental <code class="docutils literal notranslate"><span class="pre">#</span></code> (sharp) or <code class="docutils literal notranslate"><span class="pre">b</span></code>
+(flat). <code class="docutils literal notranslate"><span class="pre">B#</span></code>/<code class="docutils literal notranslate"><span class="pre">Cb</span></code> and <code class="docutils literal notranslate"><span class="pre">E#</span></code>/<code class="docutils literal notranslate"><span class="pre">Fb</span></code> are not allowed.</li>
+<li>The note name is followed by the octave number <code class="docutils literal notranslate"><span class="pre">2</span></code> to <code class="docutils literal notranslate"><span class="pre">8</span></code>. For
+example <code class="docutils literal notranslate"><span class="pre">C4</span></code> is middle C. The octave changes to the next number at
+the note C, for example, <code class="docutils literal notranslate"><span class="pre">B3</span></code> is the note below middle C (<code class="docutils literal notranslate"><span class="pre">C4</span></code>).</li>
+<li>The octave is followed by <code class="docutils literal notranslate"><span class="pre">/</span></code> and a number that indicates the size
+of the note. For example <code class="docutils literal notranslate"><span class="pre">/4</span></code> is a quarter note, <code class="docutils literal notranslate"><span class="pre">/8</span></code> is an
+eight note and so on.</li>
+<li>This can optionally followed by a <code class="docutils literal notranslate"><span class="pre">.</span></code> to make a dotted note.
+Dotted notes are 1-1/2 times as long as notes without a dot.</li>
+<li>The note can optionally end with a <code class="docutils literal notranslate"><span class="pre">_</span></code> which is a tie or a slur.
+This causes there to be no pause between this note and the next note.</li>
+</ul>
+</div></blockquote>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybricks.hubs.EV3Brick.speaker.play_file">
+<code class="descclassname">speaker.</code><code class="descname">play_file</code><span class="sig-paren">(</span><em>file_name</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.speaker.play_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Play a sound file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_name</strong> (<em>str</em>) – Path to the sound file, including the file extension.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybricks.hubs.EV3Brick.speaker.say">
+<code class="descclassname">speaker.</code><code class="descname">say</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.speaker.say" title="Permalink to this definition">¶</a></dt>
+<dd><p>Say a given text string.</p>
+<p>You can configure the language and voice of the text using
+<a class="reference internal" href="#pybricks.hubs.EV3Brick.speaker.set_speech_options" title="pybricks.hubs.EV3Brick.speaker.set_speech_options"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_speech_options()</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> (<em>str</em>) – What to say.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybricks.hubs.EV3Brick.speaker.set_speech_options">
+<code class="descclassname">speaker.</code><code class="descname">set_speech_options</code><span class="sig-paren">(</span><em>language=None</em>, <em>voice=None</em>, <em>speed=None</em>, <em>pitch=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.speaker.set_speech_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configure speech settings used by the <a class="reference internal" href="#pybricks.hubs.EV3Brick.speaker.say" title="pybricks.hubs.EV3Brick.speaker.say"><code class="xref py py-meth docutils literal notranslate"><span class="pre">say()</span></code></a> method.</p>
+<p>Any option that is set to <code class="docutils literal notranslate"><span class="pre">None</span></code> will not be changed. If an option
+is set to an invalid value <a class="reference internal" href="#pybricks.hubs.EV3Brick.speaker.say" title="pybricks.hubs.EV3Brick.speaker.say"><code class="xref py py-meth docutils literal notranslate"><span class="pre">say()</span></code></a> will use the default value
+instead.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>language</strong> (<em>str</em>) – Language of the text. For example, you can choose <code class="docutils literal notranslate"><span class="pre">'en'</span></code>
+(English) or <code class="docutils literal notranslate"><span class="pre">'de'</span></code> (German). A list of all available
+languages is given below.</li>
+<li><strong>voice</strong> (<em>str</em>) – The voice to use. For example, you can choose <code class="docutils literal notranslate"><span class="pre">'f1'</span></code> (female
+voice variant 1) or <code class="docutils literal notranslate"><span class="pre">'m3'</span></code> (male voice variant 3). A list of
+all available voices is given below.</li>
+<li><strong>speed</strong> (<em>int</em>) – Number of words per minute.</li>
+<li><strong>pitch</strong> (<em>int</em>) – Pitch (0 to 99). Higher numbers make the voice higher pitched
+and lower numbers make the voice lower pitched.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="toggle-header"><strong>Show/hide available languages and voices</strong></p>
+<div class="toggle-content docutils container">
+<p>You can choose the following languages:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">'af'</span></code>: Afrikaans</li>
+<li><code class="docutils literal notranslate"><span class="pre">'an'</span></code>: Aragonese</li>
+<li><code class="docutils literal notranslate"><span class="pre">'bg'</span></code>: Bulgarian</li>
+<li><code class="docutils literal notranslate"><span class="pre">'bs'</span></code>: Bosnian</li>
+<li><code class="docutils literal notranslate"><span class="pre">'ca'</span></code>: Catalan</li>
+<li><code class="docutils literal notranslate"><span class="pre">'cs'</span></code>: Czech</li>
+<li><code class="docutils literal notranslate"><span class="pre">'cy'</span></code>: Welsh</li>
+<li><code class="docutils literal notranslate"><span class="pre">'da'</span></code>: Danish</li>
+<li><code class="docutils literal notranslate"><span class="pre">'de'</span></code>: German</li>
+<li><code class="docutils literal notranslate"><span class="pre">'el'</span></code>: Greek</li>
+<li><code class="docutils literal notranslate"><span class="pre">'en'</span></code>: English (default)</li>
+<li><code class="docutils literal notranslate"><span class="pre">'en-gb'</span></code>: English (United Kingdom)</li>
+<li><code class="docutils literal notranslate"><span class="pre">'en-sc'</span></code>: English (Scotland)</li>
+<li><code class="docutils literal notranslate"><span class="pre">'en-uk-north'</span></code>: English (United Kingdom, Northern)</li>
+<li><code class="docutils literal notranslate"><span class="pre">'en-uk-rp'</span></code>: English (United Kingdom, Received Pronunciation)</li>
+<li><code class="docutils literal notranslate"><span class="pre">'en-uk-wmids'</span></code>: English (United Kingdom, West Midlands)</li>
+<li><code class="docutils literal notranslate"><span class="pre">'en-us'</span></code>: English (United States)</li>
+<li><code class="docutils literal notranslate"><span class="pre">'en-wi'</span></code>: English (West Indies)</li>
+<li><code class="docutils literal notranslate"><span class="pre">'eo'</span></code>: Esperanto</li>
+<li><code class="docutils literal notranslate"><span class="pre">'es'</span></code>: Spanish</li>
+<li><code class="docutils literal notranslate"><span class="pre">'es-la'</span></code>: Spanish (Latin America)</li>
+<li><code class="docutils literal notranslate"><span class="pre">'et'</span></code>: Estonian</li>
+<li><code class="docutils literal notranslate"><span class="pre">'fa'</span></code>: Persian</li>
+<li><code class="docutils literal notranslate"><span class="pre">'fa-pin'</span></code>: Persian</li>
+<li><code class="docutils literal notranslate"><span class="pre">'fi'</span></code>: Finnish</li>
+<li><code class="docutils literal notranslate"><span class="pre">'fr-be'</span></code>: French (Belgium)</li>
+<li><code class="docutils literal notranslate"><span class="pre">'fr-fr'</span></code>: French (France)</li>
+<li><code class="docutils literal notranslate"><span class="pre">'ga'</span></code>: Irish</li>
+<li><code class="docutils literal notranslate"><span class="pre">'grc'</span></code>: Greek</li>
+<li><code class="docutils literal notranslate"><span class="pre">'hi'</span></code>: Hindi</li>
+<li><code class="docutils literal notranslate"><span class="pre">'hr'</span></code>: Croatian</li>
+<li><code class="docutils literal notranslate"><span class="pre">'hu'</span></code>: Hungarian</li>
+<li><code class="docutils literal notranslate"><span class="pre">'hy'</span></code>: Armenian</li>
+<li><code class="docutils literal notranslate"><span class="pre">'hy-west'</span></code>: Armenian (Western)</li>
+<li><code class="docutils literal notranslate"><span class="pre">'id'</span></code>: Indonesian</li>
+<li><code class="docutils literal notranslate"><span class="pre">'is'</span></code>: Icelandic</li>
+<li><code class="docutils literal notranslate"><span class="pre">'it'</span></code>: Italian</li>
+<li><code class="docutils literal notranslate"><span class="pre">'jbo'</span></code>: Lojban</li>
+<li><code class="docutils literal notranslate"><span class="pre">'ka'</span></code>: Georgian</li>
+<li><code class="docutils literal notranslate"><span class="pre">'kn'</span></code>: Kannada</li>
+<li><code class="docutils literal notranslate"><span class="pre">'ku'</span></code>: Kurdish</li>
+<li><code class="docutils literal notranslate"><span class="pre">'la'</span></code>: Latin</li>
+<li><code class="docutils literal notranslate"><span class="pre">'lfn'</span></code>: Lingua Franca Nova</li>
+<li><code class="docutils literal notranslate"><span class="pre">'lt'</span></code>: Lithuanian</li>
+<li><code class="docutils literal notranslate"><span class="pre">'lv'</span></code>: Latvian</li>
+<li><code class="docutils literal notranslate"><span class="pre">'mk'</span></code>: Macedonian</li>
+<li><code class="docutils literal notranslate"><span class="pre">'ml'</span></code>: Malayalam</li>
+<li><code class="docutils literal notranslate"><span class="pre">'ms'</span></code>: Malay</li>
+<li><code class="docutils literal notranslate"><span class="pre">'ne'</span></code>: Nepali</li>
+<li><code class="docutils literal notranslate"><span class="pre">'nl'</span></code>: Dutch</li>
+<li><code class="docutils literal notranslate"><span class="pre">'no'</span></code>: Norwegian</li>
+<li><code class="docutils literal notranslate"><span class="pre">'pa'</span></code>: Punjabi</li>
+<li><code class="docutils literal notranslate"><span class="pre">'pl'</span></code>: Polish</li>
+<li><code class="docutils literal notranslate"><span class="pre">'pt-br'</span></code>: Portuguese (Brazil)</li>
+<li><code class="docutils literal notranslate"><span class="pre">'pt-pt'</span></code>: Portuguese (Portugal)</li>
+<li><code class="docutils literal notranslate"><span class="pre">'ro'</span></code>: Romanian</li>
+<li><code class="docutils literal notranslate"><span class="pre">'ru'</span></code>: Russian</li>
+<li><code class="docutils literal notranslate"><span class="pre">'sk'</span></code>: Slovak</li>
+<li><code class="docutils literal notranslate"><span class="pre">'sq'</span></code>: Albanian</li>
+<li><code class="docutils literal notranslate"><span class="pre">'sr'</span></code>: Serbian</li>
+<li><code class="docutils literal notranslate"><span class="pre">'sv'</span></code>: Swedish</li>
+<li><code class="docutils literal notranslate"><span class="pre">'sw'</span></code>: Swahili</li>
+<li><code class="docutils literal notranslate"><span class="pre">'ta'</span></code>: Tamil</li>
+<li><code class="docutils literal notranslate"><span class="pre">'tr'</span></code>: Turkish</li>
+<li><code class="docutils literal notranslate"><span class="pre">'vi'</span></code>: Vietnamese</li>
+<li><code class="docutils literal notranslate"><span class="pre">'vi-hue'</span></code>: Vietnamese (Hue)</li>
+<li><code class="docutils literal notranslate"><span class="pre">'vi-sgn'</span></code>: Vietnamese (Saigon)</li>
+<li><code class="docutils literal notranslate"><span class="pre">'zh'</span></code>: Mandarin Chinese</li>
+<li><code class="docutils literal notranslate"><span class="pre">'zh-yue'</span></code>: Cantonese Chinese</li>
+</ul>
+<p>You can choose the following voices:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">'f1'</span></code>: female variant 1</li>
+<li><code class="docutils literal notranslate"><span class="pre">'f2'</span></code>: female variant 2</li>
+<li><code class="docutils literal notranslate"><span class="pre">'f3'</span></code>: female variant 3</li>
+<li><code class="docutils literal notranslate"><span class="pre">'f4'</span></code>: female variant 4</li>
+<li><code class="docutils literal notranslate"><span class="pre">'f5'</span></code>: female variant 5</li>
+<li><code class="docutils literal notranslate"><span class="pre">'m1'</span></code>: male variant 1</li>
+<li><code class="docutils literal notranslate"><span class="pre">'m2'</span></code>: male variant 2</li>
+<li><code class="docutils literal notranslate"><span class="pre">'m3'</span></code>: male variant 3</li>
+<li><code class="docutils literal notranslate"><span class="pre">'m4'</span></code>: male variant 4</li>
+<li><code class="docutils literal notranslate"><span class="pre">'m5'</span></code>: male variant 5</li>
+<li><code class="docutils literal notranslate"><span class="pre">'m6'</span></code>: male variant 6</li>
+<li><code class="docutils literal notranslate"><span class="pre">'m7'</span></code>: male variant 7</li>
+<li><code class="docutils literal notranslate"><span class="pre">'croak'</span></code>: croak</li>
+<li><code class="docutils literal notranslate"><span class="pre">'whisper'</span></code>: whisper</li>
+<li><code class="docutils literal notranslate"><span class="pre">'whisperf'</span></code>: female whisper</li>
+</ul>
+</div></blockquote>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybricks.hubs.EV3Brick.speaker.set_volume">
+<code class="descclassname">speaker.</code><code class="descname">set_volume</code><span class="sig-paren">(</span><em>volume</em>, <em>which='_all_'</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.speaker.set_volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the speaker volume.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>volume</strong> (<a class="reference internal" href="signaltypes.html#percentage"><span class="std std-ref">percentage: %</span></a>) – Volume of the speaker.</li>
+<li><strong>which</strong> (<em>str</em>) – Which volume to set. <code class="docutils literal notranslate"><span class="pre">'Beep'</span></code> sets the volume for
+<a class="reference internal" href="#pybricks.hubs.EV3Brick.speaker.beep" title="pybricks.hubs.EV3Brick.speaker.beep"><code class="xref py py-meth docutils literal notranslate"><span class="pre">beep()</span></code></a> and <a class="reference internal" href="#pybricks.hubs.EV3Brick.speaker.play_notes" title="pybricks.hubs.EV3Brick.speaker.play_notes"><code class="xref py py-meth docutils literal notranslate"><span class="pre">play_notes()</span></code></a>. <code class="docutils literal notranslate"><span class="pre">'PCM'</span></code> sets the volume
+for <a class="reference internal" href="#pybricks.hubs.EV3Brick.speaker.play_file" title="pybricks.hubs.EV3Brick.speaker.play_file"><code class="xref py py-meth docutils literal notranslate"><span class="pre">play_file()</span></code></a> and <a class="reference internal" href="#pybricks.hubs.EV3Brick.speaker.say" title="pybricks.hubs.EV3Brick.speaker.say"><code class="xref py py-meth docutils literal notranslate"><span class="pre">say()</span></code></a>. <code class="docutils literal notranslate"><span class="pre">'_all_'</span></code> sets both
+at the same time (<em>Default</em>: <code class="docutils literal notranslate"><span class="pre">'_all_'</span></code>).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p class="rubric">Using the screen</p>
+<dl class="method">
+<dt id="pybricks.hubs.EV3Brick.screen.clear">
+<code class="descclassname">screen.</code><code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.screen.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the image. All pixels in the image will be set to
+<a class="reference internal" href="parameters.html#pybricks.parameters.Color.WHITE" title="pybricks.parameters.Color.WHITE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Color.WHITE</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybricks.hubs.EV3Brick.screen.draw_text">
+<code class="descclassname">screen.</code><code class="descname">draw_text</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>text</em>, <em>color=Color.BLACK</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.screen.draw_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws text on the image.</p>
+<p>The most recent font set using <a class="reference internal" href="#pybricks.hubs.EV3Brick.screen.set_font" title="pybricks.hubs.EV3Brick.screen.set_font"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_font()</span></code></a> will be used or
+<a class="reference internal" href="media.html#pybricks.media.ev3dev.Font.DEFAULT" title="pybricks.media.ev3dev.Font.DEFAULT"><code class="xref py py-data docutils literal notranslate"><span class="pre">Font.DEFAULT</span></code></a> if no font has been set yet.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>x</strong> (<em>int</em>) – The x-axis value where the left side of the text will start.</li>
+<li><strong>y</strong> (<em>int</em>) – The y-axis value where the top of the text will start.</li>
+<li><strong>text</strong> (<em>str</em>) – The text to display.</li>
+<li><strong>color</strong> (<a class="reference internal" href="parameters.html#pybricks.parameters.Color" title="pybricks.parameters.Color"><em>Color</em></a>) – The color used for drawing the text.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybricks.hubs.EV3Brick.screen.print">
+<code class="descclassname">screen.</code><code class="descname">print</code><span class="sig-paren">(</span><em>*args</em>, <em>sep=' '</em>, <em>end='\n'</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.screen.print" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints a line of text.</p>
+<p>This method works like the built-in <code class="docutils literal notranslate"><span class="pre">print()</span></code> function, but
+it writes on the screen/image instead.</p>
+<p>You can set the font using <a class="reference internal" href="#pybricks.hubs.EV3Brick.screen.set_font" title="pybricks.hubs.EV3Brick.screen.set_font"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_font()</span></code></a>. If no font has been
+set, <a class="reference internal" href="media.html#pybricks.media.ev3dev.Font.DEFAULT" title="pybricks.media.ev3dev.Font.DEFAULT"><code class="xref py py-data docutils literal notranslate"><span class="pre">Font.DEFAULT</span></code></a> will be used.</p>
+<p>If no new line is available, all text scrolls up automatically.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>*</strong> (<em>object</em>) – Zero or more objects to print.</li>
+<li><strong>sep</strong> (<em>str</em>) – Separator that will be placed between each object that is
+printed.</li>
+<li><strong>end</strong> (<em>str</em>) – End of line that will be printed after the last object.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybricks.hubs.EV3Brick.screen.set_font">
+<code class="descclassname">screen.</code><code class="descname">set_font</code><span class="sig-paren">(</span><em>font</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.screen.set_font" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the font used for writing on this image.</p>
+<p>The font is used for both <a class="reference internal" href="#pybricks.hubs.EV3Brick.screen.draw_text" title="pybricks.hubs.EV3Brick.screen.draw_text"><code class="xref py py-meth docutils literal notranslate"><span class="pre">draw_text()</span></code></a> and <a class="reference internal" href="#pybricks.hubs.EV3Brick.screen.print" title="pybricks.hubs.EV3Brick.screen.print"><code class="xref py py-meth docutils literal notranslate"><span class="pre">print()</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>font</strong> (<a class="reference internal" href="media.html#pybricks.media.ev3dev.Font" title="pybricks.media.ev3dev.Font"><code class="xref py py-class docutils literal notranslate"><span class="pre">Font</span></code></a>) – The font to use.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybricks.hubs.EV3Brick.screen.show_image">
+<code class="descclassname">screen.</code><code class="descname">show_image</code><span class="sig-paren">(</span><em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.screen.show_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears this image, then draws <code class="docutils literal notranslate"><span class="pre">source</span></code> centered in this image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>source</strong> (<a class="reference internal" href="media.html#pybricks.media.ev3dev.Image" title="pybricks.media.ev3dev.Image"><em>Image</em></a><em> or </em><em>str</em>) – The source <a class="reference internal" href="media.html#pybricks.media.ev3dev.Image" title="pybricks.media.ev3dev.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a>. If the argument is a string, then
+the <code class="docutils literal notranslate"><span class="pre">source</span></code> image is loaded from file.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybricks.hubs.EV3Brick.screen.draw_image">
+<code class="descclassname">screen.</code><code class="descname">draw_image</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>image</em>, <em>color=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.screen.draw_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws a copy of another image on this image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>x</strong> (<em>int</em>) – The x-axis value where the left side of the image will start.</li>
+<li><strong>y</strong> (<em>int</em>) – The y-axis value where the top of the image will start.</li>
+<li><strong>image</strong> (<a class="reference internal" href="media.html#pybricks.media.ev3dev.Image" title="pybricks.media.ev3dev.Image"><em>Image</em></a>) – The image to copy.</li>
+<li><strong>color</strong> (<a class="reference internal" href="parameters.html#pybricks.parameters.Color" title="pybricks.parameters.Color"><em>Color</em></a>) – The color of <code class="docutils literal notranslate"><span class="pre">image</span></code> to treat as transparent or <code class="docutils literal notranslate"><span class="pre">None</span></code> for
+no transparency.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybricks.hubs.EV3Brick.screen.draw_pixel">
+<code class="descclassname">screen.</code><code class="descname">draw_pixel</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>color=Color.BLACK</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.screen.draw_pixel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws a single pixel on the image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>x</strong> (<em>int</em>) – The x coordinate of the pixel.</li>
+<li><strong>y</strong> (<em>int</em>) – The y coordinate of the pixel.</li>
+<li><strong>color</strong> (<a class="reference internal" href="parameters.html#pybricks.parameters.Color" title="pybricks.parameters.Color"><em>Color</em></a>) – The color of the pixel.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybricks.hubs.EV3Brick.screen.draw_line">
+<code class="descclassname">screen.</code><code class="descname">draw_line</code><span class="sig-paren">(</span><em>x1</em>, <em>y1</em>, <em>x2</em>, <em>y2</em>, <em>color=Color.BLACK</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.screen.draw_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws a line on the image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>x1</strong> (<em>int</em>) – The x coordinate of the starting point of the line.</li>
+<li><strong>y1</strong> (<em>int</em>) – The y coordinate of the starting point of the line.</li>
+<li><strong>x2</strong> (<em>int</em>) – The x coordinate of the ending point of the line.</li>
+<li><strong>y2</strong> (<em>int</em>) – The y coordinate of the ending point of the line.</li>
+<li><strong>color</strong> (<a class="reference internal" href="parameters.html#pybricks.parameters.Color" title="pybricks.parameters.Color"><em>Color</em></a>) – The color of the line.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybricks.hubs.EV3Brick.screen.draw_box">
+<code class="descclassname">screen.</code><code class="descname">draw_box</code><span class="sig-paren">(</span><em>x1</em>, <em>y1</em>, <em>x2</em>, <em>y2</em>, <em>r=0</em>, <em>fill=False</em>, <em>color=Color.BLACK</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.screen.draw_box" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws a box on the image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>x1</strong> (<em>int</em>) – The x coordinate of the left side of the box.</li>
+<li><strong>y1</strong> (<em>int</em>) – The y coordinate of the top of the box.</li>
+<li><strong>x2</strong> (<em>int</em>) – The x coordinate of the right side of the box.</li>
+<li><strong>y2</strong> (<em>int</em>) – The y coordinate of the bottom of the box.</li>
+<li><strong>r</strong> (<em>int</em>) – The radius of the corners of the box.</li>
+<li><strong>fill</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the box will be filled with <code class="docutils literal notranslate"><span class="pre">color</span></code>,
+otherwise only the outline of the box will be drawn.</li>
+<li><strong>color</strong> (<a class="reference internal" href="parameters.html#pybricks.parameters.Color" title="pybricks.parameters.Color"><em>Color</em></a>) – The color of the box.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybricks.hubs.EV3Brick.screen.draw_circle">
+<code class="descclassname">screen.</code><code class="descname">draw_circle</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>r=0</em>, <em>fill=False</em>, <em>color=Color.BLACK</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.screen.draw_circle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws a circle on the image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>x</strong> (<em>int</em>) – The x coordinate of the center of the circle.</li>
+<li><strong>y</strong> (<em>int</em>) – The y coordinate of the center of the circle.</li>
+<li><strong>r</strong> (<em>int</em>) – The radius of the circle.</li>
+<li><strong>fill</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the circle will be filled with
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, otherwise only the circumference will be drawn.</li>
+<li><strong>color</strong> (<a class="reference internal" href="parameters.html#pybricks.parameters.Color" title="pybricks.parameters.Color"><em>Color</em></a>) – The color of the circle.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pybricks.hubs.EV3Brick.screen.width">
+<code class="descclassname">screen.</code><code class="descname">width</code><a class="headerlink" href="#pybricks.hubs.EV3Brick.screen.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the width of the image in pixels.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pybricks.hubs.EV3Brick.screen.height">
+<code class="descclassname">screen.</code><code class="descname">height</code><a class="headerlink" href="#pybricks.hubs.EV3Brick.screen.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the height of the image in pixels.</p>
+</dd></dl>
+
+<p class="rubric">Using the battery</p>
+<dl class="classmethod">
+<dt id="pybricks.hubs.EV3Brick.battery.voltage">
+<code class="descclassname">battery.</code><code class="descname">voltage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.battery.voltage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the voltage of the battery.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Battery voltage.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#voltage"><span class="std std-ref">voltage: mV</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="pybricks.hubs.EV3Brick.battery.current">
+<code class="descclassname">battery.</code><code class="descname">current</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.hubs.EV3Brick.battery.current" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current supplied by the battery.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Battery current.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#current"><span class="std std-ref">current: mA</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ev3devices.html" class="btn btn-neutral float-right" title="ev3devices – EV3 Devices" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="startrun.html" class="btn btn-neutral float-left" title="Creating and running programs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019 The LEGO Group. All rights reserved.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

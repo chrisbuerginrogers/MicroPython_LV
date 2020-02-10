@@ -1,29 +1,34 @@
 :mod:`parameters` -- Parameters and Constants
 =============================================
 
-.. automodule:: parameters
+.. automodule:: pybricks.parameters
     :no-members:
 
-.. autoclass:: parameters.Port
+.. autoclass:: pybricks.parameters.Port
     :no-members:
 
-.. autoclass:: parameters.Direction
+        Motor ports:
+
+            .. data:: A
+            .. data:: B
+            .. data:: C
+            .. data:: D
+
+        Sensor ports:
+
+            .. data:: S1
+            .. data:: S2
+            .. data:: S3
+            .. data:: S4
+
+.. autoclass:: pybricks.parameters.Direction
     :no-members:
 
-.. autoclass:: parameters.Stop
+.. autoclass:: pybricks.parameters.Stop
     :no-members:
 
-.. autoclass:: parameters.Color
+.. autoclass:: pybricks.parameters.Color
     :no-members:
 
-.. autoclass:: parameters.Button
-    :no-members:
-
-.. autoclass:: parameters.Align
-    :no-members:
-
-.. autoclass:: parameters.ImageFile
-    :no-members:
-
-.. autoclass:: parameters.SoundFile
+.. autoclass:: pybricks.parameters.Button
     :no-members:

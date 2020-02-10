@@ -1,5 +1,5 @@
-Getting started with EV3 MicroPython
-====================================
+Getting started with LEGO® MINDSTORMS Education EV3 MicroPython
+===============================================================
 
 This guide shows you how to get started writing MicroPython programs for your
 LEGO® MINDSTORMS® EV3 robots. You'll learn to do so in two steps:
@@ -34,20 +34,22 @@ programs and start inventing your own programs.
    :caption: Pybricks Modules
    :hidden:
 
-   ev3brick
+   hubs
    ev3devices
+   nxtdevices
+   iodevices
    parameters
    tools
    robotics
+   media
 
 .. toctree::
    :maxdepth: 1
-   :caption: Engineering Essentials
+   :caption: Engineering Extras
    :hidden:
 
    signaltypes
-
-.. motorcontrol
+   motors
 
 .. toctree::
    :maxdepth: 1

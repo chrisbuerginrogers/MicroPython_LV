@@ -14,4 +14,6 @@ You can find building instructions for the Robot Educator on the `LEGO Education
 
    Robot Educator with the Ultrasonic Sensor
 
-.. literalinclude:: ../../../firmware/examples/ev3/robot_educator/main.py
+.. todo:: This example is not yet updated
+
+.. .. literalinclude:: robot_educator/main.py

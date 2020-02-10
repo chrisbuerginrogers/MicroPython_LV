@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>robotics – Robotics module &mdash; ev3-micropython 1.0.0 documentation</title>
+  <title>robotics – Robotics module &mdash; ev3-micropython 0+untagged.350.gab6b15f documentation</title>
   
 
   
@@ -20,12 +20,22 @@
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'0+untagged.350.gab6b15f',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="_static/contentui.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -34,11 +44,12 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Signals and Units" href="signaltypes.html" />
-    <link rel="prev" title="tools – Timing and Datalogging" href="tools.html" /> 
+    <link rel="next" title="media – Sounds and Images" href="media.html" />
+    <link rel="prev" title="tools – Timing and Data logging" href="tools.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -65,7 +76,7 @@
             
             
               <div class="version">
-                1.0.0
+                0+untagged.350.gab6b15f
               </div>
             
           
@@ -96,15 +107,19 @@
 </ul>
 <p class="caption"><span class="caption-text">Pybricks Modules</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="ev3brick.html"><code class="docutils literal notranslate"><span class="pre">ev3brick</span></code> – The EV3 Programmable Brick</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ev3devices.html"><code class="docutils literal notranslate"><span class="pre">ev3devices</span></code> – EV3 Motors and Sensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hubs.html"><code class="docutils literal notranslate"><span class="pre">hubs</span></code> – Programmable Hubs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ev3devices.html"><code class="docutils literal notranslate"><span class="pre">ev3devices</span></code> – EV3 Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nxtdevices.html"><code class="docutils literal notranslate"><span class="pre">nxtdevices</span></code> – NXT Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iodevices.html"><code class="docutils literal notranslate"><span class="pre">iodevices</span></code> – Generic I/O Devices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="parameters.html"><code class="docutils literal notranslate"><span class="pre">parameters</span></code> – Parameters and Constants</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tools.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code> – Timing and Datalogging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code> – Timing and Data logging</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">robotics</span></code> – Robotics module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="media.html"><code class="docutils literal notranslate"><span class="pre">media</span></code> – Sounds and Images</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Engineering Essentials</span></p>
+<p class="caption"><span class="caption-text">Engineering Extras</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="signaltypes.html">Signals and Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="motors.html">More about Motors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Demo Programs</span></p>
 <ul>
@@ -175,104 +190,47 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-robotics">
-<span id="robotics-robotics-module"></span><h1><a class="reference internal" href="#module-robotics" title="robotics"><code class="xref py py-mod docutils literal notranslate"><span class="pre">robotics</span></code></a> – Robotics module<a class="headerlink" href="#module-robotics" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-pybricks.robotics">
+<span id="robotics-robotics-module"></span><h1><a class="reference internal" href="#module-pybricks.robotics" title="pybricks.robotics"><code class="xref py py-mod docutils literal notranslate"><span class="pre">robotics</span></code></a> – Robotics module<a class="headerlink" href="#module-pybricks.robotics" title="Permalink to this headline">¶</a></h1>
 <p>Robotics module for the Pybricks API.</p>
 <dl class="class">
-<dt id="robotics.DriveBase">
-<em class="property">class </em><code class="descname">DriveBase</code><span class="sig-paren">(</span><em>left_motor</em>, <em>right_motor</em>, <em>wheel_diameter</em>, <em>axle_track</em><span class="sig-paren">)</span><a class="headerlink" href="#robotics.DriveBase" title="Permalink to this definition">¶</a></dt>
-<dd><p>Class representing a robotic vehicle with two powered wheels and optional wheel caster(s).</p>
+<dt id="pybricks.robotics.DriveBase">
+<em class="property">class </em><code class="descname">DriveBase</code><span class="sig-paren">(</span><em>left_motor</em>, <em>right_motor</em>, <em>wheel_diameter</em>, <em>axle_track</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.robotics.DriveBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class representing a robotic vehicle with two powered wheels and
+optional wheel caster(s).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>left_motor</strong> (<a class="reference internal" href="ev3devices.html#ev3devices.Motor" title="ev3devices.Motor"><em>Motor</em></a>) – The motor that drives the left wheel.</li>
-<li><strong>right_motor</strong> (<a class="reference internal" href="ev3devices.html#ev3devices.Motor" title="ev3devices.Motor"><em>Motor</em></a>) – The motor that drives the right wheel.</li>
+<li><strong>left_motor</strong> (<a class="reference internal" href="ev3devices.html#pybricks.ev3devices.Motor" title="pybricks.ev3devices.Motor"><em>Motor</em></a>) – The motor that drives the left wheel.</li>
+<li><strong>right_motor</strong> (<a class="reference internal" href="ev3devices.html#pybricks.ev3devices.Motor" title="pybricks.ev3devices.Motor"><em>Motor</em></a>) – The motor that drives the right wheel.</li>
 <li><strong>wheel_diameter</strong> (<a class="reference internal" href="signaltypes.html#dimension"><span class="std std-ref">dimension: mm</span></a>) – Diameter of the wheels.</li>
-<li><strong>axle_track</strong> (<a class="reference internal" href="signaltypes.html#dimension"><span class="std std-ref">dimension: mm</span></a>) – Distance between the midpoints of the two wheels.</li>
+<li><strong>axle_track</strong> (<a class="reference internal" href="signaltypes.html#dimension"><span class="std std-ref">dimension: mm</span></a>) – Distance between the midpoints of
+the two wheels.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize two motors and a drive base</span>
-<span class="n">left</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">B</span><span class="p">)</span>
-<span class="n">right</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">C</span><span class="p">)</span>
-<span class="n">robot</span> <span class="o">=</span> <span class="n">DriveBase</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">114</span><span class="p">)</span>
-</pre></div>
-</div>
 <dl class="method">
-<dt id="robotics.DriveBase.drive">
-<code class="descname">drive</code><span class="sig-paren">(</span><em>speed</em>, <em>steering</em><span class="sig-paren">)</span><a class="headerlink" href="#robotics.DriveBase.drive" title="Permalink to this definition">¶</a></dt>
-<dd><p>Start driving at the specified speed and turnrate, both measured at the center point between the wheels of the robot.</p>
+<dt id="pybricks.robotics.DriveBase.drive">
+<code class="descname">drive</code><span class="sig-paren">(</span><em>speed</em>, <em>steering</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.robotics.DriveBase.drive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start driving at the specified speed and turn rate, both measured at
+the center point between the wheels of the robot.</p>
+<p>This method is useful in applications where you often change the speed
+and steering. For example, when following a line using a light sensor.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>speed</strong> (<a class="reference internal" href="signaltypes.html#travelspeed"><span class="std std-ref">speed: mm/s</span></a>) – Forward speed of the robot.</li>
-<li><strong>steering</strong> (<a class="reference internal" href="signaltypes.html#speed"><span class="std std-ref">rotational speed: deg/s</span></a>) – Turn rate of the robot.</li>
+<li><strong>speed</strong> (<a class="reference internal" href="signaltypes.html#linspeed"><span class="std std-ref">speed: mm/s</span></a>) – Speed of the robot. Positive is forward,
+negative is backward.</li>
+<li><strong>steering</strong> (<a class="reference internal" href="signaltypes.html#speed"><span class="std std-ref">rotational speed: deg/s</span></a>) – Turn rate of the robot. Positive is to the
+right, negative is to the left.</li>
 </ul>
 </td>
-</tr>
-</tbody>
-</table>
-<p>Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize two motors and a drive base</span>
-<span class="n">left</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">B</span><span class="p">)</span>
-<span class="n">right</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">C</span><span class="p">)</span>
-<span class="n">robot</span> <span class="o">=</span> <span class="n">DriveBase</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">114</span><span class="p">)</span>
-
-<span class="c1"># Initialize a sensor</span>
-<span class="n">sensor</span> <span class="o">=</span> <span class="n">UltrasonicSensor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">S4</span><span class="p">)</span>
-
-<span class="c1"># Drive forward until an object is detected</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="k">while</span> <span class="n">sensor</span><span class="o">.</span><span class="n">distance</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">500</span><span class="p">:</span>
-    <span class="n">wait</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="method">
-<dt id="robotics.DriveBase.drive_time">
-<code class="descname">drive_time</code><span class="sig-paren">(</span><em>speed</em>, <em>steering</em>, <em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#robotics.DriveBase.drive_time" title="Permalink to this definition">¶</a></dt>
-<dd><p>Drive at the specified speed and turnrate for a given amount of time, and then stop.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>speed</strong> (<a class="reference internal" href="signaltypes.html#travelspeed"><span class="std std-ref">speed: mm/s</span></a>) – Forward speed of the robot.</li>
-<li><strong>steering</strong> (<a class="reference internal" href="signaltypes.html#speed"><span class="std std-ref">rotational speed: deg/s</span></a>) – Turn rate of the robot.</li>
-<li><strong>time</strong> (<a class="reference internal" href="signaltypes.html#time"><span class="std std-ref">time: ms</span></a>) – Duration of the maneuver.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Drive forward at 100 mm/s for two seconds</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
-
-<span class="c1"># Turn at 45 deg/s for three seconds</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">3000</span><span class="p">)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="method">
-<dt id="robotics.DriveBase.stop">
-<code class="descname">stop</code><span class="sig-paren">(</span><em>stop_type=Stop.COAST</em><span class="sig-paren">)</span><a class="headerlink" href="#robotics.DriveBase.stop" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stop the robot.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>stop_type</strong> (<a class="reference internal" href="parameters.html#parameters.Stop" title="parameters.Stop"><em>Stop</em></a>) – Whether to coast, brake, or hold (<em>Default</em>: <a class="reference internal" href="parameters.html#parameters.Stop" title="parameters.Stop"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stop.COAST</span></code></a>).</td>
 </tr>
 </tbody>
 </table>
@@ -290,10 +248,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="signaltypes.html" class="btn btn-neutral float-right" title="Signals and Units" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="media.html" class="btn btn-neutral float-right" title="media – Sounds and Images" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tools.html" class="btn btn-neutral float-left" title="tools – Timing and Datalogging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tools.html" class="btn btn-neutral float-left" title="tools – Timing and Data logging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

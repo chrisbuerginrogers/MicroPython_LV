@@ -113,7 +113,7 @@ Now that you've run the basic code template, you can expand the program to make 
 
 Next, edit *main.py* to make it look like this:
 
-.. literalinclude:: ../../firmware/examples/ev3/getting_started/main.py
+.. literalinclude:: examples/getting_started/main.py
 
 This program makes your robot beep, rotate the motor, and beep again with a higher pitched tone. Run the program to make sure that it works as expected.
 

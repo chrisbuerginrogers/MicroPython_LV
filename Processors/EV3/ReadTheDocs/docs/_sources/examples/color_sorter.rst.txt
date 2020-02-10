@@ -16,4 +16,6 @@ You can find building instructions for the color sorter on the `LEGO Education w
 
    Color Sorter
 
-.. literalinclude:: ../../../firmware/examples/ev3/color_sorter/main.py
+.. todo:: This example is not yet updated
+
+.. .. literalinclude:: color_sorter/main.py

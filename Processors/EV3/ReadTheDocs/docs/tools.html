@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>tools – Timing and Datalogging &mdash; ev3-micropython 1.0.0 documentation</title>
+  <title>tools – Timing and Data logging &mdash; ev3-micropython 0+untagged.350.gab6b15f documentation</title>
   
 
   
@@ -20,12 +20,22 @@
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'0+untagged.350.gab6b15f',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="_static/contentui.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -34,6 +44,7 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -65,7 +76,7 @@
             
             
               <div class="version">
-                1.0.0
+                0+untagged.350.gab6b15f
               </div>
             
           
@@ -96,15 +107,19 @@
 </ul>
 <p class="caption"><span class="caption-text">Pybricks Modules</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="ev3brick.html"><code class="docutils literal notranslate"><span class="pre">ev3brick</span></code> – The EV3 Programmable Brick</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ev3devices.html"><code class="docutils literal notranslate"><span class="pre">ev3devices</span></code> – EV3 Motors and Sensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hubs.html"><code class="docutils literal notranslate"><span class="pre">hubs</span></code> – Programmable Hubs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ev3devices.html"><code class="docutils literal notranslate"><span class="pre">ev3devices</span></code> – EV3 Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nxtdevices.html"><code class="docutils literal notranslate"><span class="pre">nxtdevices</span></code> – NXT Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iodevices.html"><code class="docutils literal notranslate"><span class="pre">iodevices</span></code> – Generic I/O Devices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="parameters.html"><code class="docutils literal notranslate"><span class="pre">parameters</span></code> – Parameters and Constants</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">tools</span></code> – Timing and Datalogging</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">tools</span></code> – Timing and Data logging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="robotics.html"><code class="docutils literal notranslate"><span class="pre">robotics</span></code> – Robotics module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="media.html"><code class="docutils literal notranslate"><span class="pre">media</span></code> – Sounds and Images</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Engineering Essentials</span></p>
+<p class="caption"><span class="caption-text">Engineering Extras</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="signaltypes.html">Signals and Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="motors.html">More about Motors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Demo Programs</span></p>
 <ul>
@@ -156,7 +171,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li><code class="docutils literal notranslate"><span class="pre">tools</span></code> – Timing and Datalogging</li>
+      <li><code class="docutils literal notranslate"><span class="pre">tools</span></code> – Timing and Data logging</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -175,44 +190,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-tools">
-<span id="tools-timing-and-datalogging"></span><h1><a class="reference internal" href="#module-tools" title="tools"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools</span></code></a> – Timing and Datalogging<a class="headerlink" href="#module-tools" title="Permalink to this headline">¶</a></h1>
-<p>Common tools for timing and datalogging.</p>
+  <div class="section" id="module-pybricks.tools">
+<span id="tools-timing-and-data-logging"></span><h1><a class="reference internal" href="#module-pybricks.tools" title="pybricks.tools"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools</span></code></a> – Timing and Data logging<a class="headerlink" href="#module-pybricks.tools" title="Permalink to this headline">¶</a></h1>
+<p>Common tools for timing and data logging.</p>
 <dl class="function">
-<dt id="tools.print">
-<code class="descname">print</code><span class="sig-paren">(</span><em>value</em>, <em>...</em>, <em>sep</em>, <em>end</em>, <em>file</em>, <em>flush</em><span class="sig-paren">)</span><a class="headerlink" href="#tools.print" title="Permalink to this definition">¶</a></dt>
+<dt id="pybricks.tools.print">
+<code class="descname">print</code><span class="sig-paren">(</span><em>value</em>, <em>...</em>, <em>sep</em>, <em>end</em>, <em>file</em>, <em>flush</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.tools.print" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print values on the terminal or a stream.</p>
-<p>Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print some text</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, world&quot;</span><span class="p">)</span>
-
-<span class="c1"># Print some text and a number</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Value:&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-</pre></div>
-</div>
 </dd></dl>
 
 <dl class="function">
-<dt id="tools.wait">
-<code class="descname">wait</code><span class="sig-paren">(</span><em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#tools.wait" title="Permalink to this definition">¶</a></dt>
+<dt id="pybricks.tools.wait">
+<code class="descname">wait</code><span class="sig-paren">(</span><em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.tools.wait" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pause the user program for a specified amount of time.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time</strong> (<a class="reference internal" href="signaltypes.html#time"><span class="std std-ref">time: ms</span></a>) – How long to wait.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time</strong> (<a class="reference internal" href="signaltypes.html#id1"><span class="std std-ref">time: ms</span></a>) – How long to wait.</td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
 <dl class="class">
-<dt id="tools.StopWatch">
-<em class="property">class </em><code class="descname">StopWatch</code><a class="headerlink" href="#tools.StopWatch" title="Permalink to this definition">¶</a></dt>
-<dd><p>A stopwatch to measure time intervals. Similar to the stopwatch feature on your phone.</p>
+<dt id="pybricks.tools.StopWatch">
+<em class="property">class </em><code class="descname">StopWatch</code><a class="headerlink" href="#pybricks.tools.StopWatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>A stopwatch to measure time intervals. Similar to the stopwatch
+feature on your phone.</p>
 <dl class="method">
-<dt id="tools.StopWatch.time">
-<code class="descname">time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tools.StopWatch.time" title="Permalink to this definition">¶</a></dt>
+<dt id="pybricks.tools.StopWatch.time">
+<code class="descname">time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.tools.StopWatch.time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the current time of the stopwatch.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -220,27 +228,27 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Elapsed time.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#time"><span class="std std-ref">time: ms</span></a></td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#id1"><span class="std std-ref">time: ms</span></a></td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
 <dl class="method">
-<dt id="tools.StopWatch.pause">
-<code class="descname">pause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tools.StopWatch.pause" title="Permalink to this definition">¶</a></dt>
+<dt id="pybricks.tools.StopWatch.pause">
+<code class="descname">pause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.tools.StopWatch.pause" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pause the stopwatch.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="tools.StopWatch.resume">
-<code class="descname">resume</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tools.StopWatch.resume" title="Permalink to this definition">¶</a></dt>
+<dt id="pybricks.tools.StopWatch.resume">
+<code class="descname">resume</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.tools.StopWatch.resume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resume the stopwatch.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="tools.StopWatch.reset">
-<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tools.StopWatch.reset" title="Permalink to this definition">¶</a></dt>
+<dt id="pybricks.tools.StopWatch.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.tools.StopWatch.reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reset the stopwatch time to 0.</p>
 <p>The run state is unaffected:</p>
 <ul class="simple">

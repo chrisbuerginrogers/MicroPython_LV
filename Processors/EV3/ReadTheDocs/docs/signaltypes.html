@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Signals and Units &mdash; ev3-micropython 1.0.0 documentation</title>
+  <title>Signals and Units &mdash; ev3-micropython 0+untagged.350.gab6b15f documentation</title>
   
 
   
@@ -20,12 +20,22 @@
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'0+untagged.350.gab6b15f',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="_static/contentui.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -34,11 +44,12 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Robot Educator" href="examples/robot_educator.html" />
-    <link rel="prev" title="robotics – Robotics module" href="robotics.html" /> 
+    <link rel="next" title="More about Motors" href="motors.html" />
+    <link rel="prev" title="media – Sounds and Images" href="media.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -65,7 +76,7 @@
             
             
               <div class="version">
-                1.0.0
+                0+untagged.350.gab6b15f
               </div>
             
           
@@ -96,29 +107,60 @@
 </ul>
 <p class="caption"><span class="caption-text">Pybricks Modules</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="ev3brick.html"><code class="docutils literal notranslate"><span class="pre">ev3brick</span></code> – The EV3 Programmable Brick</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ev3devices.html"><code class="docutils literal notranslate"><span class="pre">ev3devices</span></code> – EV3 Motors and Sensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hubs.html"><code class="docutils literal notranslate"><span class="pre">hubs</span></code> – Programmable Hubs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ev3devices.html"><code class="docutils literal notranslate"><span class="pre">ev3devices</span></code> – EV3 Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nxtdevices.html"><code class="docutils literal notranslate"><span class="pre">nxtdevices</span></code> – NXT Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iodevices.html"><code class="docutils literal notranslate"><span class="pre">iodevices</span></code> – Generic I/O Devices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="parameters.html"><code class="docutils literal notranslate"><span class="pre">parameters</span></code> – Parameters and Constants</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tools.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code> – Timing and Datalogging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code> – Timing and Data logging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="robotics.html"><code class="docutils literal notranslate"><span class="pre">robotics</span></code> – Robotics module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="media.html"><code class="docutils literal notranslate"><span class="pre">media</span></code> – Sounds and Images</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Engineering Essentials</span></p>
+<p class="caption"><span class="caption-text">Engineering Extras</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Signals and Units</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#time-ms">time: ms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#angle-deg">angle: deg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rotational-speed-deg-s">rotational speed: deg/s</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#distance-mm">distance: mm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#dimension-mm">dimension: mm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#relative-distance">relative distance: %</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#speed-mm-s">speed: mm/s</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rotational-acceleration-deg-s-s">rotational acceleration: deg/s/s</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#percentage">percentage: %</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#frequency-hz">frequency: Hz</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#voltage-mv">voltage: mV</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#current-ma">current: mA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#time">Time</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#time-ms">time: ms</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#angles-and-angular-motion">Angles and angular motion</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#angle-deg">angle: deg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rotational-speed-deg-s">rotational speed: deg/s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rotational-acceleration-deg-s-s">rotational acceleration: deg/s/s</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#distance-and-linear-motion">Distance and linear motion</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#distance-mm">distance: mm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dimension-mm">dimension: mm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#speed-mm-s">speed: mm/s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#linear-acceleration-mm-s-s">linear acceleration: mm/s/s</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#approximate-and-relative-units">Approximate and relative units</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#percentage">percentage: %</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#relative-distance">relative distance: %</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#brightness">brightness: %</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#force">Force</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#force-n">force: N</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#electricity">Electricity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#voltage-mv">voltage: mV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#current-ma">current: mA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#energy-j">energy: J</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#power-mw">power: mW</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ambient-environment">Ambient environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#frequency-hz">frequency: Hz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#temperature-c">temperature: °C</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="motors.html">More about Motors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Demo Programs</span></p>
 <ul>
@@ -191,22 +233,36 @@
             
   <div class="section" id="signals-and-units">
 <h1>Signals and Units<a class="headerlink" href="#signals-and-units" title="Permalink to this headline">¶</a></h1>
-<p>Many commands allow you to specify arguments in terms of well-known physical quantities. This page gives an overview of each quantity and its unit.</p>
+<p>Many commands allow you to specify arguments in terms of well-known physical
+quantities. This page gives an overview of each quantity and its unit.</p>
+<div class="section" id="time">
+<h2>Time<a class="headerlink" href="#time" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="time-ms">
-<span id="time"></span><h2>time: ms<a class="headerlink" href="#time-ms" title="Permalink to this headline">¶</a></h2>
+<span id="id1"></span><h3>time: ms<a class="headerlink" href="#time-ms" title="Permalink to this headline">¶</a></h3>
 <p>All time and duration values are measured in milliseconds (ms).</p>
-<p>For example, the duration of motion with <a class="reference internal" href="ev3devices.html#ev3devices.Motor.run_time" title="ev3devices.Motor.run_time"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run_time</span></code></a>, the duration of <a class="reference internal" href="tools.html#tools.wait" title="tools.wait"><code class="xref py py-func docutils literal notranslate"><span class="pre">wait</span></code></a>, or the time values returned by the <a class="reference internal" href="tools.html#tools.StopWatch" title="tools.StopWatch"><code class="xref py py-class docutils literal notranslate"><span class="pre">StopWatch</span></code></a> are specified in milliseconds.</p>
+<p>For example, the duration of motion with <code class="docutils literal notranslate"><span class="pre">run_time</span></code>, and the duration
+of <a class="reference internal" href="tools.html#pybricks.tools.wait" title="pybricks.tools.wait"><code class="xref py py-func docutils literal notranslate"><span class="pre">wait</span></code></a> are
+specified in milliseconds.</p>
 </div>
+</div>
+<div class="section" id="angles-and-angular-motion">
+<h2>Angles and angular motion<a class="headerlink" href="#angles-and-angular-motion" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="angle-deg">
-<span id="angle"></span><h2>angle: deg<a class="headerlink" href="#angle-deg" title="Permalink to this headline">¶</a></h2>
-<p>All angles are measured in degrees (deg). One full rotation corresponds to 360 degrees.</p>
-<p>For example, the angle values of a <a class="reference internal" href="ev3devices.html#ev3devices.Motor.angle" title="ev3devices.Motor.angle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Motor</span></code></a> or the <a class="reference internal" href="ev3devices.html#ev3devices.GyroSensor.angle" title="ev3devices.GyroSensor.angle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GyroSensor</span></code></a> are expressed in degrees.</p>
+<span id="angle"></span><h3>angle: deg<a class="headerlink" href="#angle-deg" title="Permalink to this headline">¶</a></h3>
+<p>All angles are measured in degrees (deg). One full rotation corresponds to 360
+degrees.</p>
+<p>For example, the angle values of a <code class="docutils literal notranslate"><span class="pre">Motor</span></code> or
+the <a class="reference internal" href="ev3devices.html#pybricks.ev3devices.GyroSensor.angle" title="pybricks.ev3devices.GyroSensor.angle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GyroSensor</span></code></a> are expressed in degrees.</p>
 </div>
 <div class="section" id="rotational-speed-deg-s">
-<span id="speed"></span><h2>rotational speed: deg/s<a class="headerlink" href="#rotational-speed-deg-s" title="Permalink to this headline">¶</a></h2>
-<p>Rotational speed, or <em>angular velocity</em> describes how fast something rotates, expressed as the number of degrees per second (deg/s).</p>
-<p>For example, the rotational speed values of a <a class="reference internal" href="ev3devices.html#ev3devices.Motor.speed" title="ev3devices.Motor.speed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Motor</span></code></a> or the <a class="reference internal" href="ev3devices.html#ev3devices.GyroSensor.speed" title="ev3devices.GyroSensor.speed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GyroSensor</span></code></a> are expressed in degrees per second.</p>
-<p>While we recommend working with degrees per second in your programs, you can use the following table to convert between commonly used units.</p>
+<span id="speed"></span><h3>rotational speed: deg/s<a class="headerlink" href="#rotational-speed-deg-s" title="Permalink to this headline">¶</a></h3>
+<p>Rotational speed, or <em>angular velocity</em> describes how fast something rotates,
+expressed as the number of degrees per second (deg/s).</p>
+<p>For example, the rotational speed values of a <code class="docutils literal notranslate"><span class="pre">Motor</span></code> or the
+<a class="reference internal" href="ev3devices.html#pybricks.ev3devices.GyroSensor.speed" title="pybricks.ev3devices.GyroSensor.speed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GyroSensor</span></code></a> are expressed in degrees
+per second.</p>
+<p>While we recommend working with degrees per second in your programs, you can
+use the following table to convert between commonly used units.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="38%" />
@@ -229,11 +285,25 @@
 </tbody>
 </table>
 </div>
+<div class="section" id="rotational-acceleration-deg-s-s">
+<h3>rotational acceleration: deg/s/s<a class="headerlink" href="#rotational-acceleration-deg-s-s" title="Permalink to this headline">¶</a></h3>
+<p>Rotational acceleration, or <em>angular acceleration</em> describes how fast the
+rotational speed changes. This is expressed as the change of the number of
+degrees per second, during one second (deg/s/s). This is also commonly written
+as  <span class="math notranslate nohighlight">\(deg/s^2\)</span>.</p>
+<p>For example, you can adjust the rotational acceleration setting of a <code class="docutils literal notranslate"><span class="pre">Motor</span></code>
+to change how smoothly or
+how quickly it reaches the constant speed set point.</p>
+</div>
+</div>
+<div class="section" id="distance-and-linear-motion">
+<h2>Distance and linear motion<a class="headerlink" href="#distance-and-linear-motion" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="distance-mm">
-<span id="distance"></span><h2>distance: mm<a class="headerlink" href="#distance-mm" title="Permalink to this headline">¶</a></h2>
+<span id="distance"></span><h3>distance: mm<a class="headerlink" href="#distance-mm" title="Permalink to this headline">¶</a></h3>
 <p>Distances are expressed in millimeters (mm) whenever possible.</p>
-<p>For example, the distance value of the <a class="reference internal" href="ev3devices.html#ev3devices.UltrasonicSensor.distance" title="ev3devices.UltrasonicSensor.distance"><code class="xref py py-meth docutils literal notranslate"><span class="pre">UltrasonicSensor</span></code></a> is measured in millimeters.</p>
-<p>While we recommend working with millimeters in your programs, you can use the following table to convert between commonly used units.</p>
+<p>For example, the distance value of the <a class="reference internal" href="ev3devices.html#pybricks.ev3devices.UltrasonicSensor.distance" title="pybricks.ev3devices.UltrasonicSensor.distance"><code class="xref py py-meth docutils literal notranslate"><span class="pre">UltrasonicSensor</span></code></a> is measured in millimeters.</p>
+<p>While we recommend working with millimeters in your programs, you can use the
+following table to convert between commonly used units.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="32%" />
@@ -266,44 +336,127 @@
 </table>
 </div>
 <div class="section" id="dimension-mm">
-<span id="dimension"></span><h2>dimension: mm<a class="headerlink" href="#dimension-mm" title="Permalink to this headline">¶</a></h2>
-<p>Dimensions are expressed in millimeters (mm) whenever possible, just like distances.</p>
+<span id="dimension"></span><h3>dimension: mm<a class="headerlink" href="#dimension-mm" title="Permalink to this headline">¶</a></h3>
+<p>Dimensions are expressed in millimeters (mm), just like
+distances.</p>
 <p>For example, the diameter of a wheel is measured in millimeters.</p>
 </div>
-<div class="section" id="relative-distance">
-<span id="relativedistance"></span><h2>relative distance: %<a class="headerlink" href="#relative-distance" title="Permalink to this headline">¶</a></h2>
-<p>Some distance measurements do not provide an accurate value with a specific unit, but they range from very close (0%) to very far (100%). These are referred to as relative distances.</p>
-<p>For example, the distance value of the <a class="reference internal" href="ev3devices.html#ev3devices.InfraredSensor.distance" title="ev3devices.InfraredSensor.distance"><code class="xref py py-meth docutils literal notranslate"><span class="pre">InfraredSensor</span></code></a> is a relative distance.</p>
-</div>
 <div class="section" id="speed-mm-s">
-<span id="travelspeed"></span><h2>speed: mm/s<a class="headerlink" href="#speed-mm-s" title="Permalink to this headline">¶</a></h2>
+<span id="linspeed"></span><h3>speed: mm/s<a class="headerlink" href="#speed-mm-s" title="Permalink to this headline">¶</a></h3>
 <p>Linear speeds are expressed as millimeters per second (mm/s).</p>
 <p>For example, the speed of a robotic vehicle is expressed in mm/s.</p>
 </div>
-<div class="section" id="rotational-acceleration-deg-s-s">
-<span id="acceleration"></span><h2>rotational acceleration: deg/s/s<a class="headerlink" href="#rotational-acceleration-deg-s-s" title="Permalink to this headline">¶</a></h2>
-<p>Rotational acceleration, or <em>angular acceleration</em> describes how fast the rotational speed changes. This is expressed as the change of the number of degrees per second, during one second (deg/s/s). This is also commonly written as  <span class="math notranslate nohighlight">\(deg/s^2\)</span>.</p>
-<p>For example, you can adjust the rotational acceleration setting of a <a class="reference internal" href="ev3devices.html#ev3devices.Motor.set_run_settings" title="ev3devices.Motor.set_run_settings"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Motor</span></code></a> to change how smoothly or how quickly it reaches the constant speed set point.</p>
+<div class="section" id="linear-acceleration-mm-s-s">
+<span id="linacceleration"></span><h3>linear acceleration: mm/s/s<a class="headerlink" href="#linear-acceleration-mm-s-s" title="Permalink to this headline">¶</a></h3>
+<p>Linear acceleration describes how fast the speed changes. This is expressed as
+the change of the millimeters per second, during one second (deg/s/s).
+This is also commonly written as  <span class="math notranslate nohighlight">\(mm/s^2\)</span>.</p>
+<p>For example, you can adjust the acceleration setting of a
+<a class="reference internal" href="robotics.html#pybricks.robotics.DriveBase" title="pybricks.robotics.DriveBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">DriveBase</span></code></a> to change how
+smoothly or how quickly it reaches the constant speed set point.</p>
 </div>
+</div>
+<div class="section" id="approximate-and-relative-units">
+<span id="acceleration"></span><h2>Approximate and relative units<a class="headerlink" href="#approximate-and-relative-units" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="percentage">
-<span id="id1"></span><h2>percentage: %<a class="headerlink" href="#percentage" title="Permalink to this headline">¶</a></h2>
-<p>Some signals do not have specific units but range from a minimum (0%) to a maximum (100%). A specific type of percentages are <a class="reference internal" href="#relativedistance"><span class="std std-ref">relative distances</span></a>.</p>
-<p>For example, the sound <a class="reference internal" href="ev3brick.html#ev3brick.sound.beep" title="ev3brick.sound.beep"><code class="xref py py-meth docutils literal notranslate"><span class="pre">volume</span></code></a> ranges from 0% to 100%.</p>
+<span id="id2"></span><h3>percentage: %<a class="headerlink" href="#percentage" title="Permalink to this headline">¶</a></h3>
+<p>Some signals do not have specific units. They range from a minimum (0%) to a
+maximum (100%). Specifics type of percentages are <a class="reference internal" href="#relativedistance"><span class="std std-ref">relative distances</span></a> or  <a class="reference internal" href="#brightness"><span class="std std-ref">brightness</span></a>.</p>
+<p>Another example is the sound volume,
+which ranges from 0% (silent) to 100% (loudest).</p>
 </div>
-<div class="section" id="frequency-hz">
-<span id="frequency"></span><h2>frequency: Hz<a class="headerlink" href="#frequency-hz" title="Permalink to this headline">¶</a></h2>
-<p>Sound frequencies are expressed in Hertz (Hz).</p>
-<p>For example, you can choose the frequency of a <a class="reference internal" href="ev3brick.html#ev3brick.sound.beep" title="ev3brick.sound.beep"><code class="xref py py-meth docutils literal notranslate"><span class="pre">beep</span></code></a> to change the pitch.</p>
+<div class="section" id="relative-distance">
+<span id="relativedistance"></span><h3>relative distance: %<a class="headerlink" href="#relative-distance" title="Permalink to this headline">¶</a></h3>
+<p>Some distance measurements do not provide an accurate value with a specific
+unit, but they range from very close (0%) to very far (100%). These are
+referred to as relative distances.</p>
+<p>For example, the distance value of the <a class="reference internal" href="ev3devices.html#pybricks.ev3devices.InfraredSensor.distance" title="pybricks.ev3devices.InfraredSensor.distance"><code class="xref py py-meth docutils literal notranslate"><span class="pre">InfraredSensor</span></code></a> is a relative distance.</p>
 </div>
+<div class="section" id="brightness">
+<span id="id3"></span><h3>brightness: %<a class="headerlink" href="#brightness" title="Permalink to this headline">¶</a></h3>
+<p>The perceived brightness of a light is expressed as a percentage. It is 0% when
+the light is off and 100% when the light is fully on. When you choose 50%, this
+means that the light is perceived as approximately half as bright to the human
+eye.</p>
+</div>
+</div>
+<div class="section" id="force">
+<h2>Force<a class="headerlink" href="#force" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="force-n">
+<span id="id4"></span><h3>force: N<a class="headerlink" href="#force-n" title="Permalink to this headline">¶</a></h3>
+<p>Force values are expressed in newtons (N).</p>
+<p>While we recommend working with newtons in your programs, you can use the
+following table to convert to and from other units.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="12%" />
+<col width="14%" />
+<col width="57%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&#160;</td>
+<td>mN</td>
+<td>N</td>
+<td>lbf</td>
+</tr>
+<tr class="row-even"><td>1 mN =</td>
+<td>1</td>
+<td>0.001</td>
+<td><span class="math notranslate nohighlight">\(2.248 \cdot 10^{-4}\)</span></td>
+</tr>
+<tr class="row-odd"><td>1 N =</td>
+<td>1000</td>
+<td>1</td>
+<td>0.2248</td>
+</tr>
+<tr class="row-even"><td>1 lbf =</td>
+<td>4448</td>
+<td>4.448</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="electricity">
+<h2>Electricity<a class="headerlink" href="#electricity" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="voltage-mv">
-<span id="voltage"></span><h2>voltage: mV<a class="headerlink" href="#voltage-mv" title="Permalink to this headline">¶</a></h2>
+<span id="voltage"></span><h3>voltage: mV<a class="headerlink" href="#voltage-mv" title="Permalink to this headline">¶</a></h3>
 <p>Voltages are expressed in millivolt (mV).</p>
-<p>For example, you can check the voltage of the <a class="reference internal" href="ev3brick.html#ev3brick.battery.voltage" title="ev3brick.battery.voltage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">battery</span></code></a>.</p>
+<p>For example, you can check the voltage of the battery.</p>
 </div>
 <div class="section" id="current-ma">
-<span id="current"></span><h2>current: mA<a class="headerlink" href="#current-ma" title="Permalink to this headline">¶</a></h2>
+<span id="current"></span><h3>current: mA<a class="headerlink" href="#current-ma" title="Permalink to this headline">¶</a></h3>
 <p>Electrical currents are expressed in milliampere (mA).</p>
-<p>For example, you can check the current supplied by the <a class="reference internal" href="ev3brick.html#ev3brick.battery.current" title="ev3brick.battery.current"><code class="xref py py-meth docutils literal notranslate"><span class="pre">battery</span></code></a>.</p>
+<p>For example, you can check the current supplied by the battery.</p>
+</div>
+<div class="section" id="energy-j">
+<span id="energy"></span><h3>energy: J<a class="headerlink" href="#energy-j" title="Permalink to this headline">¶</a></h3>
+<p>Stored energy or energy consumption can be expressed in Joules (J).</p>
+</div>
+<div class="section" id="power-mw">
+<span id="power"></span><h3>power: mW<a class="headerlink" href="#power-mw" title="Permalink to this headline">¶</a></h3>
+<p>Power is the rate at which energy is stored or consumed. It is expressed in
+milliwatt (mW).</p>
+</div>
+</div>
+<div class="section" id="ambient-environment">
+<h2>Ambient environment<a class="headerlink" href="#ambient-environment" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="frequency-hz">
+<span id="frequency"></span><h3>frequency: Hz<a class="headerlink" href="#frequency-hz" title="Permalink to this headline">¶</a></h3>
+<p>Sound frequencies are expressed in Hertz (Hz).</p>
+<p>For example, you can choose the frequency of a beep to change the pitch.</p>
+</div>
+<div class="section" id="temperature-c">
+<span id="temperature"></span><h3>temperature: °C<a class="headerlink" href="#temperature-c" title="Permalink to this headline">¶</a></h3>
+<p>Temperature is measured in degrees Celcius (°C). To convert to degrees
+Fahrenheit (°F) or Kelvin (K), you can use the following conversion formulas:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(°\!F = °\!C \cdot \frac{9}{5} + 32\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(K = °\!C + 273.15\)</span>.</p>
+</div></blockquote>
+</div>
 </div>
 </div>
 
@@ -315,10 +468,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="examples/robot_educator.html" class="btn btn-neutral float-right" title="Robot Educator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="motors.html" class="btn btn-neutral float-right" title="More about Motors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="robotics.html" class="btn btn-neutral float-left" title="robotics – Robotics module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="media.html" class="btn btn-neutral float-left" title="media – Sounds and Images" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

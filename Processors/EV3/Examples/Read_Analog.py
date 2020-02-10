@@ -1,25 +1,19 @@
 #!/usr/bin/env pybricks-micropython
 
-'''
-This code will set up port 1 as an analog in port
-Make sure to use pin 6 as AIN rather than Pin 1 (otherwise you will need to get the right resistors on Pin2)
+from pybricks.hubs import EV3Brick
+from pybricks.tools import wait
+from pybricks.parameters import Color, Port
+from pybricks.iodevices import AnalogSensor
 
-'''
+# Initialize the EV3
+ev3 = EV3Brick()
+ev3.light.on(Color.RED)
+sense = AnalogSensor(Port.S1, False)
+sense.voltage()
 
-from pybricks.parameters import Port
-from pybricks.ev3devio import Ev3devSensor
+for i in range(100):
+    light = sense.voltage()   #This seems to give a EIO error sometimes.
+    ev3.screen.print(light)
+    wait(100)
 
-class EV3Sensor(Ev3devSensor):
-    _ev3dev_driver_name='ev3-analog-01'
-    def read(self):
-        self._mode('ANALOG')
-        return self._value(0)
-
-# this is a hack to set the mode properly
-from ev3dev2.port import LegoPort
-s = LegoPort(address ='ev3-ports:in1')
-s.mode = 'ev3-analog'
-
-# now set up your sensor to read
-sensor=EV3Sensor(Port.S1) # same port as above
-print(sensor.read())
+ev3.light.off()

@@ -17,4 +17,4 @@ Tip: When building the robot, reverse the orientation of the EV3 Brick such that
 
    Robot Arm H25
 
-.. literalinclude:: ../../../firmware/examples/ev3/robot_arm_h25/main.py
+.. literalinclude:: robot_arm_h25/main.py

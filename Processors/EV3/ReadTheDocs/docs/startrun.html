@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Creating and running programs &mdash; ev3-micropython 1.0.0 documentation</title>
+  <title>Creating and running programs &mdash; ev3-micropython 0+untagged.350.gab6b15f documentation</title>
   
 
   
@@ -20,12 +20,22 @@
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'0+untagged.350.gab6b15f',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="_static/contentui.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -34,10 +44,11 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="ev3brick – The EV3 Programmable Brick" href="ev3brick.html" />
+    <link rel="next" title="hubs – Programmable Hubs" href="hubs.html" />
     <link rel="prev" title="Installation" href="startinstall.html" /> 
 </head>
 
@@ -65,7 +76,7 @@
             
             
               <div class="version">
-                1.0.0
+                0+untagged.350.gab6b15f
               </div>
             
           
@@ -105,15 +116,19 @@
 </ul>
 <p class="caption"><span class="caption-text">Pybricks Modules</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="ev3brick.html"><code class="docutils literal notranslate"><span class="pre">ev3brick</span></code> – The EV3 Programmable Brick</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ev3devices.html"><code class="docutils literal notranslate"><span class="pre">ev3devices</span></code> – EV3 Motors and Sensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hubs.html"><code class="docutils literal notranslate"><span class="pre">hubs</span></code> – Programmable Hubs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ev3devices.html"><code class="docutils literal notranslate"><span class="pre">ev3devices</span></code> – EV3 Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nxtdevices.html"><code class="docutils literal notranslate"><span class="pre">nxtdevices</span></code> – NXT Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iodevices.html"><code class="docutils literal notranslate"><span class="pre">iodevices</span></code> – Generic I/O Devices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="parameters.html"><code class="docutils literal notranslate"><span class="pre">parameters</span></code> – Parameters and Constants</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tools.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code> – Timing and Datalogging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code> – Timing and Data logging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="robotics.html"><code class="docutils literal notranslate"><span class="pre">robotics</span></code> – Robotics module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="media.html"><code class="docutils literal notranslate"><span class="pre">media</span></code> – Sounds and Images</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Engineering Essentials</span></p>
+<p class="caption"><span class="caption-text">Engineering Extras</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="signaltypes.html">Signals and Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="motors.html">More about Motors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Demo Programs</span></p>
 <ul>
@@ -233,7 +248,7 @@
 <h2>Downloading and running a program<a class="headerlink" href="#downloading-and-running-a-program" title="Permalink to this headline">¶</a></h2>
 <p>You can press the F5 key to run the program. Alternatively, you can start it manually by going to the <em>debug</em> tab and clicking the green start arrow, as shown in <a class="reference internal" href="#fig-running"><span class="std std-numref">Figure 12</span></a>.</p>
 <p>When the program starts, a pop-up toolbar allows you to stop the program if necessary. You can also stop the program at any time using the back button on the EV3 Brick.</p>
-<p>If your program produces any output with the <a class="reference internal" href="tools.html#module-tools" title="tools"><code class="xref py py-mod docutils literal notranslate"><span class="pre">print</span></code></a> command, this is shown in the output window.</p>
+<p>If your program produces any output with the <a class="reference internal" href="tools.html#module-pybricks.tools" title="pybricks.tools"><code class="xref py py-mod docutils literal notranslate"><span class="pre">print</span></code></a> command, this is shown in the output window.</p>
 <div class="figure align-center" id="id6">
 <span id="fig-running"></span><a class="reference internal image-reference" href="_images/running.png"><img alt="running" src="_images/running.png" style="width: 100%;" /></a>
 <p class="caption"><span class="caption-number">Figure 12 </span><span class="caption-text">Running a program</span></p>
@@ -249,12 +264,15 @@
 <p>Next, edit <em>main.py</em> to make it look like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env pybricks-micropython</span>
 
-<span class="kn">from</span> <span class="nn">pybricks</span> <span class="k">import</span> <span class="n">ev3brick</span> <span class="k">as</span> <span class="n">brick</span>
-<span class="kn">from</span> <span class="nn">pybricks.ev3devices</span> <span class="k">import</span> <span class="n">Motor</span>
-<span class="kn">from</span> <span class="nn">pybricks.parameters</span> <span class="k">import</span> <span class="n">Port</span>
+<span class="kn">from</span> <span class="nn">pybricks.hubs</span> <span class="kn">import</span> <span class="n">EV3Brick</span>
+<span class="kn">from</span> <span class="nn">pybricks.ev3devices</span> <span class="kn">import</span> <span class="n">Motor</span>
+<span class="kn">from</span> <span class="nn">pybricks.parameters</span> <span class="kn">import</span> <span class="n">Port</span>
+
+<span class="c1"># Initialize the EV3 Brick</span>
+<span class="n">ev3</span> <span class="o">=</span> <span class="n">EV3Brick</span><span class="p">()</span>
 
 <span class="c1"># Play a sound.</span>
-<span class="n">brick</span><span class="o">.</span><span class="n">sound</span><span class="o">.</span><span class="n">beep</span><span class="p">()</span>
+<span class="n">ev3</span><span class="o">.</span><span class="n">speaker</span><span class="o">.</span><span class="n">beep</span><span class="p">()</span>
 
 <span class="c1"># Initialize a motor at port B.</span>
 <span class="n">test_motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">B</span><span class="p">)</span>
@@ -264,7 +282,7 @@
 
 <span class="c1"># Play another beep sound.</span>
 <span class="c1"># This time with a higher pitch (1000 Hz) and longer duration (500 ms).</span>
-<span class="n">brick</span><span class="o">.</span><span class="n">sound</span><span class="o">.</span><span class="n">beep</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="n">ev3</span><span class="o">.</span><span class="n">speaker</span><span class="o">.</span><span class="n">beep</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>This program makes your robot beep, rotate the motor, and beep again with a higher pitched tone. Run the program to make sure that it works as expected.</p>
@@ -296,7 +314,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ev3brick.html" class="btn btn-neutral float-right" title="ev3brick – The EV3 Programmable Brick" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="hubs.html" class="btn btn-neutral float-right" title="hubs – Programmable Hubs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="startinstall.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

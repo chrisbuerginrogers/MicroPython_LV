@@ -1,0 +1,611 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>nxtdevices – NXT Devices &mdash; ev3-micropython 0+untagged.350.gab6b15f documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'0+untagged.350.gab6b15f',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="_static/contentui.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="iodevices – Generic I/O Devices" href="iodevices.html" />
+    <link rel="prev" title="ev3devices – EV3 Devices" href="ev3devices.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ev3-micropython
+          
+
+          
+            
+            <img src="_static/lego-education-logo-small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0+untagged.350.gab6b15f
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="startinstall.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startrun.html">Creating and running programs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pybricks Modules</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="hubs.html"><code class="docutils literal notranslate"><span class="pre">hubs</span></code> – Programmable Hubs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ev3devices.html"><code class="docutils literal notranslate"><span class="pre">ev3devices</span></code> – EV3 Devices</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">nxtdevices</span></code> – NXT Devices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#nxt-motor">NXT Motor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nxt-touch-sensor">NXT Touch Sensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nxt-light-sensor">NXT Light Sensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nxt-color-sensor">NXT Color Sensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nxt-ultrasonic-sensor">NXT Ultrasonic Sensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nxt-sound-sensor">NXT Sound Sensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nxt-temperature-sensor">NXT Temperature Sensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nxt-energy-meter">NXT Energy Meter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="iodevices.html"><code class="docutils literal notranslate"><span class="pre">iodevices</span></code> – Generic I/O Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameters.html"><code class="docutils literal notranslate"><span class="pre">parameters</span></code> – Parameters and Constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code> – Timing and Data logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robotics.html"><code class="docutils literal notranslate"><span class="pre">robotics</span></code> – Robotics module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="media.html"><code class="docutils literal notranslate"><span class="pre">media</span></code> – Sounds and Images</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Engineering Extras</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="signaltypes.html">Signals and Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="motors.html">More about Motors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Demo Programs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/robot_educator.html">Robot Educator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/color_sorter.html">Color Sorter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/robot_arm_h25.html">Robot Arm H25</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ev3-micropython</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">nxtdevices</span></code> – NXT Devices</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/nxtdevices.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pybricks.nxtdevices">
+<span id="nxtdevices-nxt-devices"></span><h1><a class="reference internal" href="#module-pybricks.nxtdevices" title="pybricks.nxtdevices"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nxtdevices</span></code></a> – NXT Devices<a class="headerlink" href="#module-pybricks.nxtdevices" title="Permalink to this headline">¶</a></h1>
+<p>Use LEGO® MINDSTORMS® NXT motors and sensors with the EV3 brick.</p>
+<div class="section" id="nxt-motor">
+<h2>NXT Motor<a class="headerlink" href="#nxt-motor" title="Permalink to this headline">¶</a></h2>
+<p>This motor works just like a LEGO MINDSTORMS EV3 Large Motor. You can use it in
+your programs using the <a class="reference internal" href="ev3devices.html#module-pybricks.ev3devices" title="pybricks.ev3devices"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Motor</span></code></a> class.</p>
+</div>
+<div class="section" id="nxt-touch-sensor">
+<h2>NXT Touch Sensor<a class="headerlink" href="#nxt-touch-sensor" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pybricks.nxtdevices.TouchSensor">
+<em class="property">class </em><code class="descname">TouchSensor</code><span class="sig-paren">(</span><em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.nxtdevices.TouchSensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>LEGO® MINDSTORMS® NXT Touch Sensor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>port</strong> (<a class="reference internal" href="parameters.html#pybricks.parameters.Port" title="pybricks.parameters.Port"><em>Port</em></a>) – Port to which the sensor is connected.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pybricks.nxtdevices.TouchSensor.pressed">
+<code class="descname">pressed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.nxtdevices.TouchSensor.pressed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the sensor is pressed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">True</span></code> if the sensor is pressed, <code class="docutils literal notranslate"><span class="pre">False</span></code> if it is
+not pressed.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p class="toggle-header"><strong>Using older NXT Touch Sensors</strong></p>
+<div class="toggle-content docutils container">
+<p><strong>Example: Using a first-generation NXT Touch Sensor.</strong></p>
+<p>Normally, the EV3 brick always verifies that a sensor is attached
+before you can use it. This means that your program stops if a sensor
+that you selected was not found. The very first generation of NXT Touch
+Sensors did not support this functionality.
+To use these sensors, set <code class="docutils literal notranslate"><span class="pre">verify_type=False</span></code> as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pybricks.nxtdevices</span> <span class="kn">import</span> <span class="n">TouchSensor</span>
+<span class="kn">from</span> <span class="nn">pybricks.parameters</span> <span class="kn">import</span> <span class="n">Port</span>
+<span class="n">my_sensor</span> <span class="o">=</span> <span class="n">TouchSensor</span><span class="p">(</span><span class="n">Port</span><span class="o">.</span><span class="n">S1</span><span class="p">,</span> <span class="n">verify_type</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="nxt-light-sensor">
+<h2>NXT Light Sensor<a class="headerlink" href="#nxt-light-sensor" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pybricks.nxtdevices.LightSensor">
+<em class="property">class </em><code class="descname">LightSensor</code><span class="sig-paren">(</span><em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.nxtdevices.LightSensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>LEGO® MINDSTORMS® NXT Color Sensor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>port</strong> (<a class="reference internal" href="parameters.html#pybricks.parameters.Port" title="pybricks.parameters.Port"><em>Port</em></a>) – Port to which the sensor is connected.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pybricks.nxtdevices.LightSensor.ambient">
+<code class="descname">ambient</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.nxtdevices.LightSensor.ambient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measure the ambient light intensity.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Ambient light intensity, ranging from 0 (dark)
+to 100 (bright).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#percentage"><span class="std std-ref">percentage: %</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybricks.nxtdevices.LightSensor.reflection">
+<code class="descname">reflection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.nxtdevices.LightSensor.reflection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measure the reflection of a surface using a red light.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Reflection, ranging from 0 (no reflection) to
+100 (high reflection).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#percentage"><span class="std std-ref">percentage: %</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="nxt-color-sensor">
+<h2>NXT Color Sensor<a class="headerlink" href="#nxt-color-sensor" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pybricks.nxtdevices.ColorSensor">
+<em class="property">class </em><code class="descname">ColorSensor</code><span class="sig-paren">(</span><em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.nxtdevices.ColorSensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>LEGO® MINDSTORMS® NXT Color Sensor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>port</strong> (<a class="reference internal" href="parameters.html#pybricks.parameters.Port" title="pybricks.parameters.Port"><em>Port</em></a>) – Port to which the sensor is connected.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pybricks.nxtdevices.ColorSensor.color">
+<code class="descname">color</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.nxtdevices.ColorSensor.color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measure the color of a surface.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">Color.BLACK</span></code>, <code class="docutils literal notranslate"><span class="pre">Color.BLUE</span></code>, <code class="docutils literal notranslate"><span class="pre">Color.GREEN</span></code>, <code class="docutils literal notranslate"><span class="pre">Color.YELLOW</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Color.RED</span></code>, <code class="docutils literal notranslate"><span class="pre">Color.WHITE</span></code>, <code class="docutils literal notranslate"><span class="pre">Color.BROWN</span></code> or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="parameters.html#pybricks.parameters.Color" title="pybricks.parameters.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">Color</span></code></a>, or <code class="docutils literal notranslate"><span class="pre">None</span></code> if no color is
+detected.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybricks.nxtdevices.ColorSensor.ambient">
+<code class="descname">ambient</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.nxtdevices.ColorSensor.ambient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measure the ambient light intensity.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Ambient light intensity, ranging from 0 (dark)
+to 100 (bright).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#percentage"><span class="std std-ref">percentage: %</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybricks.nxtdevices.ColorSensor.reflection">
+<code class="descname">reflection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.nxtdevices.ColorSensor.reflection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measure the reflection of a surface.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Reflection, ranging from 0 (no reflection) to
+100 (high reflection).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#percentage"><span class="std std-ref">percentage: %</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="nxt-ultrasonic-sensor">
+<h2>NXT Ultrasonic Sensor<a class="headerlink" href="#nxt-ultrasonic-sensor" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pybricks.nxtdevices.UltrasonicSensor">
+<em class="property">class </em><code class="descname">UltrasonicSensor</code><span class="sig-paren">(</span><em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.nxtdevices.UltrasonicSensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>LEGO® MINDSTORMS® NXT Ultrasonic Sensor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>port</strong> (<a class="reference internal" href="parameters.html#pybricks.parameters.Port" title="pybricks.parameters.Port"><em>Port</em></a>) – Port to which the sensor is connected.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pybricks.nxtdevices.UltrasonicSensor.distance">
+<code class="descname">distance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.nxtdevices.UltrasonicSensor.distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measure the distance between the sensor and an object using
+ultrasonic sound waves.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Distance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#distance"><span class="std std-ref">distance: mm</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="nxt-sound-sensor">
+<h2>NXT Sound Sensor<a class="headerlink" href="#nxt-sound-sensor" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pybricks.nxtdevices.SoundSensor">
+<em class="property">class </em><code class="descname">SoundSensor</code><span class="sig-paren">(</span><em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.nxtdevices.SoundSensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>LEGO® MINDSTORMS® NXT Sound Sensor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>port</strong> (<a class="reference internal" href="parameters.html#pybricks.parameters.Port" title="pybricks.parameters.Port"><em>Port</em></a>) – Port to which the sensor is connected.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pybricks.nxtdevices.SoundSensor.intensity">
+<code class="descname">intensity</code><span class="sig-paren">(</span><em>audible_only=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.nxtdevices.SoundSensor.intensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measure the ambient sound intensity (loudness).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>audible_only</strong> (<em>bool</em>) – Detect only audible sounds. This tries to
+filter out frequencies that cannot be heard by the
+human ear. (<em>Default</em>: True).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Sound intensity.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#percentage"><span class="std std-ref">percentage: %</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="nxt-temperature-sensor">
+<h2>NXT Temperature Sensor<a class="headerlink" href="#nxt-temperature-sensor" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pybricks.nxtdevices.TemperatureSensor">
+<em class="property">class </em><code class="descname">TemperatureSensor</code><span class="sig-paren">(</span><em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.nxtdevices.TemperatureSensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>LEGO® MINDSTORMS® NXT Ultrasonic Sensor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>port</strong> (<a class="reference internal" href="parameters.html#pybricks.parameters.Port" title="pybricks.parameters.Port"><em>Port</em></a>) – Port to which the sensor is connected.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pybricks.nxtdevices.TemperatureSensor.temperature">
+<code class="descname">temperature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.nxtdevices.TemperatureSensor.temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measure the temperature.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Measured temperature.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#temperature"><span class="std std-ref">temperature: °C</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="nxt-energy-meter">
+<h2>NXT Energy Meter<a class="headerlink" href="#nxt-energy-meter" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pybricks.nxtdevices.EnergyMeter">
+<em class="property">class </em><code class="descname">EnergyMeter</code><span class="sig-paren">(</span><em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.nxtdevices.EnergyMeter" title="Permalink to this definition">¶</a></dt>
+<dd><p>LEGO® MINDSTORMS® Education NXT Energy Meter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>port</strong> (<a class="reference internal" href="parameters.html#pybricks.parameters.Port" title="pybricks.parameters.Port"><em>Port</em></a>) – Port to which the sensor is connected.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pybricks.nxtdevices.EnergyMeter.storage">
+<code class="descname">storage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.nxtdevices.EnergyMeter.storage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the total available energy stored in the battery.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Remaining stored energy.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="signaltypes.html#energy"><span class="std std-ref">energy: J</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybricks.nxtdevices.EnergyMeter.input">
+<code class="descname">input</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.nxtdevices.EnergyMeter.input" title="Permalink to this definition">¶</a></dt>
+<dd><p>This measures the electrical signals at the input (bottom) side
+of the energy meter. It measures the voltage applied to it and the
+current passing through it. The product of these two values is power.
+This power value is the rate at which the stored energy increases. This
+power is supplied by an energy source such as the provided solar panel
+or an externally driven motor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Voltage, current,
+and power measured at the input port.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">(<a class="reference internal" href="signaltypes.html#voltage"><span class="std std-ref">voltage: mV</span></a>, <a class="reference internal" href="signaltypes.html#current"><span class="std std-ref">current: mA</span></a>, <a class="reference internal" href="signaltypes.html#power"><span class="std std-ref">power: mW</span></a>)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybricks.nxtdevices.EnergyMeter.output">
+<code class="descname">output</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybricks.nxtdevices.EnergyMeter.output" title="Permalink to this definition">¶</a></dt>
+<dd><p>This measures the electrical signals at the output (top) side
+of the energy meter. It measures the voltage applied to the external
+load and the current passing to it. The product of these two values
+is power. This power value is the rate at which the stored energy
+decreases. This power is consumed by the load, such as a light or a
+motor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Voltage, current,
+and power measured at the output port.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">(<a class="reference internal" href="signaltypes.html#voltage"><span class="std std-ref">voltage: mV</span></a>, <a class="reference internal" href="signaltypes.html#current"><span class="std std-ref">current: mA</span></a>, <a class="reference internal" href="signaltypes.html#power"><span class="std std-ref">power: mW</span></a>)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="iodevices.html" class="btn btn-neutral float-right" title="iodevices – Generic I/O Devices" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ev3devices.html" class="btn btn-neutral float-left" title="ev3devices – EV3 Devices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019 The LEGO Group. All rights reserved.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

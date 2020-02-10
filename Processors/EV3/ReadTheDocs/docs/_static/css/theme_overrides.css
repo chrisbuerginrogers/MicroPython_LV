@@ -9,3 +9,14 @@ div.figure p.caption {
 span.caption-number:after {
     content: ": ";
  }
+
+/* 
+    sphinx-contrib contentui sets max-width to none,
+    giving a very wide page which makes text hard to
+    read. This sets it to a finite value.
+*/
+@media screen and (min-width: 1300px) {
+    .wy-nav-content {
+        max-width: 800px;
+    }
+}
