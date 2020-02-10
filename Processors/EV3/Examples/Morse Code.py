@@ -59,9 +59,10 @@ class Kmean():
         
     def findMeans(self):
          for i in range(self.k):
-#             self.mean.append(self.array[random.randint(0,len(self.array)-1)])  # choosing 2 random elements
-             self.mean.append(random.randint(min(self.array),max(self.array)))   # choosing two random numbers
-             self.total.append(1)
+#             x = self.array[random.randint(0,len(self.array)-1)]
+             x = random.randint(min(self.array),max(self.array))
+             self.mean.append(x)
+             self.total.append(x)
              self.num.append(1)
          iteration = 0
          iterate = True
