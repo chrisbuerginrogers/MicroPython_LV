@@ -12,12 +12,7 @@ ev3 = EV3Brick()
 ev3.speaker.beep()
 sense = AnalogSensor(Port.S1, False)
 sense.voltage()
-uart = UARTDevice(Port.S1, 9600, timeout=2000)
 
-uart.write('Test')
-wait(10)
-data = uart.read_all()  #if you connect Pin 5 & 6 you should see Test on the screen
-ev3.screen.print(data)
 watch = StopWatch()
 wheel = Motor(Port.A)
 data = DataLog('output.txt', header = 'Time,Angle,Voltage')

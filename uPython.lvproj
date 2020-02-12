@@ -30,6 +30,10 @@
 		</Item>
 		<Item Name="BuildClassInstaller.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/BuildClassInstaller.vi"/>
 		<Item Name="dir.mnu" Type="Document" URL="/&lt;userlib&gt;/MicroPython/dir.mnu"/>
+		<Item Name="MagicWandAnalysis.vi" Type="VI" URL="/Users/crogers/Desktop/MagicWandAnalysis.vi"/>
+		<Item Name="PullSubsection.vi" Type="VI" URL="/Users/crogers/Desktop/PullSubsection.vi"/>
+		<Item Name="ReadArduino.vi" Type="VI" URL="/&lt;resource&gt;/dialog/GSW/Course/_Subs/ReadArduino.vi"/>
+		<Item Name="ReadIoTNano.vi" Type="VI" URL="/Users/crogers/Desktop/ReadIoTNano.vi"/>
 		<Item Name="README.md" Type="Document" URL="/&lt;userlib&gt;/MicroPython/README.md"/>
 		<Item Name="SaveForPrevious.vi" Type="VI" URL="/&lt;userlib&gt;/MicroPython/SaveForPrevious.vi"/>
 		<Item Name="SSHProblem.vi" Type="VI" URL="/Users/crogers/Desktop/SSHProblem.vi"/>
