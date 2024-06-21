@@ -12,6 +12,7 @@ import utime
 from machine import Pin,time_pulse_us
 
 dio = Pin('Y9')
+_TIMEOUT2 = 0 # defined this, test out different numbers
 
 def _get_distance():
      dio.init(Pin.OUT)
